@@ -1,0 +1,22 @@
+body {
+	margin: 0;
+	background-color: white;
+}
+
+.logo {
+	margin-top: 35px;
+	margin-left: 50px;
+	width: 260px;
+}
+
+.banner {
+	margin: 0;
+	height: 120px;
+	background: url(../Images/cascade_mountains.jpg) repeat #f4f2ec;
+	Color: white;
+}
+
+.main-content {
+	font-family: 'Open Sans', serif;
+	margin-left: 25px;
+}

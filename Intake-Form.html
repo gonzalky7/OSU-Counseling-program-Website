@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>OSU-Cascades Counseling Practicum</title>
+		<link rel="stylesheet" type="text/css" href="CSS/style.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+	</head>
+
+	<body>
+		<a href="http://one.cs361.osu.humanoriented.com" class="tag">
+			<div class="banner">
+				<img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades">
+			</div>
+		</a>
+		
+		<div class="main-content">
+			<form method="post" action="#">
+				<fieldset>
+					<legend>Client Information Sheet</legend>
+						<label>Date:</label>
+						<input type="date" name="date"/>
+					<br>
+						<label>First Name:</label>
+						<input type="text" name="firstName"/>
+						<label>Last Name:</label>
+						<input type="text" name="lastName"/>
+						<label>Age:</label>
+						<input type="text" name="age"/>
+						<label>Date of Birth:</label>
+						<input type="text" name="Bday"/>
+					<br>
+						<label>Address:</label>
+						<input type="text" name="address"/>
+						<label>City:</label>
+						<input type="text" name="city"/>
+						<label>State:</label>
+						<input type="text" name="state"/>
+						<label>Zip:</label>
+						<input type="text" name="zip"/>
+					<br>
+						<label>Phone:</label>
+						<input type="text" name="phone"/>
+						<label>Message:</label>
+						<input type="radio" name="message" value="yes" />Yes
+						<input type="radio" name="message" value="no" />No
+						<label>Email:</label>
+						<input type="email" name="email"/>
+					<br>
+						<label>Occupation:</label>
+						<input type="text" name="occupation"/>
+						<label>Employer:</label>
+						<input type="text" name="employer"/>
+					<br>
+						<label>Employer address:</label>
+						<input type="text" name="workAddress"/>
+						<label>Work Phone:</label>
+						<input type="text" name="workPhone"/>
+						<label>Message:</label>
+						<input type="radio" name="workMessage" value="yes" />Yes
+						<input type="radio" name="workMessage" value="no" />No
+
+					<h2 class="form-header">Spouse or Partner Information</h2>
+						<label>Name:</label>
+						<input type="text" name="partnerName"/>
+						<label>Age:</label>
+						<input type="text" name="partnerAge"/>
+						<label>Date of Birth:</label>
+						<input type="text" name="partnerBday"/>
+					<br>
+						<label>Ocupation:</label>
+						<input type="text" name="partnerOcupation"/>
+						<label>Employer:</label>
+						<input type="text" name="partnerEmployer"/>
+						<label>Phone:</label>
+						<input type="text" name="partnerPhone"/>
+										
+					<h2 class="form-header">Other Members of Your Household</h2>
+					 <!-- Want to do like select a number of members of house -->
+						<label>First Name:</label>
+						<input type="text" name="relativeFirstname">
+						<label>Last Name:</label>
+						<input type="text" name="relativeLastname">
+						<label>Age:</label>
+						<input type="number" name="relativeAge">
+						<label>Date of Birth:</label>	
+						<input type="text" name="relativeDate">
+						<label>Relation:</label>
+						<input type="text" name="relation">
+				    <br>
+					<h2 class="form-header">Emergency Contact</h2>
+						<label>Name:</label>
+						<input type="text" name="emergencyName">
+						<label>Relation:</label>
+						<input type="text" name="emergencyRelation">
+						<label>Address:</label>
+						<input type="text" name="emergencyaddress">
+						<label>Phone:</label>
+						<input type="text" name="emergencyphone">
+				
+			
+					<h2 class="form-header">Health Insurance</h2>
+						<label>Do you have health insurance?</label>
+						<input type="radio" name="hasInsurance" value="yes" />Yes
+						<input type="radio" name="hasInsurance" value="no" />No
+						<label>If yes, what company?</label>
+						<input type="text" name="insuranceCompany">
+				
+					<h2 class="form-header"> Medical Information</h2>
+						<label>Primary Care Physician:</label>
+						<input type="text" name="PCP"/>
+						<label>Phone:</label>
+						<input type="text" name="PCPphone"/>
+					<br>
+						<label>Prescription Medications:</label>
+						<input type="text" name="medications"/>
+					<br>
+						<label>Have you ever seen a counselor before?:</label>
+						<input type="radio" name="seenBefore" value="yes" />Yes
+						<input type="radio" name="seenBefore" value="no" />No
+						<label>If yes, when and where?:</label>
+						<input type="text" name="previousCounselor"/>
+					<br>
+						<label>Reason for seeking help now?:</label>
+						<input type="text" name="reason"/>
+					<br>
+						<input type="submit" value="Submit" />
+				</fieldset>
+			</form>
+		</div>
+
+	</body>
+
+</html>
