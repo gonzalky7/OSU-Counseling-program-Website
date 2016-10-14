@@ -14,12 +14,25 @@ body {
 	height: 120px;
 	background: url(../Images/cascade_mountains.jpg) repeat #f4f2ec;
 	Color: white;
+  box-shadow: 5px 5px 2px #888888;
 }
 h1 {
 
    background-color: none;
    text-align:center;
-   color:#1F618D;  
+   color:#D35400  ; 
+   position: absolute;
+   top: 200px;
+   left: 700px; 
+}
+h2{
+  background-color: none;
+   text-align:center;
+   color:#D35400  ; 
+   font-size: 30px;
+   position: absolute;
+   top: 250px;
+   left: 820px; 
 }
 p {
     color: black;
@@ -27,7 +40,7 @@ p {
 /*Main homepage box */
 .mainBox {
  
-  background: url(sun.jpeg) no-repeat center center fixed; 
+  background: url("/Users/Kyleen/projects/src/Images/sun.jpeg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -65,9 +78,9 @@ p {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
-position:absolute;
-    bottom: 35%;
-    left:44%; 
+position:absolute; /*how to position button*/
+    bottom: 40%;
+    left:68%; 
 }
 
 
