@@ -40,7 +40,7 @@ p {
 /*Main homepage box */
 .mainBox {
  
-  background: url("/Users/Kyleen/projects/src/Images/sun.jpeg") no-repeat center center fixed; 
+  background: url("../Images/sun.jpeg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -49,6 +49,13 @@ p {
     padding: 50px;
     border: none;
 
+}
+
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
    
 }
 /*footer for Homepage */
