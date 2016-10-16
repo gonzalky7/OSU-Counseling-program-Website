@@ -11,43 +11,45 @@ body {
 
 .banner {
 	margin: 0;
-	height: 120px;
+	height: 100px;
 	background: url(../Images/cascade_mountains.jpg) repeat #f4f2ec;
 	Color: white;
-  box-shadow: 5px 5px 2px #888888;
+    box-shadow: 5px 5px 2px #888888;
 }
 h1 {
-
+	/*Welcome to OSU Counseling Clinic*/
    background-color: none;
    text-align:center;
-   color:#D35400  ; 
+   color:#FDFEFE  ; 
    position: absolute;
    top: 200px;
-   left: 700px; 
+   left: 420px; 
 }
 h2{
+	/*First time Visitor*/
   background-color: none;
    text-align:center;
-   color:#D35400  ; 
+   color:#FDFEFE ; 
    font-size: 30px;
    position: absolute;
    top: 250px;
-   left: 820px; 
+   left: 550px; 
 }
 p {
     color: black;
 }
 /*Main homepage box */
 .mainBox {
- 
-  background: url("../Images/sun.jpeg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-    height: 350px;
-    padding: 50px;
-    border: none;
+
+   background: url("../Images/green.jpg") no-repeat center center; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 450px;
+   padding: 50px;
+   
+   margin-top: 10px; 
 
 }
 
@@ -60,10 +62,13 @@ p {
 }
 /*footer for Homepage */
 .footer{
-  boder: 5px outset black; 
-  background-color:#2C3E50; 
+  border: 5px outset black;  
   color:white; 
-  
+  background: url("../Images/treeline.png")repeat-x bottom left #373737;
+  color:#ffff;
+  padding:100px;
+  margin-top: 10px; 
+  border-top:5px solid #c34500;
 
 }
 .main-content {
@@ -87,7 +92,7 @@ p {
   box-shadow: 0 9px #999;
 position:absolute; /*how to position button*/
     bottom: 40%;
-    left:68%; 
+    left:46%; 
 }
 
 
