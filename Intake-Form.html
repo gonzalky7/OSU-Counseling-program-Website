@@ -4,6 +4,28 @@
 		<title>OSU-Cascades Counseling Practicum</title>
 		<link rel="stylesheet" type="text/css" href="CSS/style.css">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+		<style>
+			.boxed {
+			border: 1px solid black;
+			padding: 25px;
+			line-height: 8px;
+			margin: 25 px;
+			} 
+			
+			.centerTitle{
+				text-align: center;
+				 
+			}
+			
+			.box{
+				color:white;
+				width:medium;
+				height:60px;
+				background:black;
+				display: flex;
+				align-items: center
+			}
+		</style>
 	</head>
 
 	<body>
@@ -12,24 +34,24 @@
 				<img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades">
 			</div>
 		</a>
-		
-		<div class="main-content">
+			<div class="main-content">
+
 			<form method="post" action="#">
-				<fieldset>
+				<fieldset>				
+				<div class="centerTitle"><legend><h1>OSU Cascades counseling Practicum <br/> Client Information Sheet<h1></legend></div>
 					<div class="boxed">
-					<legend>Client Information Sheet</legend>
 						<label>Date:</label>
 						<input type="date" name="date"/>
-					<br>
+					<br/> <br/>
 						<label>First Name:</label>
 						<input type="text" name="firstName"/>
 						<label>Last Name:</label>
-						<input type="text" name="lastName"/>
+						<input type="text" name="lastName"/> <br/> <br/>
 						<label>Age:</label>
 						<input type="text" name="age"/>
 						<label>Date of Birth:</label>
 						<input type="text" name="Bday"/>
-					<br>
+					<br/> <br/>
 						<label>Address:</label>
 						<input type="text" name="address"/>
 						<label>City:</label>
@@ -38,29 +60,30 @@
 						<input type="text" name="state"/>
 						<label>Zip:</label>
 						<input type="text" name="zip"/>
-					<br>
+					<br/> <br/>
 						<label>Phone:</label>
 						<input type="text" name="phone"/>
 						<label>Message:</label>
 						<input type="radio" name="message" value="yes" />Yes
 						<input type="radio" name="message" value="no" />No
-						<label>Email:</label>
-						<input type="email" name="email"/>
-					<br>
+					<br/> <br/>
+						<label>Email:</label> 
+						<input type="email" name="email" size="40"/>
+					<br> <br/>
 						<label>Occupation:</label>
 						<input type="text" name="occupation"/>
 						<label>Employer:</label>
 						<input type="text" name="employer"/>
-					<br>
-						<label>Employer address:</label>
+					<br> <br/>
+						<label>Employer's address:</label>
 						<input type="text" name="workAddress"/>
 						<label>Work Phone:</label>
 						<input type="text" name="workPhone"/>
 						<label>Message:</label>
 						<input type="radio" name="workMessage" value="yes" />Yes
 						<input type="radio" name="workMessage" value="no" />No
-
-					<h2 class="form-header">Spouse or Partner Information</h2>
+					</div>
+					<div class="box"><h2 class="form-header">Spouse or Partner Information</h2></div>
 						<label>Name:</label>
 						<input type="text" name="partnerName"/>
 						<label>Age:</label>
@@ -74,8 +97,8 @@
 						<input type="text" name="partnerEmployer"/>
 						<label>Phone:</label>
 						<input type="text" name="partnerPhone"/>
-					</div>					
-					<h2 class="form-header">Other Members of Your Household</h2>
+										
+					<div class="box"><h2 class="form-header">Other Members of Your Household</h2></div>
 					 <!-- Want to do like select a number of members of house -->
 						<label>First Name:</label>
 						<input type="text" name="relativeFirstname">
@@ -88,7 +111,7 @@
 						<label>Relation:</label>
 						<input type="text" name="relation">
 				    <br>
-					<h2 class="form-header">Emergency Contact</h2>
+					<div class="box"><h2 class="form-header">Emergency Contact</h2></div>
 						<label>Name:</label>
 						<input type="text" name="emergencyName">
 						<label>Relation:</label>
@@ -99,14 +122,14 @@
 						<input type="text" name="emergencyphone">
 				
 			
-					<h2 class="form-header">Health Insurance</h2>
+					<div class="box"><h2 class="form-header">Health Insurance</h2></div>
 						<label>Do you have health insurance?</label>
 						<input type="radio" name="hasInsurance" value="yes" />Yes
 						<input type="radio" name="hasInsurance" value="no" />No
 						<label>If yes, what company?</label>
 						<input type="text" name="insuranceCompany">
 				
-					<h2 class="form-header"> Medical Information</h2>
+					<div class="box"><h2 class="form-header"> Medical Information</h2></div>
 						<label>Primary Care Physician:</label>
 						<input type="text" name="PCP"/>
 						<label>Phone:</label>
@@ -127,7 +150,7 @@
 						<input type="submit" value="Submit" />
 				</fieldset>
 			</form>
-		</div>
+			</div>
 
 	</body>
 
