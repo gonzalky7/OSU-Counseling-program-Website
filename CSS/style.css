@@ -1,6 +1,24 @@
-body {
+* {
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+html, body {
 	margin: 0;
 	background-color: white;
+  height: 100%;
+}
+
+.home {
+  background: url("../Images/green.jpg") no-repeat center center;
 }
 
 .logo {
@@ -13,63 +31,61 @@ body {
 	margin: 0;
 	height: 100px;
 	background: url(../Images/cascade_mountains.jpg) repeat #f4f2ec;
-	Color: white;
-    box-shadow: 5px 5px 2px #888888;
 }
-h1 {
-	/*Welcome to OSU Counseling Clinic*/
-   background-color: none;
-   text-align:center;
-   color:#FDFEFE  ; 
-   position: absolute;
-   top: 200px;
-   left: 420px; 
-}
-h2{
-	/*First time Visitor*/
-  background-color: none;
-   text-align:center;
-   color:#FDFEFE ; 
-   font-size: 30px;
-   position: absolute;
-   top: 250px;
-   left: 550px; 
-}
+
 p {
     color: black;
 }
+
 /*Main homepage box */
 .mainBox {
-
-   background: url("../Images/green.jpg") no-repeat center center; 
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   height: 450px;
-   padding: 50px;
-   
-   margin-top: 10px; 
-
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 450px;
+  padding: 50px; 
+  margin-top: 10px; 
+  min-height: 75%;
+  margin-bottom: -100px;
 }
+
+/* this is to style the welcome text */
+.welcome-header, p, h1, h2 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  font-family: "Open Sans", serif;
+}
+
+/* This is for sticky footer */
+.mainBox:after {
+  content: "";
+  display: block;
+}
+
+.footer, .mainBox: after {
+  height: 100px;
+}
+/* end of sticky footer */
 
 .topright {
     position: absolute;
-    top: 8px;
-    right: 16px;
+    top: 35px;
+    right: 50px;
     font-size: 18px;
    
 }
 /*footer for Homepage */
 .footer{
-  border: 5px outset black;  
   color:white; 
   background: url("../Images/treeline.png")repeat-x bottom left #373737;
   color:#ffff;
-  padding:100px;
+  padding: 25px 50px 25px 50px;
   margin-top: 10px; 
-  border-top:5px solid #c34500;
-
+  border-top:1px solid #c34500;
+  font-family: "Open Sans", serif;
 }
 .main-content {
 	font-family: 'Open Sans', serif;
@@ -77,9 +93,9 @@ p {
 }
 
 /*button on homepage*/
-.button {
+a.button {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 15px 15px;
   font-size: 24px;
   cursor: pointer;
   text-align: center;
@@ -89,10 +105,13 @@ p {
   background-color: #4CAF50;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
-position:absolute; /*how to position button*/
-    bottom: 40%;
-    left:46%; 
+  box-shadow: 0 5px #999;
+  position: absolute; /*how to position button */
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
 }
 
 
@@ -105,7 +124,7 @@ position:absolute; /*how to position button*/
 
 
 
-/* this is for intakefdsfs form */
+/* this is for intake form */
 
 .boxed {
 	border: 1px solid black ;
