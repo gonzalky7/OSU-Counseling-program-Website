@@ -108,8 +108,8 @@ a.button {
   border-radius: 15px;
   box-shadow: 0 5px #999;
   position: absolute; /*how to position button */
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 44%;
 /*
   margin-right: -50%;
   transform: translate(-50%, -50%);
