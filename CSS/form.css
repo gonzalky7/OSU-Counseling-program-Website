@@ -64,3 +64,30 @@ input {
   -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
+
+/*Jack: code to center title */
+
+.centerTitle{
+	text-align: center;
+	color: white;					 
+}
+
+/*Jack: code to make things centered and white in black*/
+.box{
+	color:white;
+	width:medium;
+	height:60px;
+	background:black;
+	display: flex;
+	align-items: center
+}
+
+/*
+		/*.boxed {
+			border: 1px solid black;
+			padding: 25px;
+			line-height: 8px;
+			margin: 25 px;
+		} 
+*/
+
