@@ -2,14 +2,11 @@
 # cs361one
 One team's repo for CS 361, Fall 2016 at OSU Cascades, for the Intake app.
 
-BWAH HAH HAH
-Tim - this line belongs here.
+This app is the best app in the world.
 
+It currently consists of 3 screens:
+-Index/Welcome
+-Client Intake Form
+-Thank You
 
-
-
-Kyleen, stop copying.
-
-
-Yodfkdjsalfjoeiwfjkdsafjkds
-
+A 4th screen might be added for after the staff logs in.
