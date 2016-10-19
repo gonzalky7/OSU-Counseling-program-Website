@@ -13,9 +13,16 @@
 	<p><strong>Email:</strong> <?php echo $_POST["email"]; ?> </p>
 	<p><strong>Occupation:</strong> <?php echo $_POST["occupation"]; ?> </p>
 	<p><strong>Employer:</strong> <?php echo $_POST["employer"]; ?> </p>
+	<h2>Employer</h2>
 	<p><strong>Employer's Address:</strong> <?php echo $_POST["workAddress"]; ?> </p>
 	<p><strong>Work Phone:</strong> <?php echo $_POST["workPhone"]; ?> </p>
-	<p><strong>Message:</strong> <?php echo $_POST["workMessage"]; ?> </p>
+	<p><strong>Work Message:</strong> <?php echo $_POST["workMessage"]; ?> </p>
+	<h2>Spouse or Partner Information</h2>
+	<p><strong>Name:</strong> <?php echo $_POST["partnerName"]; ?> </p>
+	<p><strong>Age:</strong> <?php echo $_POST["partnerAge"]; ?> </p>
+	<p><strong>Date of Birth:</strong> <?php echo $_POST["partnerBday"]; ?> </p>
+	<p><strong>Occupation:</strong> <?php echo $_POST["partnerOccupation"]; ?> </p>
+	<p><strong>Employer:</strong> <?php echo $_POST["partnerEmployer"]; ?> </p>
 
 
 
