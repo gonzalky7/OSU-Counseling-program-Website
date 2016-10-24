@@ -79,11 +79,18 @@ input {
 	height:60px;
 	background:black;
 	display: flex;
-	align-items: center
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+br {
+   display: block;
+   margin: 15px 0;
 }
 
 /*
-		/*.boxed {
+		.boxed {
 			border: 1px solid black;
 			padding: 25px;
 			line-height: 8px;
