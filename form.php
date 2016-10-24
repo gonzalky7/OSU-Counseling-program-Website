@@ -1,76 +1,151 @@
-<?php
-	//Recipients of the email
-	$email = 'tappertj@oregonstate.edu, gonzalky@oregonstate.edu, leaveyt@oregonstate.edu, wilsonja@oregonstate.edu';
-	//Subject line on sent email
-	$subject = 'Form Submission';
-	//Content of the email
-	$message = 'Form was successfully submitted.';
-	//php function call to send email
-	mail($email, $subject, $message);
-?>
-<html>
-	<p><strong>Today's date:</strong> <?php echo $_POST["date"]; ?> </p>
-	<p><strong>First Name:</strong> <?php echo $_POST["firstName"]; ?> </p>
-	<p><strong>Last Name:</strong> <?php echo $_POST["lastName"]; ?> </p>
-	<p><strong>Age:</strong> <?php echo $_POST["age"]; ?> </p>
-	<p><strong>Date of Birth:</strong> <?php echo $_POST["birthday"]; ?> </p>
-	<p><strong>Address:</strong> <?php echo $_POST["address"]; ?> </p>
-	<p><strong>City:</strong> <?php echo $_POST["city"]; ?> </p>
-	<p><strong>State:</strong> <?php echo $_POST["state"]; ?> </p>
-	<p><strong>Zip:</strong> <?php echo $_POST["zip"]; ?> </p>
-	<p><strong>Phone:</strong> <?php echo $_POST["phone"]; ?> </p>
-	<p><strong>Message:</strong> <?php echo $_POST["message"]; ?> </p>
-	<p><strong>Email:</strong> <?php echo $_POST["email"]; ?> </p>
-	<p><strong>Occupation:</strong> <?php echo $_POST["occupation"]; ?> </p>
-	<p><strong>Employer:</strong> <?php echo $_POST["employer"]; ?> </p>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>OSU-Cascades Counseling Practicum</title>
+		<link rel="stylesheet" type="text/css" href="CSS/style.css">
+		<link rel="stylesheet" type="text/css" href="CSS/form.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+	</head>
 
+	<body>
+		<a href="/" class="tag">
+			<div class="banner">
+				<img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades">
+			</div>
+		</a>
+		<div class="main-content">
 
-	<h2>Employer</h2>
-	<p><strong>Employer's Address:</strong> <?php echo $_POST["workAddress"]; ?> </p>
-	<p><strong>Work Phone:</strong> <?php echo $_POST["workPhone"]; ?> </p>
-	<p><strong>Work Message:</strong> <?php echo $_POST["workMessage"]; ?> </p>
+			<form method="post" action="form.php">
+				<fieldset>				
+				<div class="centerTitle"><legend><h1 id="header">OSU Cascades Counseling Practicum <br> Client Information Form<h1></legend></div>
+					<br>				
+					<div class="boxed">
+						<label for="date">Today's Date</label>
+						<input type="date" name="date" placeholder="MM/DD/YYYY"/>
+					
+						<label for="firstName">First Name</label>
+						<input type="text" name="firstName"/>
+						<label for="lastName">Last Name</label>
+						<input type="text" name="lastName"/>
+					<br>
+						<label for="age">Age</label>
+						<input type="text" name="age"/>
+						<label for="birthday">Date of Birth</label>
+						<input type="date" name="birthday" placeholder="MM/DD/YYYY"/>
+					<br>
+						<label for="address">Address</label>
+						<input type="text" name="address"/>
+						<label for="city">City</label>
+						<input type="text" name="city"/>
+						<label for="state">State</label>
+						<input type="text" name="state"/>
+						<label for="zip">Zip</label>
+						<input type="text" name="zip"/>
+					<br>
+						<label for="phone">Phone</label>
+						<input type="text" name="phone"/>
+						<label for="message">May we contact you at this number if necessary?</label>
+						<p> Yes <input type="radio" name="message" value="yes" /><p>
+					 No<input type="radio" name="message" value="no" /> </p>
+					<br>
+						<label for="email">Email</label> 
+						<input type="email" name="email" size="40"/>
+					<br>
+						<label for="occupation">Occupation</label>
+						<input type="text" name="occupation"/>
+						<label for="employer">Employer</label>
+						<input type="text" name="employer"/>
+					<br>
+						<label for="workAddress">Employer's address</label>
+						<input type="text" name="workAddress"/>
+						<label for="workPhone">Work Phone</label>
+						<input type="text" name="workPhone"/>
+						<label for="workMessage">May we contact this person if necessary?</label>
+						<input type="radio" name="workMessage" value="yes" />Yes
+						<input type="radio" name="workMessage" value="no" />No
+					</div>
+					
+					<div class="box"><h2 class="form-header">Spouse or Partner Information</h2></div>
+						
+						<label for="partnerName">Name</label>
+						<input type="text" name="partnerName"/>
+						<label for="partnerAge">Age</label>
+						<input type="text" name="partnerAge"/>
+						<label for="partnerBday">Date of Birth</label>
+						<input type="date" name="partnerBday" placeholder="MM/DD/YYYY"/>					
+						<label for="partnerOcupation">Ocupation</label>
+						<input type="text" name="partnerOcupation"/>
+						<label for="partnerEmployer">Employer</label>
+						<input type="text" name="partnerEmployer"/>
+						<label for="partnerPhone">Phone</label>
+						<input type="text" name="partnerPhone"/>
+											
+					<div class="box"><h2 class="form-header">Other Members of Your Household</h2></div>
+					
+					 <!-- Want to do like select a number of members of house -->
+						<label for="relativeFirstName">First Name</label>
+						<input type="text" name="relativeFirstName">
+						<label for="relativeLastName">Last Name</label>
+						<input type="text" name="relativeLastName">
+						<label for="relativeAge">Age</label>
+						<input type="number" name="relativeAge">
+						<label for="relativeDate">Date of Birth</label>	
+						<input type="date" name="relativeDate" placeholder="MM/DD/YYYY">
+						<label for="relation">Relation</label>
+						<input type="text" name="relation">
+				    
+					<div class="box"><h2 class="form-header">Emergency Contact</h2></div>
+					
+						<label for="emergencyName">Name</label>
+						<input type="text" name="emergencyName">
+						<label for="emergencyRelation">Relation</label>
+						<input type="text" name="emergencyRelation">
+						<label for="emergencyAddress">Address</label>
+						<input type="text" name="emergencyAddress">
+						<label for="emergencyPhone">Phone</label>
+						<input type="text" name="emergencyPhone">
+						
+					<div class="box"><h2 class="form-header">Health Insurance</h2></div>				
+						
+						<label for="hasInsurance">Do you have health insurance?</label>
+						<input type="radio" name="hasInsurance" value="yes" />Yes
+						<input type="radio" name="hasInsurance" value="no" />No
+						<label for="insuranceCompany">If yes, what company?</label>
+					<br>
+						<input type="text" name="insuranceCompany">					
+					
+					<div class="box"><h2 class="form-header"> Medical Information</h2></div>					
+						
+						<label for="PCP">Primary Care Physician</label>
+						<input type="text" name="PCP"/>
+						<label for="PCPphone">Phone</label>
+						<input type="text" name="PCPphone"/>
+					<br>
+						<label for="medications">Prescription Medications</label>
+						<input type="text" name="medications"/>
+					<br>
+						<label for="seenBefore">Have you ever seen a counselor before?</label>
+						<input type="radio" name="seenBefore" value="yes" />Yes
+						<input type="radio" name="seenBefore" value="no" />No
+						<br>
+						<label for="previousCounselor">If yes, when and where?</label>
+						<input type="text" name="previousCounselor"/>
+					<br> <br>
+						<label for="reason">Reason for seeking help now?</label>
+						<textarea>Reason for your visit.</textarea>
+					<br>
+						<input type="submit" value="Submit" />
+				</fieldset>
+			</form>
+		</div>
 
+		<div class= "footer"> <body>
+			<a href="http://osucascades.edu/">OSU-Cascades</a><br>
+    		1500 SW Chandler Avenue<br>
+    		Bend, Oregon 97702<br>
+    		541-322-3100<br> 
+    	</div> 
 
-	<h2>Spouse or Partner Information</h2>
-	<p><strong>Name:</strong> <?php echo $_POST["partnerName"]; ?> </p>
-	<p><strong>Age:</strong> <?php echo $_POST["partnerAge"]; ?> </p>
-	<p><strong>Date of Birth:</strong> <?php echo $_POST["partnerBday"]; ?> </p>
-	<p><strong>Occupation:</strong> <?php echo $_POST["partnerOcupation"]; ?> </p>
-	<p><strong>Employer:</strong> <?php echo $_POST["partnerEmployer"]; ?> </p>
-	<p><strong>Phone:</strong> <?php echo $_POST["partnerPhone"]; ?> </p>
-
-	<h2>Other Members of Your Household</h2>
-	<p><strong>First Name:</strong> <?php echo $_POST["relativeFirstName"]; ?> </p>
-	<p><strong>Last Name:</strong> <?php echo $_POST["relativeLastName"]; ?> </p>
-	<p><strong>Age:</strong> <?php echo $_POST["relativeAge"]; ?> </p>
-	<p><strong>Date of Birth:</strong> <?php echo $_POST["relativeDate"]; ?> </p>
-	<p><strong>Relation:</strong> <?php echo $_POST["relation"]; ?> </p>
-
-	<h2>Emergency Contact</h2>
-	<p><strong>Name:</strong> <?php echo $_POST["partnerEmployer"]; ?> </p>
-	<p><strong>Relation:</strong> <?php echo $_POST["emergencyName"]; ?> </p>
-	<p><strong>Employer:</strong> <?php echo $_POST["emergencyRelation"]; ?> </p>
-	<p><strong>Employer:</strong> <?php echo $_POST["emergencyAddress"]; ?> </p>
-	<p><strong>Employer:</strong> <?php echo $_POST["emergencyPhone"]; ?> </p>
-
-	<h2>Health Insurance</h2>
-	<p><strong>Do you have health insurance?:</strong> <?php echo $_POST["hasInsurance"]; ?> </p>
-	<p><strong>If yes, what company?:</strong> <?php echo $_POST["insuranceCompany"]; ?> </p>
-
-	<h2>Medical Information</h2>
-	<p><strong>Primary Care Physician:</strong> <?php echo $_POST["PCP"]; ?> </p>
-	<p><strong>Phone:</strong> <?php echo $_POST["PCPphone"]; ?> </p>
-	<p><strong>Prescription Medications:</strong> <?php echo $_POST["medications"]; ?> </p>
-	<p><strong>Have you ever seen a counselor before?:</strong> <?php echo $_POST["seenBefore"]; ?> </p>
-	<p><strong>If yes, when and where?:</strong> <?php echo $_POST["previousCounselor"]; ?> </p>
-	<p><strong>Reason for seeking help now?:</strong> <?php echo $_POST["reason"]; ?> </p>
-
-
-
-
-
-
-
-
+	</body>
 
 </html>
