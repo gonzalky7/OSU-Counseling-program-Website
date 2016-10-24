@@ -1,3 +1,10 @@
+<?php
+	$email = 'jwtappert@cocc.edu';
+	$subject = 'Form Submission';
+	$message = 'Form was successfully submitted.';
+
+	mail($email, $subject, $message);
+?>
 <html>
 	<p><strong>Today's date:</strong> <?php echo $_POST["date"]; ?> </p>
 	<p><strong>First Name:</strong> <?php echo $_POST["firstName"]; ?> </p>
@@ -23,8 +30,5 @@
 	<p><strong>Date of Birth:</strong> <?php echo $_POST["partnerBday"]; ?> </p>
 	<p><strong>Occupation:</strong> <?php echo $_POST["partnerOccupation"]; ?> </p>
 	<p><strong>Employer:</strong> <?php echo $_POST["partnerEmployer"]; ?> </p>
-
-
-
 
 </html>
