@@ -16,13 +16,13 @@
 		<div class="main-content">
 
 			<form method="post" action="form.php">
-				<fieldset>				
+				<fieldset>
 				<div class="centerTitle"><legend><h1 id="header">OSU Cascades Counseling Practicum <br> Client Information Form<h1></legend></div>
-					<br>				
+					<br>
 					<div class="boxed">
 						<label for="date">Today's Date</label>
 						<input type="date" name="date" placeholder="MM/DD/YYYY"/>
-					
+
 						<label for="firstName">First Name</label>
 						<input type="text" name="firstName"/>
 						<label for="lastName">Last Name</label>
@@ -48,7 +48,7 @@
 						<p> Yes <input type="radio" name="message" value="yes" /><p>
 					 No<input type="radio" name="message" value="no" /> </p>
 					<br>
-						<label for="email">Email</label> 
+						<label for="email">Email</label>
 						<input type="email" name="email" size="40"/>
 					<br>
 						<label for="occupation">Occupation</label>
@@ -64,24 +64,24 @@
 						<input type="radio" name="workMessage" value="yes" />Yes
 						<input type="radio" name="workMessage" value="no" />No
 					</div>
-					
+
 					<div class="box"><h2 class="form-header">Spouse or Partner Information</h2></div>
-						
+
 						<label for="partnerName">Name</label>
 						<input type="text" name="partnerName"/>
 						<label for="partnerAge">Age</label>
 						<input type="text" name="partnerAge"/>
 						<label for="partnerBday">Date of Birth</label>
-						<input type="date" name="partnerBday" placeholder="MM/DD/YYYY"/>					
+						<input type="date" name="partnerBday" placeholder="MM/DD/YYYY"/>
 						<label for="partnerOcupation">Ocupation</label>
 						<input type="text" name="partnerOcupation"/>
 						<label for="partnerEmployer">Employer</label>
 						<input type="text" name="partnerEmployer"/>
 						<label for="partnerPhone">Phone</label>
 						<input type="text" name="partnerPhone"/>
-											
+
 					<div class="box"><h2 class="form-header">Other Members of Your Household</h2></div>
-					
+
 					 <!-- Want to do like select a number of members of house -->
 						<label for="relativeFirstName">First Name</label>
 						<input type="text" name="relativeFirstName">
@@ -89,13 +89,13 @@
 						<input type="text" name="relativeLastName">
 						<label for="relativeAge">Age</label>
 						<input type="number" name="relativeAge">
-						<label for="relativeDate">Date of Birth</label>	
+						<label for="relativeDate">Date of Birth</label>
 						<input type="date" name="relativeDate" placeholder="MM/DD/YYYY">
 						<label for="relation">Relation</label>
 						<input type="text" name="relation">
-				    
+
 					<div class="box"><h2 class="form-header">Emergency Contact</h2></div>
-					
+
 						<label for="emergencyName">Name</label>
 						<input type="text" name="emergencyName">
 						<label for="emergencyRelation">Relation</label>
@@ -104,18 +104,18 @@
 						<input type="text" name="emergencyAddress">
 						<label for="emergencyPhone">Phone</label>
 						<input type="text" name="emergencyPhone">
-						
-					<div class="box"><h2 class="form-header">Health Insurance</h2></div>				
-						
+
+					<div class="box"><h2 class="form-header">Health Insurance</h2></div>
+
 						<label for="hasInsurance">Do you have health insurance?</label>
 						<input type="radio" name="hasInsurance" value="yes" />Yes
 						<input type="radio" name="hasInsurance" value="no" />No
 						<label for="insuranceCompany">If yes, what company?</label>
 					<br>
-						<input type="text" name="insuranceCompany">					
-					
-					<div class="box"><h2 class="form-header"> Medical Information</h2></div>					
-						
+						<input type="text" name="insuranceCompany">
+
+					<div class="box"><h2 class="form-header"> Medical Information</h2></div>
+
 						<label for="PCP">Primary Care Physician</label>
 						<input type="text" name="PCP"/>
 						<label for="PCPphone">Phone</label>
@@ -139,13 +139,4 @@
 			</form>
 		</div>
 
-		<div class= "footer"> <body>
-			<a href="http://osucascades.edu/">OSU-Cascades</a><br>
-    		1500 SW Chandler Avenue<br>
-    		Bend, Oregon 97702<br>
-    		541-322-3100<br> 
-    	</div> 
-
-	</body>
-
-</html>
+<? include('footer.php') ?>

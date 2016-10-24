@@ -65,12 +65,4 @@
 	<p><strong>If yes, when and where?:</strong> <?php echo $_POST["previousCounselor"]; ?> </p>
 	<p><strong>Reason for seeking help now?:</strong> <?php echo $_POST["reason"]; ?> </p>
 
-
-
-
-
-
-
-
-
-</html>
+<? include('footer.php') ?>
