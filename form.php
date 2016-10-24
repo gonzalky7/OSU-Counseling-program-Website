@@ -3,7 +3,7 @@
 	<p><strong>First Name:</strong> <?php echo $_POST["firstName"]; ?> </p>
 	<p><strong>Last Name:</strong> <?php echo $_POST["lastName"]; ?> </p>
 	<p><strong>Age:</strong> <?php echo $_POST["age"]; ?> </p>
-	<p><strong>Date of Birth:</strong> <?php echo $_POST["Bday"]; ?> </p>
+	<p><strong>Date of Birth:</strong> <?php echo $_POST["birthday"]; ?> </p>
 	<p><strong>Address:</strong> <?php echo $_POST["address"]; ?> </p>
 	<p><strong>City:</strong> <?php echo $_POST["city"]; ?> </p>
 	<p><strong>State:</strong> <?php echo $_POST["state"]; ?> </p>
