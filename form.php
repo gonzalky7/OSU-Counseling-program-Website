@@ -52,7 +52,7 @@
 						<div class="radioButton">
 							<label for="option1">Yes</label>
 							<input type="radio" name="message" value="yes" />
-							<label for="option1">Noo</label>
+							<label for="option1">No</label>
 							<input type="radio" name="message" value="no" />
 						</div>
 					
@@ -140,9 +140,10 @@
 						<br>
 						<label for="previousCounselor">If yes, when and where?</label>
 						<input type="text" name="previousCounselor"/>
-					<br> <br>
+					<br>
 						<label for="reason">Reason for seeking help now?</label>
-						<textarea>Reason for your visit.</textarea>
+					<br>
+						<textarea rows="5" cols="50">Reason for your visit.</textarea>
 					<br>
 						<input type="submit" value="Submit" />
 				</fieldset>
