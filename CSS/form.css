@@ -4,12 +4,13 @@
 
 a {
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
   text-decoration: underline;
 }
+
 
 html, body {
 	margin: 0;
@@ -32,6 +33,7 @@ html, body {
 #header {
 	color: black;
 }
+
 
 form {
   background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
@@ -79,15 +81,26 @@ input {
 	height:60px;
 	background:black;
 	display: flex;
-	align-items: center
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+br {
+   display: block;
+   margin: 15px 0;
 }
 
 /*
-		/*.boxed {
+		.boxed {
 			border: 1px solid black;
 			padding: 25px;
 			line-height: 8px;
 			margin: 25 px;
 		} 
 */
+
+.radioButton{
+	display:inline-block;
+}
 
