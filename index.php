@@ -20,8 +20,8 @@
        	<div class="welcome-header">
        		<h1>Welcome to the OSU Counseling Clinic!</h1>
 
-
-        	<a href="Intake-Form.html" class="button" >Start Here</a>
+			<h2><a href="form.php">Form</a> </h2>
+     
         </div>
 
        </div>
