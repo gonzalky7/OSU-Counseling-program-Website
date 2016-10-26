@@ -4,12 +4,13 @@
 
 a {
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
   text-decoration: underline;
 }
+
 
 html, body {
 	margin: 0;
@@ -32,6 +33,7 @@ html, body {
 #header {
 	color: black;
 }
+
 
 form {
   background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);

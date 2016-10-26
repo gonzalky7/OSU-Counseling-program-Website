@@ -1,13 +1,4 @@
-<?php
-	//Recipients of the email
-	$email = 'tappertj@oregonstate.edu, gonzalky@oregonstate.edu, leaveyt@oregonstate.edu, wilsonja@oregonstate.edu';
-	//Subject line on sent email
-	$subject = 'Form Submission';
-	//Content of the email
-	$message = 'Form was successfully submitted.';
-	//php function call to send email
-	mail($email, $subject, $message);
-?>
+
 <html>
 	<p><strong>Today's date:</strong> <?php echo $_POST["date"]; ?> </p>
 	<p><strong>First Name:</strong> <?php echo $_POST["firstName"]; ?> </p>

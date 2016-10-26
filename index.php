@@ -12,8 +12,8 @@
 				<img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades">
 
 				<div class="topright"><a href="#">log in</a></div>
+	</body>
 
-			</div>
 
        <div class="mainBox">
 
@@ -22,6 +22,9 @@
 
 
         	<a href="form.php" class="button" >Start Here</a>
+
+			<a href="form.php" class="button">Registration Form</a> 
+     
         </div>
 
        </div>
