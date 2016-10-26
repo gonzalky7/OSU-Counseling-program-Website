@@ -45,8 +45,15 @@
 						<label for="phone">Phone</label>
 						<input type="text" name="phone"/>
 						<label for="message">May we contact you at this number if necessary?</label>
-						<p> Yes <input type="radio" name="message" value="yes" /><p>
-					 No<input type="radio" name="message" value="no" /> </p>
+					<br>
+						<div class="radioButton">
+							<label for="option1">Yes</label>
+							<input type="radio" name="message" value="yes" />
+							<label for="option1">Noo</label>
+							<input type="radio" name="message" value="no" />
+						</div>
+					
+					
 					<br>
 						<label for="email">Email</label>
 						<input type="email" name="email" size="40"/>

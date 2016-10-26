@@ -21,7 +21,7 @@
        		<h1>Welcome to the OSU Counseling Clinic!</h1>
 
 
-        	<a href="Intake-Form.html" class="button" >Start Here</a>
+        	<a href="form.php" class="button" >Start Here</a>
         </div>
 
        </div>
