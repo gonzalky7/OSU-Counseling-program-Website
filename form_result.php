@@ -1,5 +1,6 @@
+<? include('header.php') ?>
 
-<html>
+<body>
 	<p><strong>Today's date:</strong> <?php echo $_POST["date"]; ?> </p>
 	<p><strong>First Name:</strong> <?php echo $_POST["firstName"]; ?> </p>
 	<p><strong>Last Name:</strong> <?php echo $_POST["lastName"]; ?> </p>
@@ -55,5 +56,6 @@
 	<p><strong>Have you ever seen a counselor before?:</strong> <?php echo $_POST["seenBefore"]; ?> </p>
 	<p><strong>If yes, when and where?:</strong> <?php echo $_POST["previousCounselor"]; ?> </p>
 	<p><strong>Reason for seeking help now?:</strong> <?php echo $_POST["reason"]; ?> </p>
+</body>
 
 <? include('footer.php') ?>

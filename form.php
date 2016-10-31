@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>OSU-Cascades Counseling Practicum</title>
-		<link rel="stylesheet" type="text/css" href="CSS/style.css">
-		<link rel="stylesheet" type="text/css" href="CSS/form.css">
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
-	</head>
-
+<? include('header.php') ?>
 	<body>
 		<a href="/" class="tag">
 			<div class="banner">
@@ -18,7 +10,7 @@
 		
 		<div class="main-content">
 
-			<form method="post" action="form.php">
+			<form method="post" action="db_connect.php">
 				<fieldset>
 				<div class="centerTitle"><legend><h1 id="header">OSU Cascades Counseling Practicum <br> Client Information Form<h1></legend></div>
 					<br>
