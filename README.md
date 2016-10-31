@@ -1,12 +1,10 @@
+OSU CASCADES COUNSELING CLINIC INTAKE SYSTEM
 
-# cs361one
-One team's repo for CS 361, Fall 2016 at OSU Cascades, for the Intake app.
+Project for CS 361
 
-This app is the best app in the world.
+This project is designing and creating a web based program to collect and store
+data for the OSU Cascades counseling clinic. Having the data collection and storage
+be digital will increase the speed in which information can be organized and processed
+as well as reducing the amount of paper used.
 
-It currently consists of 3 screens:
--Index/Welcome
--Client Intake Form
--Thank You
-
-A 4th screen might be added for after the staff logs in.
+TEAM ONE: Jack, Justin, Tim, Kyleen
