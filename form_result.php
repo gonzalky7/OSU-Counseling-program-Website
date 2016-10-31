@@ -1,5 +1,6 @@
+<? include('db_connect.php') ?>
 <?php
-	$db = new mysqli("localhost", "root", "root", "cascades_clinic");
+	$db = new mysqli("$host", "$username", "$password", "$database");
 
 	$sql = "INSERT INTO `patients` (`ID`,`first_name`, `last_name`, `age`, `date_of_birth`) VALUES ( NULL,'$_POST[firstName]',
 	 '$_POST[lastName]', '$_POST[age]', '$_POST[birthday]')";
