@@ -12,16 +12,8 @@ a:hover {
 }
 
 html, body {
-	margin: 0;
 	background-color: white;
   height: 100%;
-}
-
-
-.home {
-  background: url("../Images/green.jpg") no-repeat center center;
-  max-width:auto;
-  margin: auto;
 }
 
 .logo {
@@ -40,17 +32,26 @@ p {
     color: black;
 }
 
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -120px;
+  background: url("../Images/green.jpg") no-repeat center center;
+  max-width:auto;
+  margin: auto;
+}
+
 /*Main homepage box */
 .mainBox {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 450px;
+  height: 600px;
   padding: 50px; 
   margin-top: 10px; 
-  min-height: 75%;
-  margin-bottom: -100px;
+  min-height: 450px;
 }
 
 /* this is to style the welcome text */
@@ -63,15 +64,11 @@ p {
   font-family: "Open Sans", serif;
 }
 
-/* This is for sticky footer */
-.mainBox:after {
-  content: "";
-  display: block;
-}
-
-.footer, .mainBox: after {
+/*.footer, .mainBox: after {
   height: 100px;
 }
+*/
+
 /* end of sticky footer */
 
 /*footer for Homepage */
@@ -83,6 +80,7 @@ p {
   margin-top: 10px; 
   border-top:1px solid #c34500;
   font-family: "Open Sans", serif;
+  height: 120px;
 }
 
 
