@@ -43,16 +43,20 @@
 	// 					'phone' = '$phone'
 	// 					WHERE 'firstName' = '$firstName'")
 	// 	or die(mysql_error());
-
 	// } else {
 	// 	//TO DO
 	// }
 
 	//$res = $db->query("SELECT id, first_name FROM patients");
+
+	$res = $db->query("SELECT ID, first_name FROM patients");
+
 ?>
 
-<ul>
+
+<ol>
 <?php while($row = $res->fetch_assoc()) { ?>
+
     <li>First name: <a href="patient.php?id=<?php echo $row['id']; ?>"><?php echo $row['first_name']; ?></a></li>
 <?php } ?>
 
@@ -81,3 +85,7 @@
 
 
 <? include('footer.php') ?>
+
+   <li> First name: <a href="patients.php?ID= <?php echo $row['ID']; ?>"> <?php echo $row['first_name']; ?></a>
+   <a href="delete.php?ID=<?php echo $row['ID']; ?>">Delete</a> </li><br>
+<?php } ?>  </ol>
