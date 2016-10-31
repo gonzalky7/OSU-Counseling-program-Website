@@ -18,23 +18,23 @@
 		
 		<div class="main-content">
 
-			<form method="post" action="form.php">
+			<form method="post" action="form_result.php">
 				<fieldset>
 				<div class="centerTitle"><legend><h1 id="header">OSU Cascades Counseling Practicum <br> Client Information Form<h1></legend></div>
 					<br>
 					<div class="boxed">
 						<label for="date">Today's Date</label>
-						<input type="date" name="date" placeholder="MM/DD/YYYY"/>
+						<input type="date" name="date" placeholder="YYYYMMDD"/>
 
 						<label for="firstName">First Name</label>
-						<input type="text" name="firstName"/>
+						<input type="text" name="firstName" />
 						<label for="lastName">Last Name</label>
 						<input type="text" name="lastName"/>
 					<br>
 						<label for="age">Age</label>
 						<input type="text" name="age"/>
 						<label for="birthday">Date of Birth</label>
-						<input type="date" name="birthday" placeholder="MM/DD/YYYY"/>
+						<input type="date" name="birthday" placeholder="YYYYMMDD"/>
 					<br>
 						<label for="address">Address</label>
 						<input type="text" name="address"/>
@@ -145,7 +145,9 @@
 					<br>
 						<textarea rows="5" cols="50">Reason for your visit.</textarea>
 					<br>
-						<input type="submit" value="Submit" />
+						
+						<input type="submit" name ="Submit" />
+						
 				</fieldset>
 			</form>
 		</div>
