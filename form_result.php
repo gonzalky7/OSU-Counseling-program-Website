@@ -6,7 +6,7 @@
 	 '$_POST[lastName]', '$_POST[age]', '$_POST[birthday]')";
 
 if(mysqli_query($db, $sql)){
-    echo "Thank you Record added successfully.";
+    echo "Thank your record was added successfully.";
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($db);
 }

@@ -14,7 +14,7 @@
   	die('invalid  id');
 	$query = "SELECT * FROM `patients` WHERE `ID` =$ID ORDER BY 'ID'";
 
-	$row = $res->fetch_assoc()  ?>ß
+	$row = $res->fetch_assoc()  ?>
     First name:  <?php echo $row['first_name']; ?> <br>
     Last name:  <?php echo $row['last_name']; ?> 
 
