@@ -1,11 +1,4 @@
-<? include('header.php') ?>
-	<body>
-		<a href="/" class="tag">
-			<div class="banner">
-				<img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades">
-			</div>
-		</a>
-		
+<? include('header.php') ?>	
 		<div class="main-content">
 
 			<form method="post" action="form_result.php">
