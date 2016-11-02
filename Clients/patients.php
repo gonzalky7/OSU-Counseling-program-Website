@@ -1,4 +1,4 @@
-<? include("header.php") ?>
+<? include("includes/header.php") ?>
 
 <?php
 	include("db_connect.php");
@@ -30,4 +30,4 @@
 
 ?>
 
-<? include("footer.php") ?> 
+<? include("includes/footer.php") ?> 
