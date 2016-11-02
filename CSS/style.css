@@ -12,8 +12,11 @@ a:hover {
 }
 
 html, body {
-	background-color: white;
-  height: 100%;
+	background: url("../Images/green.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .logo {
@@ -37,7 +40,6 @@ p {
   height: auto !important;
   height: 100%;
   margin: 0 auto -120px;
-  background: url("../Images/green.jpg") no-repeat center center;
   max-width:auto;
   margin: auto;
 }
