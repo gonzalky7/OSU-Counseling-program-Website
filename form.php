@@ -1,4 +1,4 @@
-<? include('header.php') ?>	
+<?php include('header.php') ?>	
 		<div class="main-content">
 
 			<form method="post" action="form_result.php">
@@ -135,4 +135,4 @@
 			</form>
 		</div>
 
-<? include('footer.php') ?>
+<?php include('footer.php') ?>

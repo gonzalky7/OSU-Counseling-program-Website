@@ -1,4 +1,4 @@
-<? include('header.php') ?>
+<?php include('header.php') ?>
 	<div class="wrapper">
        	<div class="mainBox">
        		<div class="welcome-header">
@@ -9,4 +9,4 @@
        		</div>
        	</div>	
     </div>
-<? include('footer.php') ?>
+<?php include('footer.php') ?>
