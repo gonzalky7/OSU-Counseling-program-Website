@@ -1,4 +1,4 @@
-<?php include('header.php') ?>
+<?php include('includes/header.php') ?>
 	<div class="wrapper">
        	<div class="mainBox">
        		<div class="welcome-header">
@@ -7,6 +7,6 @@
 
 				<a href="form.php" class="button">Registration Form</a>
        		</div>
-       	</div>	
+       	</div>
     </div>
-<?php include('footer.php') ?>
+<?php include('includes/footer.php') ?>
