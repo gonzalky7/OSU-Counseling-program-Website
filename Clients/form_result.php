@@ -1,11 +1,9 @@
-<? include('header.php') ?>
+<?php include('header.php') ?>
 
 <?php
-
-	$db = new mysqli($server, $username, $password, $dbname);
-
-
 	include("db_connect.php")
+
+	#$db = new mysqli($server, $username, $password, $dbname);
 
 	
 	$sql = "INSERT INTO `patients` (`ID`,`first_name`, `last_name`, `age`, `date_of_birth`) VALUES ( NULL,'$_POST[firstName]',
@@ -20,3 +18,7 @@
  
 	// Close connection
 	mysqli_close($db);
+
+?>
+
+<?php include("footer.php") ?>

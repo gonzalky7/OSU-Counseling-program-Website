@@ -1,9 +1,9 @@
-<? include("header.php") ?>
+<?php include("header.php") ?>
 
 <?php
 	include("db_connect.php");
 	#Create an array of all entries in the db
-	$get = "SELECT * FROM patients ORDER BY id";
+	$get = "SELECT * FROM patients";
 	$resultArray = mysqli_query($db, $get);
 
 	#if entries are found
@@ -30,4 +30,4 @@
 
 ?>
 
-<? include("footer.php") ?> 
+<?php include("footer.php") ?> 
