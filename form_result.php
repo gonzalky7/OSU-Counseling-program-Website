@@ -1,3 +1,5 @@
+<? include('header.php') ?>
+
 <?php
 	include('db_connect.php');
 	
@@ -5,23 +7,14 @@
 	 '$_POST[lastName]', '$_POST[age]', '$_POST[birthday]')";
 
 	if(mysqli_query($db, $sql)){
-    	echo "Thank you. Record added successfully.";
+    	echo "<h1>Thank you</h1>";
+    	echo "<p>Your record was successfuly added.</p>";
 	} else{
     	echo "ERROR: Could not execute $sql. " . mysqli_error($db);
 	}
-
  
 	// Close connection
 	mysqli_close($db);
 ?>
 
-<? include('header.php') ?>
-		<a href="/" class="tag">
-			<div class="banner">
-				<img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades">
-			</div>
-		</a>
-	<body>
-	<h1>Thank you...</h1>
-	</body>
 <? include('footer.php') ?> 

@@ -1,24 +1,33 @@
+<? include("header.php") ?>
+
 <?php
-	$db = new mysqli("localhost", "root", "root", "cascades_clinic");
+	include("db_connect.php");
+	#Create an array of all entries in the db
+	$get = "SELECT * FROM patients ORDER BY id";
+	$resultArray = mysqli_query($db, $get);
 
-	
+	#if entries are found
+	if (resultArray->num_rows != 0){
 
-	$res = $db->query("SELECT ID, first_name, last_name FROM patients");
+		echo "<h1>Patients</h1>";
+		echo "<table> <th>First Name</th> <th>Last Name</th> <th>Age</th> <th>Brithday</th> <th>Address</th>";
+		while ($rows = $resultArray->fetch_assoc()){
+			$first = $rows['first_name'];
+			$last = $rows['last_name'];
+			$age = $rows['age'];
+			$bday = $rows['date_of_birth'];
+			$addr = $rows['address'];
+
+
+
+		}
+		echo "</table>";
+
+	} else {
+		#print an error because nothing was found
+		echo "Error: No entries found";
+	}
+
 ?>
 
-
-
-<?php 
-	$ID = $_GET['ID'];
-	if( ! is_numeric($ID) )
-  	die('invalid  id');
-	$query = "SELECT * FROM `patients` WHERE `ID` =$ID ORDER BY 'ID'";
-
-	$row = $res->fetch_assoc()  ?>
-    First name:  <?php echo $row['first_name']; ?> <br>
-    Last name:  <?php echo $row['last_name']; ?> 
-
-
-
-
-<?php  ?> 
+<? include("footer.php") ?> 
