@@ -1,4 +1,4 @@
-<?php include('includes/header.php') ?>	
+<?php include('../includes/header.php') ?>	
 		<div class="main-content">
 
 			<form method="post" action="clients/create.php">
