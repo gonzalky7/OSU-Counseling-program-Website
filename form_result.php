@@ -20,7 +20,7 @@
 	mysqli_close($db);
 ?>
 
-<? include('header.php') ?>
+<?php include('header.php') ?>
 		<a href="/" class="tag">
 			<div class="banner">
 				<img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades">
@@ -29,4 +29,4 @@
 	<body>
 	<h1>Thank you...</h1>
 	</body>
-<? include('footer.php') ?> 
+<?php include('footer.php') ?> 
