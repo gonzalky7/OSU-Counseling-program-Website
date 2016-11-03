@@ -1,7 +1,8 @@
-<? include("header.php") ?>
+<?php include("..includes/header.php") ?>
 
 <?php
 	include("../db_connect.php");
+	
 	#Create an array of all entries in the db
 	$get = "SELECT * FROM patients ORDER BY id";
 	$resultArray = mysqli_query($db, $get);
