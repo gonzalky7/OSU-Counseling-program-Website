@@ -18,7 +18,7 @@ $res = $db->query("SELECT ID, first_name, last_name FROM patients"); ?>
 		<td><a href="view_patient_info.php?ID= <?php echo $row['ID']; ?>"> 
 			<?php echo $row['first_name']; echo " "; echo $row['last_name']; ?></a>
 		</td>
- 		<td><a style="color: red; text-decoration: none;" href="delete.php?ID=<?php echo $row['ID']; ?>">X</a></td> 
+ 		<td><a style="color: red; text-decoration: none; text-align: center;" href="delete.php?ID=<?php echo $row['ID']; ?>">X</a></td> 
 
 <?php } ?></table>
 
