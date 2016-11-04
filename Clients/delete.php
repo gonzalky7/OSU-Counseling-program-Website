@@ -2,20 +2,25 @@
 
 <?php include("../db_connect.php") ?>
 
-<?php 
+<div class="wrapper">
+	<div class="main-content">
 
-$id = $_GET["ID"];
+		<?php 
 
-$res = $db->query("DELETE FROM 'patients' WHERE ID=$id");
+			$id = $_GET["ID"];
 
-if( $db->query($res) === TRUE){
-	echo "Recorded successfully deleted"; 
-}else {
-	echo "Error deleting record: " . $db->error;
-}
+			$res = $db->query("DELETE FROM patients WHERE ID=$id");
 
-$db->close();
+			if($res){
+			echo "<h1>Recorded successfully deleted</h1>"; 
+			}else {
+			echo "<h1>Error deleting record: " . $db->error . "</h1>"; 
+			}
 
-?>
+			$db->close();
+
+		?>
+	</div>
+</div>
 
 <?php include("../includes/footer.php") ?> 
