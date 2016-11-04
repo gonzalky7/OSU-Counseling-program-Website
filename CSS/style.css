@@ -211,3 +211,14 @@ th {
 /* ---- end login style ---- */
 
 
+.content {
+  background-color: #FCFCFC;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #999;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.content h2 {
+  font-weight: normal;
+}
