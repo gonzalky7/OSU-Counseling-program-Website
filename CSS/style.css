@@ -54,6 +54,7 @@ p {
 /*aligns text to left*/
 .navBar li {
     float: left;
+    font-family: "Open Sans", serif;
   }
 
 .navBar li a {
@@ -119,6 +120,7 @@ p {
     top: 35px;
     right: 50px;
     font-size: 18px;
+    font-family: "Open Sans", serif;
    
 }
 
