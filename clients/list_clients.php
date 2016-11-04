@@ -1,7 +1,7 @@
 <?php include("header.php") ?>
 
 <?php
-	include("db_connect.php");
+	include("../db_connect.php");
 	#Create an array of all entries in the db
 	$get = "SELECT * FROM patients";
 	$resultArray = mysqli_query($db, $get);

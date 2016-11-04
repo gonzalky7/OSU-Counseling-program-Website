@@ -1,11 +1,16 @@
-<?php include('header.php') ?>
+
+<?php include("../includes/header.php") ?>
 
 <?php
-	include("db_connect.php")
+
+
+	include("../db_connect.php");
 
 	#$db = new mysqli($server, $username, $password, $dbname);
 
 	
+
+
 	$sql = "INSERT INTO `patients` (`ID`,`first_name`, `last_name`, `age`, `date_of_birth`) VALUES ( NULL,'$_POST[firstName]',
 	 '$_POST[lastName]', '$_POST[age]', '$_POST[birthday]')";
 
