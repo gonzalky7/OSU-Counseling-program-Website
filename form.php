@@ -1,5 +1,4 @@
 <?php include('includes/header.php') ?>	
-		<div class="main-content">
 			<form method="post" action="clients/create.php">
 				<fieldset>
 				<div class="centerTitle"><legend><h1 id="header">OSU Cascades Counseling Practicum <br> Client Information Form<h1></legend></div>
@@ -132,6 +131,5 @@
 						
 				</fieldset>
 			</form>
-		</div>
 
 <?php include('includes/footer.php') ?>

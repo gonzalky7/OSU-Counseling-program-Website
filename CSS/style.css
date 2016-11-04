@@ -126,7 +126,12 @@ p {
 
 .main-content {
 	font-family: 'Open Sans', serif;
-	margin-left: 25px;
+  background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background: linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  margin: 10px auto;
+  width: 80%;
+  border-radius: 10px;
 }
 
 /*button on homepage*/
@@ -179,5 +184,24 @@ p {
   box-shadow: 0 5px #000000;
   transform: translateY(4px); }
 
+/* table style for listing clients */
+table, th, td {
+  width: 100%;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+.list-table a {
+  color: black;
+}
+/* ---- end table style --- */
 
 

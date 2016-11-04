@@ -2,46 +2,29 @@
 
 <?php include("../db_connect.php") ?>
 
+<div class="wrapper">
+	<div class="main-content">
+
 <?php 
 
-$res = $db->query("SELECT ID, first_name FROM patients"); ?>
-<ol>
+$res = $db->query("SELECT ID, first_name, last_name FROM patients"); ?>
+<table class="list-table">
+	<tr>
+		<th>Name</th>
+		<th>Delete</th>
+	</tr>
 <?php while($row = $res->fetch_assoc()) { ?> 
-	 	<li> First name: <a href="view_patient_info.php?ID= <?php echo $row['ID']; ?>"> <?php echo $row['first_name']; ?></a>
- 	<a href="delete.php?ID=<?php echo $row['ID']; ?>">Delete</a> </li><br>
+	<tr>
+		<td><a href="view_patient_info.php?ID= <?php echo $row['ID']; ?>"> 
+			<?php echo $row['first_name']; echo " "; echo $row['last_name']; ?></a>
+		</td>
+ 		<td><a style="color: red; text-decoration: none;" href="delete.php?ID=<?php echo $row['ID']; ?>">X</a></td> 
 
-<?php } ?> </ol>
+<?php } ?></table>
 
 <?php $db->close(); ?>
 
-/*
- 
-	#Create an array of all entries in the db
-	$get = "SELECT * FROM patients";
-	$resultArray = mysqli_query($db, $get);
-
-	#if entries are found
-	if (resultArray->num_rows != 0){
-
-		echo "<h1>Patients</h1>";
-		echo "<table> <th>First Name</th> <th>Last Name</th> <th>Age</th> <th>Brithday</th> <th>Address</th>";
-		while ($rows = $resultArray->fetch_assoc()){
-			$first = $rows['first_name'];
-			$last = $rows['last_name'];
-			$age = $rows['age'];
-			$bday = $rows['date_of_birth'];
-			$addr = $rows['address'];
-
-
-
-		}
-		echo "</table>";
-
-	} else {
-		#print an error because nothing was found
-		echo "Error: No entries found";
-	}
-*/
-?>
+	</div>
+</div>
 
 <?php include("../includes/footer.php") ?> 
