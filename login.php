@@ -1,10 +1,11 @@
-<?php include('../includes/header.php') ?>
+<?php include('includes/header.php') ?>
+
+
 	<div class="wrapper">
-   	<div class="mainBox">
    		<div class="welcome-header">
-   			<h1>Log In</h1>
-		    <form action="session_new.php" method="POST">
-          <label name="username">Username</label><br />
+   			<h1>Login</h1>
+		    <form class="login-form" action="session_new.php" method="POST">
+          <label style="text-align: left;"name="username">Username</label><br />
           <input type="text" name="username" /><br />
           <br />
           <label name="password">Password</label><br />
@@ -14,5 +15,6 @@
         </form>
    		</div>
    	</div>
-    </div>
+  </div>
+
 <?php include('includes/footer.php') ?>

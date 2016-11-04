@@ -6,9 +6,9 @@
 
 $id = $_GET["ID"];
 
-$res = $db->query("DELETE FROM 'patients' WHERE ID=$id");
+$res = $db->query("DELETE FROM patients WHERE ID=$id");
 
-if( $db->query($res) === TRUE){
+if($res){
 	echo "Recorded successfully deleted"; 
 }else {
 	echo "Error deleting record: " . $db->error;
