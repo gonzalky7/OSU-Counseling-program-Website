@@ -13,4 +13,13 @@
 			<div class="topright"><a href="/login.php" title="Log In">Log In</a></div>
 		</div>
 
+		<div class="navBar">
+       		<ul>
+  			<li><a class="active" href="../index.php">Home</a></li>
+  			<li><a href="../clients/list_clients.php">Clients</a></li>
+  			<li><a href="#Users">Users</a></li>
+  			<li><a href="#about">About</a></li>
+			</ul>
+  		</div>
+
 
