@@ -18,7 +18,7 @@ html, body {
 }
 
 .home {
-  background: url("../Images/green.jpg") no-repeat center center;
+  background: url("/images/green.jpg") no-repeat center center;
 }
 
 .logo {
@@ -30,7 +30,7 @@ html, body {
 .banner {
 	margin: 0;
 	height: 100px;
-	background: url(../Images/cascade_mountains.jpg) repeat #f4f2ec;
+	background: url(/images/cascade_mountains.jpg) repeat #f4f2ec;
 }
 
 p {
@@ -44,8 +44,8 @@ p {
   -o-background-size: cover;
   background-size: cover;
   height: 450px;
-  padding: 50px; 
-  margin-top: 10px; 
+  padding: 50px;
+  margin-top: 10px;
   min-height: 75%;
   margin-bottom: -100px;
 }
@@ -77,15 +77,15 @@ p {
     top: 35px;
     right: 50px;
     font-size: 18px;
-   
+
 }
 /*footer for Homepage */
 .footer{
-  color:white; 
-  background: url("../Images/treeline.png")repeat-x bottom left #373737;
+  color:white;
+  background: url("/images/treeline.png")repeat-x bottom left #373737;
   color:#ffff;
   padding: 25px 50px 25px 50px;
-  margin-top: 10px; 
+  margin-top: 10px;
   border-top:1px solid #c34500;
   font-family: "Open Sans", serif;
 }

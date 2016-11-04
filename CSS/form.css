@@ -27,7 +27,7 @@ html, body {
 .banner {
 	margin: 0;
 	height: 100px;
-	background: url(../Images/cascade_mountains.jpg) repeat #f4f2ec;
+	background: url(/images/cascade_mountains.jpg) repeat #f4f2ec;
 }
 
 #header {
@@ -71,7 +71,7 @@ input {
 
 .centerTitle{
 	text-align: center;
-	color: white;					 
+	color: white;
 }
 
 /*Jack: code to make things centered and white in black*/
@@ -97,7 +97,7 @@ br {
 			padding: 25px;
 			line-height: 8px;
 			margin: 25 px;
-		} 
+		}
 */
 
 .radioButton{
