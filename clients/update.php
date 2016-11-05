@@ -4,11 +4,11 @@
 
 <?php
 	$db = new mysqli($server, $username, $password, $dbname);
-	$id = $_GET["ID"];
-	$res = $db->query("SELECT * FROM patients WHERE ID=$id");
+	$id = $_GET["id"];
+	$res = $db->query("SELECT * FROM patients WHERE id=$id");
 	$row = $res->fetch_assoc();
-	
-		
+
+
 	if(isset($_POST['update']))
 	{
 
@@ -17,9 +17,9 @@
 		$age = $_POST['age'];
 		$date_of_birth = $_POST['date_of_birth'];
 
-		$sql = "UPDATE patients SET first_name='$first_name',last_name='$last_name',age='$age',date_of_birth='$date_of_birth' WHERE ID=$id";
- 
-		
+		$sql = "UPDATE patients SET first_name='$first_name',last_name='$last_name',age='$age',date_of_birth='$date_of_birth' WHERE id=$id";
+
+
 		if(mysqli_query($db, $sql)){
 			echo "<h1>Thank you</h1>";
 			echo "<p>Your record was successfuly added.</p>";
@@ -27,8 +27,8 @@
 			echo "ERROR: Could not execute $sql. " . mysqli_error($db);
 		}
 	}
-	
-	
+
+
 ?>
 
 
@@ -54,7 +54,7 @@
     </table>
     </form>
 
-	
+
 	<?php $db->close();//Not sure what this line does -jack ?>
 
-<?php include("../includes/footer.php") ?> 
+<?php include("../includes/footer.php") ?>

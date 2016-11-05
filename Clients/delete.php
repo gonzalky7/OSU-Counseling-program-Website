@@ -5,16 +5,16 @@
 <div class="wrapper">
 	<div class="main-content">
 
-		<?php 
+		<?php
 
-			$id = $_GET["ID"];
-//again $db for db.humanoriented.com is db_oneteam 
-			$res = $db->query("DELETE FROM patients WHERE ID=$id");
+			$id = $_GET["id"];
+//again $db for db.humanoriented.com is db_oneteam
+			$res = $db->query("DELETE FROM patients WHERE id=$id");
 
 			if($res){
-			echo "<h1>Recorded successfully deleted</h1>"; 
+			echo "<h1>Recorded successfully deleted</h1>";
 			}else {
-			echo "<h1>Error deleting record: " . $db->error . "</h1>"; 
+			echo "<h1>Error deleting record: " . $db->error . "</h1>";
 			}
 
 			$db->close();
@@ -23,4 +23,4 @@
 	</div>
 </div>
 
-<?php include("../includes/footer.php") ?> 
+<?php include("../includes/footer.php") ?>

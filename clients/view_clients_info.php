@@ -5,10 +5,10 @@
 <div class="wrapper">
 	<div class="main-content">
 
-<?php 
-//again $db for db.humanoriented.com is db_oneteam 
-$id = $_GET["ID"];
-$res = $db->query("SELECT * FROM patients WHERE ID=$id");
+<?php
+//again $db for db.humanoriented.com is db_oneteam
+$id = $_GET["id"];
+$res = $db->query("SELECT * FROM patients WHERE id=$id");
 $row = $res->fetch_assoc();
 
 ?>
@@ -32,4 +32,4 @@ $row = $res->fetch_assoc();
 	</div>
 </div>
 
-<?php include("../includes/footer.php") ?> 
+<?php include("../includes/footer.php") ?>

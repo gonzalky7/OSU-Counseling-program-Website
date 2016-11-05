@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `patients`
 --
 
-CREATE TABLE `patients` (
-  `ID` int(11) NOT NULL,
+CREATE TABLE `clients` (
+  `id` int(11) NOT NULL,
   `first_name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `age` int(100) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE `patients` (
 -- Dumping data for table `patients`
 --
 
-INSERT INTO `patients` (`ID`, `first_name`, `last_name`, `age`, `date_of_birth`) VALUES
+INSERT INTO `clients` (`id`, `first_name`, `last_name`, `age`, `date_of_birth`) VALUES
 (1, 'Yong', 'Bakos', 0, '0000-00-00'),
 (2, 'Jack', 'Wilson', 0, '0000-00-00'),
 (4, 'Jeremy', 'Scott', 22, '1996-10-10'),
@@ -51,8 +51,8 @@ INSERT INTO `patients` (`ID`, `first_name`, `last_name`, `age`, `date_of_birth`)
 --
 -- Indexes for table `patients`
 --
-ALTER TABLE `patients`
-  ADD PRIMARY KEY (`ID`);
+ALTER TABLE `clients`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -61,8 +61,8 @@ ALTER TABLE `patients`
 --
 -- AUTO_INCREMENT for table `patients`
 --
-ALTER TABLE `patients`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `clients`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
