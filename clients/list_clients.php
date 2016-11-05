@@ -6,7 +6,9 @@
 	<div class="main-content">
 
 <?php 
+//<td align="center"><a href="javascript:edt_id('<?php echo $row[0]; >?')"><img src="b_edit.png" align="EDIT" /></a></td>
 //again $db is db.humanoriented.com is db_oneteam 
+$db = new mysqli($server, $username, $password, $dbname); //had to add this line to get it to work on mine 
 $res = $db->query("SELECT ID, first_name, last_name FROM patients"); ?>
 	<table class="list-table">
 		<tr>
@@ -18,8 +20,9 @@ $res = $db->query("SELECT ID, first_name, last_name FROM patients"); ?>
 			<td><a href="view_patient_info.php?ID=<?php echo $row['ID']; ?>"> 
 				<?php echo $row['first_name'] . " " . $row['last_name']; ?></a>
 			</td>
+			<td><a style="color: Green; text-decoration: none; text-align: center;" href="delete.php?ID=<?php echo $row['ID']; ?>">O</a></td> 
  			<td><a style="color: red; text-decoration: none; text-align: center;" href="delete.php?ID=<?php echo $row['ID']; ?>">X</a></td> 
-
+			
 	<?php } ?></table>
 
 	<?php $db->close(); ?>

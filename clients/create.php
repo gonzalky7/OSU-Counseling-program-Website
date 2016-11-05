@@ -4,7 +4,7 @@
 <?php
 	include("../db_connect.php");
 	//For the db.humanoriented.com the $dbname is db_oneteam not cascades_clinic
-	#$db = new mysqli($server, $username, $password, $dbname);
+	$db = new mysqli($server, $username, $password, $dbname);
 
 	
 
