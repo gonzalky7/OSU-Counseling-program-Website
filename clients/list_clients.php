@@ -6,7 +6,7 @@
 	<div class="main-content">
 
 <?php 
-
+//again $db is db.humanoriented.com is db_oneteam 
 $res = $db->query("SELECT ID, first_name, last_name FROM patients"); ?>
 	<table class="list-table">
 		<tr>

@@ -8,7 +8,7 @@
 		<?php 
 
 			$id = $_GET["ID"];
-
+//again $db for db.humanoriented.com is db_oneteam 
 			$res = $db->query("DELETE FROM patients WHERE ID=$id");
 
 			if($res){
