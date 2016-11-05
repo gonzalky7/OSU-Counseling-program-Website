@@ -7,6 +7,7 @@
 
 <?php 
 //again $db for db.humanoriented.com is db_oneteam 
+$db = new mysqli($server, $username, $password, $dbname);//21321
 $id = $_GET["ID"];
 $res = $db->query("SELECT * FROM patients WHERE ID=$id");
 $row = $res->fetch_assoc();
