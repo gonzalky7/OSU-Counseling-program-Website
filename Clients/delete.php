@@ -9,7 +9,7 @@
 
 			$id = $_GET["id"];
 //again $db for db.humanoriented.com is db_oneteam
-			$res = $db->query("DELETE FROM patients WHERE id=$id");
+			$res = $db->query("DELETE FROM clients WHERE id=$id");
 
 			if($res){
 			echo "<h1>Recorded successfully deleted</h1>";

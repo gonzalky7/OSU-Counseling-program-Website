@@ -5,7 +5,7 @@
 <?php
 	$db = new mysqli($server, $username, $password, $dbname);
 	$id = $_GET["id"];
-	$res = $db->query("SELECT * FROM patients WHERE id=$id");
+	$res = $db->query("SELECT * FROM clients WHERE id=$id");
 	$row = $res->fetch_assoc();
 
 
@@ -17,7 +17,7 @@
 		$age = $_POST['age'];
 		$date_of_birth = $_POST['date_of_birth'];
 
-		$sql = "UPDATE patients SET first_name='$first_name',last_name='$last_name',age='$age',date_of_birth='$date_of_birth' WHERE id=$id";
+		$sql = "UPDATE clients SET first_name='$first_name',last_name='$last_name',age='$age',date_of_birth='$date_of_birth' WHERE id=$id";
 
 
 		if(mysqli_query($db, $sql)){

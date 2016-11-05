@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `patients`
+-- Table structure for table `clients`
 --
 
 CREATE TABLE `clients` (
@@ -35,7 +35,7 @@ CREATE TABLE `clients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `patients`
+-- Dumping data for table `clients`
 --
 
 INSERT INTO `clients` (`id`, `first_name`, `last_name`, `age`, `date_of_birth`) VALUES
@@ -49,7 +49,7 @@ INSERT INTO `clients` (`id`, `first_name`, `last_name`, `age`, `date_of_birth`) 
 --
 
 --
--- Indexes for table `patients`
+-- Indexes for table `clients`
 --
 ALTER TABLE `clients`
   ADD PRIMARY KEY (`id`);
@@ -59,7 +59,7 @@ ALTER TABLE `clients`
 --
 
 --
--- AUTO_INCREMENT for table `patients`
+-- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;

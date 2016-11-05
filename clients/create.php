@@ -9,7 +9,7 @@
 
 
 
-	$sql = "INSERT INTO `patients` (`id`,`first_name`, `last_name`, `age`, `date_of_birth`) VALUES ( NULL,'$_POST[firstName]',
+	$sql = "INSERT INTO `clients` (`id`,`first_name`, `last_name`, `age`, `date_of_birth`) VALUES ( NULL,'$_POST[firstName]',
 	 '$_POST[lastName]', '$_POST[age]', '$_POST[birthday]')";
 
 	if(mysqli_query($db, $sql)){
