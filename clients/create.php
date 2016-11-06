@@ -14,7 +14,8 @@
 
 	if(mysqli_query($db, $sql)){
     	echo "<h1>Thank you</h1>";
-    	echo "<p>Your record was successfuly added.</p>";
+    	echo "<p>Your record was successfuly added.</p>";		  
+//		header('Location: mypage.php');    
 	} else{
     	echo "ERROR: Could not execute $sql. " . mysqli_error($db);
 	}
