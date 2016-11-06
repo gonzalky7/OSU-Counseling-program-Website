@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="/css/form.css">
 		<link rel="stylesheet" type="text/css" href="/css/login.css">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+		<link rel="stylesheet" type="text/css" href="/css/about.css">
+
 	</head>
 
 	<body>
