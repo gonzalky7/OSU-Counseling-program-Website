@@ -19,6 +19,8 @@
 					<br>
 						<label for="address">Address</label>
 						<input type="text" name="address"/>
+						<label for="address2">Address</label>
+						<input type="text" name="address2"/>
 						<label for="city">City</label>
 						<input type="text" name="city"/>
 						<label for="state">State</label>
