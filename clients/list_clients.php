@@ -8,7 +8,7 @@
 <?php
 
 //again $db is db.humanoriented.com is db_oneteam
-$db = new mysqli($server, $username, $password, $dbname); //had to add this line to get it to work on mine
+//$db = new mysqli($server, $username, $password, $dbname); //had to add this line to get it to work on mine
 $res = $db->query("SELECT id, first_name, last_name FROM clients"); ?>
 	<table class="list-table">
 		<tr>

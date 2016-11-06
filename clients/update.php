@@ -3,7 +3,7 @@
 <?php include("../db_connect.php") ?>
 
 <?php
-	$db = new mysqli($server, $username, $password, $dbname);
+	//$db = new mysqli($server, $username, $password, $dbname);
 	$id = $_GET["id"];
 	$res = $db->query("SELECT * FROM clients WHERE id=$id");
 	$row = $res->fetch_assoc();
@@ -32,29 +32,32 @@
 ?>
 
 
-<form method="post">
-    <table align="center">
-    <tr>
-    <td><input type="text" name="first_name" placeholder="First Name" value="<?php echo $row['first_name']; ?>" required /></td>
-    </tr>
-    <tr>
-    <td><input type="text" name="last_name" placeholder="Last Name" value="<?php echo $row['last_name']; ?>" required /></td>
-    </tr>
-    <tr>
-    <td><input type="text" name="age" placeholder="age" value="<?php echo $row['age']; ?>" required /></td>
-    </tr>
-	<tr>
-	<td><input type="text" name="date_of_birth" placeholder="date_of_birth" value="<?php echo $row['date_of_birth']; ?>" required /></td>
-	</tr>
-    <tr>
-    <td>
-    <button type="submit" name="update"><strong>UPDATE</strong></button>
-    </td>
-    </tr>
-    </table>
+<div class="wrapper">
+	<form method="post">
+    	<table align="center">
+    		<tr>
+    		<td><input type="text" name="first_name" placeholder="First Name" value="<?php echo $row['first_name']; ?>" required /></td>
+    		</tr>
+    		<tr>
+    		<td><input type="text" name="last_name" placeholder="Last Name" value="<?php echo $row['last_name']; ?>" required /></td>
+    		</tr>
+    		<tr>
+    		<td><input type="text" name="age" placeholder="age" value="<?php echo $row['age']; ?>" required /></td>
+    		</tr>
+			<tr>
+			<td><input type="text" name="date_of_birth" placeholder="date_of_birth" value="<?php echo $row['date_of_birth']; ?>" required /></td>
+			</tr>
+    		<tr>
+    		<td>
+    		<button type="submit" name="update"><strong>UPDATE</strong></button>
+    		</td>
+    		</tr>
+    	</table>
     </form>
+ </div>
 
 
-	<?php $db->close();//Not sure what this line does -jack ?>
+	<?php $db->close();//Not sure what this line does -jack -> This line closes the connection to the database - Justin?>
+
 
 <?php include("../includes/footer.php") ?>
