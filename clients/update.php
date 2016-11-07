@@ -1,8 +1,8 @@
-<?php include("../includes/header.php") ?>
-
-<?php include("../db_connect.php") ?>
-
 <?php
+	ob_start();
+	include("../includes/header.php");
+	include("../db_connect.php");
+
 	//$db = new mysqli($server, $username, $password, $dbname);
 	$id = $_GET["id"];
 	$res = $db->query("SELECT * FROM clients WHERE id=$id");
@@ -11,7 +11,6 @@
 
 	if(isset($_POST['update']))
 	{
-
 		$first_name = $_POST['first_name'];
 		$last_name = $_POST['last_name'];
 		$age = $_POST['age'];
@@ -19,15 +18,15 @@
 
 		$sql = "UPDATE clients SET first_name='$first_name',last_name='$last_name',age='$age',date_of_birth='$date_of_birth' WHERE id=$id";
 
-
 		if(mysqli_query($db, $sql)){
 			echo "<h1>Thank you</h1>";
 			echo "<p>Your record was successfuly added.</p>";
+			header('Refresh:3; list_clients.php');
 		} else{
 			echo "ERROR: Could not execute $sql. " . mysqli_error($db);
+			header('Refresh:3; list_clients.php');
 		}
 	}
-
 
 ?>
 
@@ -57,7 +56,7 @@
  </div>
 
 
-	<?php $db->close();//Not sure what this line does -jack -> This line closes the connection to the database - Justin?>
-
-
-<?php include("../includes/footer.php") ?>
+<?php 
+	$db->close();//Not sure what this line does -jack -> This line closes the connection to the database - Justin
+	include("../includes/footer.php")
+?>
