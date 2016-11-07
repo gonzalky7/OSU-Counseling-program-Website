@@ -66,8 +66,8 @@
 						<input type="text" name="partnerAge"/>
 						<label for="partnerBday">Date of Birth</label>
 						<input type="date" name="partnerBday" placeholder="MM/DD/YYYY"/>
-						<label for="partnerOcupation">Ocupation</label>
-						<input type="text" name="partnerOcupation"/>
+						<label for="partnerOccupation">Occupation</label>
+						<input type="text" name="partnerOccupation"/>
 						<label for="partnerEmployer">Employer</label>
 						<input type="text" name="partnerEmployer"/>
 						<label for="partnerPhone">Phone</label>
