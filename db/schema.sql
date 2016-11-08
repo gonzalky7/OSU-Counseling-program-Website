@@ -115,3 +115,10 @@ ALTER TABLE `users`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- Seed data to bootstrap one user in the db --
+INSERT INTO `roles` (`id`, `name`) VALUES (1, 'Admin');
+
+INSERT INTO `users` (`first_name`, `last_name`, `username`, `password`, `role_id`)
+ VALUES ('Seed', 'Admin', 'admin', 'password', 1);
+
