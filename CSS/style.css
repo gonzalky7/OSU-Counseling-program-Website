@@ -205,6 +205,14 @@ th {
 }
 /* ---- end table style --- */
 
+/* ---- roles table style ---- */
+.list-roles-table th {
+  width: 50%;
+}
+
+/* ---end roles table style ---- */
+
+
 /* style for login page */
 
 
