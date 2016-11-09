@@ -1,6 +1,6 @@
 <?php include("../includes/header.php") ?>
 
-<?php include("../db_connect.php") ?>
+<?php include("../includes/db_connect.php") ?>
 
 <div class="wrapper">
 	<div class="main-content">
@@ -18,7 +18,7 @@ $res = $db->query("SELECT id, first_name, last_name FROM clients"); ?>
 		</tr>
 	<?php while($row = $res->fetch_assoc()) { ?>
 		<tr>
-			<td><a href="view_patient_info.php?id=<?php echo $row['id']; ?>">
+			<td><a href="view_clients_info.php?id=<?php echo $row['id']; ?>">
 				<?php echo $row['first_name'] . " " . $row['last_name']; ?></a>
 			</td>
 			<td><a style="color: red; text-decoration: none; text-align: center;" href="delete.php?id=<?php echo $row['id']; ?>">X</a></td>

@@ -21,7 +21,7 @@ $row = $res->fetch_assoc();
 			<td>Age: <?php echo $row['age'];?></td>
 		</tr>
 		<tr>
-			<td>Birthday: <?php echo $row['date_of_birth']; ?></td>
+			<td>Date of Birth: <?php echo $row['date_of_birth']; ?></td>
 		</tr>
 		<tr>
 			<td>Address: <?php echo $row['address']; ?></td>
@@ -69,7 +69,7 @@ $row = $res->fetch_assoc();
 			<td>Spouse/Partner's Age: <?php echo $row['partnerAge']; ?></td>
 		</tr>
 		<tr>
-			<td>Spouse/Partner's Birthday: <?php echo $row['partnerBday']; ?></td>
+			<td>Spouse/Partner's DOB: <?php echo $row['partnerBday']; ?></td>
 		</tr>
 		<tr>
 			<td>Spouse/Partner's Occupation: <?php echo $row['partnerOccupation']; ?></td>
@@ -129,7 +129,7 @@ $row = $res->fetch_assoc();
 			<td>Previous Counselor: <?php echo $row['previousCounselor']; ?></td>
 		</tr>
 		<tr>
-			<td>Reason: <?php echo $row['reason']; ?></td>
+			<td>Reason for Today's Visit: <?php echo $row['reason']; ?></td>
 		</tr>
 	</table>
 

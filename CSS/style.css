@@ -11,7 +11,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
 html, body {
 	background: url("/images/green.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -34,6 +33,13 @@ html, body {
 
 p {
     color: black;
+}
+
+p.demo {
+  float: right;
+  background: #9C9;
+  color: #FFF;
+  padding: 2px;
 }
 
 .wrapper {
@@ -204,6 +210,14 @@ th {
   color: black;
 }
 /* ---- end table style --- */
+
+/* ---- roles table style ---- */
+.list-roles-table th {
+  width: 50%;
+}
+
+/* ---end roles table style ---- */
+
 
 /* style for login page */
 
