@@ -1,6 +1,6 @@
 <?php include("../includes/header.php") ?>
 
-<?php include("../db_connect.php") ?>
+<?php include("../includes/db_connect.php") ?>
 
 <div class="wrapper">
 	<div class="main-content">
