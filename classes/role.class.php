@@ -6,7 +6,7 @@
  * everything," or, "If the user isn't a Counselor, don't show them the
  * special puppy picture."
  */
-include("../db_connect.php");
+include("../includes/db_connect.php");
 
 class Role {
     public $id;
