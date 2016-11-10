@@ -28,7 +28,7 @@
 	 		
 	 		//@Yong - this query string won't save properly, its saying the VALUES
 	 		// are undefined..I've been googling and trying for a couple hours. HALP.
-	 		$save_query = "INSERT INTO clients (id, first_name, last_name, age, date_of_birth) VALUES ( NULL, 'self::$first_name', 'self::$last_name', 'self::$age', 'self::$birthday')";
+	 		$save_query = "INSERT INTO clients (id, first_name, last_name, age, date_of_birth) VALUES ( '{NULL}', '{$this->first_name}', '{$this->last_name}', '{$this->age}', '{$this->birthday}')";
 
 	 		//check to make sure it worked
 	 		if(mysqli_query($db, $save_query)) {
