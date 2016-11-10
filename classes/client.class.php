@@ -40,8 +40,44 @@
 	 		mysqli_close($db);
 	 	}
 
+	 	public function deleteClient(){
+	 		//get the id to be deleted
 
-	 }
+	 		//create a query
+
+	 		//test to see if it was successful
+
+	 		//close connection
+	 	}
+
+	 	public function listClientInfo(){
+	 		//create a query and execute it
+
+	 		//while there are results print them
+
+	 		//close connection
+
+	 	}
+
+	 	public function updateClientInfo(){
+	 		//get the ID
+
+	 		//create and execute a query
+
+	 		//get the first row of the return from the query
+
+	 		//get the updated values form
+
+	 		//construct a new query string
+
+	 		//execute and test the query
+
+	 		//close connection
+	 		
+	 	}
+
+
+	}
 
 
 ?>

@@ -29,20 +29,25 @@
 
 	// include("../includes/footer.php"); 
 
+//----------------- NEW CODE --------------------------//
+
+
+	//strings to outout on function success/failure
 	$success = "Record saved successfully.";
 	$failed = "Error: could not save client info.";
 
-	$new_client = new Client(NULL, $_POST[firstName], $_POST[lastName], 
-		$_POST[age], $_POST[birthday]);
+	//create a new client object and pass to it the values from the form
+	$new_client = new Client(NULL, $_POST['firstName'], $_POST['lastName'], 
+		$_POST['age'], $_POST['birthday']);
 
-	echo $new_client->ID;
-	echo $new_client->first_name;
-	echo $new_client->last_name;
-	echo $new_client->age;
-	echo $new_client->birthday;
+	//testing to ensure client object was created correctly
+	//echo $new_client->ID;
+	//echo $new_client->first_name;
+	//echo $new_client->last_name;
+	//echo $new_client->age;
+	//echo $new_client->birthday;
 
-
-
+	//call our save function and it it returns true print success else print failure
 	if($new_client->saveClientInfo()){
 		echo "$success";
 	} else {
