@@ -1,5 +1,5 @@
 <?php 
-	ob_start(); 
+	ob_start(); //output buffer 
 	session_start();
  
  	include("db_connect.php");
