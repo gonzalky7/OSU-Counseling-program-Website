@@ -48,15 +48,14 @@
 
 	 		//test to see if it was successful
 	 		if($delete_query){
-	 			header("Refresh:3; list_clients.php");
+	 			//close connection
+	 			$db->close();
 	 			return true;
 	 		} else {
-	 			header("Refresh:3; list_clients.php");
+                //close connection
+	 			$db->close();
 	 			return false;
 	 		}
-
-	 		//close connection
-	 		$db->close();
 	 	}
 
 	 	public function listClientInfo(){

@@ -19,10 +19,12 @@
 		$output = $failed;
 	}
 
-?>
+	echo "<div class=\"wrapper\">";
+	echo "    <div class=\"main-content\">";
+	echo "<h1 style=\"text-align: center;\">"; echo "$output"; echo "</h1>";
+	echo "    </div>";
+	echo "</div>";
 
-	<div class="wrapper">
-		<div class="main-content">
-			<h2 style="text-align: center;"><?php echo "$output";?></h2>
-		</div>
-	</div>
+	include("../includes/footer.php");
+	header("Refresh:3; ../index.php");
+?>
