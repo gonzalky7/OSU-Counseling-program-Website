@@ -25,9 +25,6 @@
 	 		global $db;
 
 	 		//Create the query to save the client
-	 		
-	 		//@Yong - this query string won't save properly, its saying the VALUES
-	 		// are undefined..I've been googling and trying for a couple hours. HALP.
 	 		$save_query = "INSERT INTO clients (id, first_name, last_name, age, date_of_birth) VALUES ( '{NULL}', '{$this->first_name}', '{$this->last_name}', '{$this->age}', '{$this->birthday}')";
 
 	 		//check to make sure it worked
@@ -41,13 +38,25 @@
 	 	}
 
 	 	public function deleteClient(){
+	 		global $db;
+
 	 		//get the id to be deleted
+	 		$idToDelete = $_GET["id"];
 
 	 		//create a query
+	 		$delete_query = $db->query("DELETE FROM clients WHERE id = $idToDelete");
 
 	 		//test to see if it was successful
+	 		if($delete_query){
+	 			header("Refresh:3; list_clients.php");
+	 			return true;
+	 		} else {
+	 			header("Refresh:3; list_clients.php");
+	 			return false;
+	 		}
 
 	 		//close connection
+	 		$db->close();
 	 	}
 
 	 	public function listClientInfo(){
