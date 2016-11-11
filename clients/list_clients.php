@@ -1,33 +1,35 @@
-<?php include("../includes/header.php") ?>
+<?php include("../includes/header.php");
+	  include("../classes/client.class.php");
 
-<?php include("../includes/db_connect.php") ?>
+	  $clients = new Client();
+	  $client_info = $clients->listAllClientInfo();
+?>
 
 <div class="wrapper">
 	<div class="main-content">
-
-<?php
-
-//again $db is db.humanoriented.com is db_oneteam
-//$db = new mysqli($server, $username, $password, $dbname); //had to add this line to get it to work on mine
-$res = $db->query("SELECT id, first_name, last_name FROM clients"); ?>
 	<table class="list-table">
 		<tr>
 			<th>Name</th>
 			<th>Delete</th>
 			<th>Edit</th>
 		</tr>
-	<?php while($row = $res->fetch_assoc()) { ?>
-		<tr>
-			<td><a href="view_clients_info.php?id=<?php echo $row['id']; ?>">
-				<?php echo $row['first_name'] . " " . $row['last_name']; ?></a>
-			</td>
-			<td><a style="color: red; text-decoration: none; text-align: center;" href="delete.php?id=<?php echo $row['id']; ?>">X</a></td>
- 			<td><a style="color: Green; text-decoration: none; text-align: center;" href="update.php?id=<?php echo $row['id']; ?>">&#10003</a></td>
-
-	<?php } ?></table>
-
-	<?php $db->close(); ?>
-
+		<?php foreach($client_info as $value) {
+			echo "<tr>";
+			echo "<td>";
+			echo "<a href=\"view_clients_info.php?id=" . $value->ID . "\">";
+			echo $value->first_name . " " . $value->last_name;
+			echo "</a>";
+			echo "</td>";
+			echo "<td>";
+			echo "<a style=\"color: red; text-decoration: none; text-align: center;\" href=\"delete.php?id=" . $value->ID . "\">X</a>";
+			echo "</td>";
+ 			echo "<td>";
+ 			echo "<a style=\"color: Green; text-decoration: none; text-align: center;\" href=\"update.php?id=" . $value->ID . "\">&#10003</a>";
+ 			echo "</td>";
+ 			echo "</tr>";
+ 			}
+ 		?>
+	</table>
 	</div>
 </div>
 

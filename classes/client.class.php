@@ -58,12 +58,29 @@
 	 		}
 	 	}
 
-	 	public function listClientInfo(){
+	 	public function listAllClientInfo(){
+	 		global $db;
+	 		$all_clients = [];
 	 		//create a query and execute it
+			$results = $db->query("SELECT id, first_name, last_name FROM clients");
 
-	 		//while there are results print them
+        	while ($row = $results->fetch_assoc()) {
+            	$client = new Client();
+            	$client->ID = $row['id'];
+            	$client->first_name = $row['first_name'];
+            	$client->last_name = $row['last_name'];
+
+            	array_push($all_clients, $client);
+        	}
+
+        	$results->free();
+        	return $all_clients;
 
 	 		//close connection
+        	$db->close();
+	 	}
+
+	 	public function listClientInfo(){
 
 	 	}
 
