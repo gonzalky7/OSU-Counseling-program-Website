@@ -1,9 +1,9 @@
 <?php include("../includes/header.php");
 	  include("../classes/client.class.php");
 
-	  $clients = new Client();
+	  $clients = new Client(NULL, NULL, NULL, NULL, NULL);
 	  $client_info = $clients->listAllClientInfo();
-	  $db = new mysqli($server, $username, $password, $dbname);
+//	  $db = new mysqli($server, $username, $password, $dbname);
 ?>
 
 <div class="wrapper">

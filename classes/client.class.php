@@ -1,6 +1,6 @@
 <?php
 	include("../includes/db_connect.php");
-	$db = new mysqli($server, $username, $password, $dbname);
+//	$db = new mysqli($server, $username, $password, $dbname);
 	/*The clients class will incapsulate our CRUD operations 
 	 *as well as store some of the data.
 	 */
@@ -59,7 +59,7 @@
 			$results = $db->query("SELECT id, first_name, last_name FROM clients");
 
         	while ($row = $results->fetch_assoc()) {
-            	$client = new Client();
+            	$client = new Client(NULL, NULL, NULL, NULL, NULL);
             	$client->ID = $row['id'];
             	$client->first_name = $row['first_name'];
             	$client->last_name = $row['last_name'];

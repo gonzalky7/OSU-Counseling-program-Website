@@ -30,7 +30,7 @@
   			<li><a href="/users">Users</a></li>
         	<li><a href="/roles">Roles</a></li>
   			<li><a href="/about.php">About</a></li>
-  			<li><a href="login.php">Login</a></li>
+  			<li><a href="../login.php">Login</a></li>
         	<li><a href="logout.php">Logout</a></li>
 			</ul>
   		</div>
