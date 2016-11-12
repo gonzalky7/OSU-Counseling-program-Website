@@ -33,8 +33,6 @@
 	 		} else {
 	 			return false;
 	 		}
-	 		//close database connection
-	 		mysqli_close($db);
 	 	}
 
 	 	public function deleteClient(){
@@ -48,12 +46,8 @@
 
 	 		//test to see if it was successful
 	 		if($delete_query){
-	 			//close connection
-	 			$db->close();
 	 			return true;
 	 		} else {
-                //close connection
-	 			$db->close();
 	 			return false;
 	 		}
 	 	}
@@ -74,35 +68,44 @@
         	}
 
         	$results->free();
-        	return $all_clients;
-
-	 		//close connection
-        	$db->close();
+        	return $all_client;
 	 	}
 
-	 	public function listClientInfo(){
-
-	 	}
-
-	 	public function updateClientInfo(){
-	 		//get the ID
-
-	 		//create and execute a query
-
-	 		//get the first row of the return from the query
+	 	public function updateClientInfo($id, $first, $last, $age, $bday){
+	 		global $db;
 
 	 		//get the updated values form
+	 	 	$this->ID = $id;
+	 		$this->first_name = $first;
+			$this->last_name = $last;
+			$this->age = $age;
+			$this->birthday = $bday;
 
-	 		//construct a new query string
+			$update_query = "UPDATE clients SET first_name = '$first', last_name = '$last', age = '$age', date_of_birth = '$bday' WHERE id = $id";
 
-	 		//execute and test the query
-
-	 		//close connection
-	 		
+			//test to make sure update worked
+			if(mysqli_query($db, $update_query)){
+				return true;
+			} else {
+				return false;
+			}
 	 	}
 
+	 	//should we do a list one client info?
+		public function listClientInfo($id){
+			global $db;
 
+	 		//create and execute a query
+	 		$results = $db->query("SELECT * FROM clients WHERE id = $id");
+
+	 		//get the first row of the return from the query
+	 		$row = $results->fetch_assoc();
+
+	 		$this->first_name = $row['first_name'];
+			$this->last_name = $row['last_name'];
+			$this->age = $row['age'];
+			$this->birthday = $row['date_of_birth'];
+	 	}
 	}
-
 
 ?>
