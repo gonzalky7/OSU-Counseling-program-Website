@@ -14,7 +14,10 @@
 	<body>
 		<div class="banner">
 			<a href="/index.php"><img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades"></a>
-			<div class="topright"><a href="/login.php" title="Log In">Login</a></div>
+
+
+	
+   
       <!-- demo. delete when you 'get it'. -->
         <p class="demo">
           <?= currentUser() ? "Logged in" : "Not logged in"; ?>
@@ -27,8 +30,10 @@
   			<li><a class="active" href="/index.php">Home</a></li>
   			<li><a href="/clients/list_clients.php">Clients</a></li>
   			<li><a href="/users">Users</a></li>
-        <li><a href="/roles">Roles</a></li>
+        	<li><a href="/roles">Roles</a></li>
   			<li><a href="/about.php">About</a></li>
+  			<li><a href="login.php">Login</a></li>
+        	<li><a href="logout.php">Logout</a></li>
 			</ul>
   		</div>
 
