@@ -3,6 +3,7 @@
 
 	  $clients = new Client();
 	  $client_info = $clients->listAllClientInfo();
+	  $db = new mysqli($server, $username, $password, $dbname);
 ?>
 
 <div class="wrapper">

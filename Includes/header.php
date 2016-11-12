@@ -1,4 +1,4 @@
-<?php include('session.functions.php') ?>
+<?php include('session.functions.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -15,11 +15,11 @@
 		<div class="banner">
 			<a href="/index.php"><img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades"></a>
 			<div class="topright"><a href="/login.php" title="Log In">Login</a></div>
-      <!-- demo. delete when you 'get it'. -->
+      <!-- demo. delete when you 'get it'. 
         <p class="demo">
-          <?php = currentUser() ? "Logged in" : "Not logged in"; ?>
+          <//?php = currentUser() ? "Logged in" : "Not logged in"; ?>
         </p>
-      <!-- /demo -->
+       /demo -->
 		</div>
 
 		<div class="navBar">

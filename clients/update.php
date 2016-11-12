@@ -3,7 +3,7 @@
 	include("../includes/header.php");
 	include("../db_connect.php");
 
-	//$db = new mysqli($server, $username, $password, $dbname);
+	$db = new mysqli($server, $username, $password, $dbname);
 	$id = $_GET["id"];
 	$res = $db->query("SELECT * FROM clients WHERE id=$id");
 	$row = $res->fetch_assoc();
