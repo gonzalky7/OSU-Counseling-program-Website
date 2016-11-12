@@ -13,6 +13,25 @@
 		//What kinds of things will users be able to do...?
 
 
+		//Create
+		public static function create() {
+			global $db;
+
+			//create a query and fill it with passed values
+
+			//error check it
+	 	
+			//close connection
+
+		}
+
+
+		//Read
+
+		//Update
+
+		//Delete
+
 
 	}
 
