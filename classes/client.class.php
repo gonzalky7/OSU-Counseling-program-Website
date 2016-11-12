@@ -68,7 +68,7 @@
         	}
 
         	$results->free();
-        	return $all_client;
+        	return $all_clients;
 	 	}
 
 	 	public function updateClientInfo($id, $first, $last, $age, $bday){
