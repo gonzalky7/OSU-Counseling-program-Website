@@ -1,4 +1,4 @@
-<?
+<?php
 /* Session Functions
  * These functions abstract the details of working with sessions.
 */

@@ -1,4 +1,4 @@
-<?php include('session.functions.php'); ?>
+<?php include('session.functions.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -17,7 +17,7 @@
 			<div class="topright"><a href="/login.php" title="Log In">Login</a></div>
       <!-- demo. delete when you 'get it'. -->
         <p class="demo">
-          <?= currentUser() ? "Logged in" : "Not logged in"; ?>
+          <?php = currentUser() ? "Logged in" : "Not logged in"; ?>
         </p>
       <!-- /demo -->
 		</div>
