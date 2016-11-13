@@ -2,8 +2,8 @@
 	ob_start();
 	include("../includes/header.php");
 	include("../classes/client.class.php");
-
-	$client = new Client();
+//	$db = new mysqli($server, $username, $password, $dbname);
+	$client = new Client(NULL, NULL, NULL, NULL, NULL);
 
 
 	echo "<div class=\"wrapper\">";

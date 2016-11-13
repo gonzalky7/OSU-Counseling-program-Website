@@ -1,7 +1,13 @@
 <?php 
 	ob_start();
 	include("../includes/header.php");
+	include("../includes/db_connect.php");
+	
+	//For the db.humanoriented.com the $dbname is db_oneteam not cascades_clinic
+	//$db = new mysqli($server, $username, $password, $dbname);
+
 	include("../classes/client.class.php");
+
 
 	//strings to outout on function success/failure
 	$success = "Record saved successfully.";

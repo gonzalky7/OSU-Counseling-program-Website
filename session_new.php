@@ -2,8 +2,8 @@
 	ob_start(); //output buffer 
 	session_start();
  
- 	include("db_connect.php");
-	
+	include("includes/db_connect.php");
+//	$db = new mysqli($server, $username, $password, $dbname);
 	if (isset($_POST['username']) && isset($_POST['password'])){
 		$username = $_POST['username'];
 		$password = $_POST['password'];
@@ -24,8 +24,8 @@
 			} else if ($row_cnt == 1){
 				$user_id = $row['id'];
 				$_SESSION['user_id'] = $user_id;
-				$_SESSION['username'] = $username;
-				header('Location: index.php');
+				$_SESSION['user_name'] = $username;
+				header('Location: ../index.php');
 			}
 		
 		}

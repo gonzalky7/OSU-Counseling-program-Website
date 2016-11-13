@@ -3,6 +3,9 @@
 	include("../includes/header.php");
 	include("../classes/client.class.php");
 
+
+//	$db = new mysqli($server, $username, $password, $dbname);
+
 	$updateClient = new Client(NULL, NULL, NULL, NULL, NULL);
 	$updateClient->listClientInfo($_GET['id']);
 
