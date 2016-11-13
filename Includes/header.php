@@ -1,4 +1,11 @@
-<?php include('session.functions.php'); ?>
+<?php include('session.functions.php') ?>
+<?php include('session_new.php') ?>
+
+<?php 
+ob_start();
+session_start();
+
+ ?> 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -15,25 +22,39 @@
 		<div class="banner">
 			<a href="/index.php"><img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades"></a>
 
-			<div class="topright"><a href="/login.php" title="Log In">Login</a></div>
 
-        <p class="demo">
-          <?php currentUser() ? "Logged in" : "Not logged in"; ?>
-		  <?php currentUser() ? $user_name : ;?>
-        </p>
 
+			<p class="demo">  <?php echo currentUserName() ?> </p>
+
+
+     	   </body>
 		</div>
 
-		<div class="navBar">
-       		<ul>
-  			<li><a class="active" href="/index.php">Home</a></li>
-  			<li><a href="/clients/list_clients.php">Clients</a></li>
-  			<li><a href="/users">Users</a></li>
-        	<li><a href="/roles">Roles</a></li>
-  			<li><a href="/about.php">About</a></li>
-  			<li><a href="../login.php">Login</a></li>
-        	<li><a href="logout.php">Logout</a></li>
-			</ul>
-  		</div>
+		 </body>
+
+
+<?php
+		if (currentUser()) {
+			echo "<div class=\"navBar\">";
+       			echo "<ul>";
+  				echo "<li><a class=\"active\" href=\"/index.php\">Home</a></li>";
+  				echo "<li><a href=\"/clients/list_clients.php\">Clients</a></li>";
+  				echo "<li><a href=\"/users/list_users.php\">Users</a></li>";
+        		echo "<li><a href=\"/roles\">Roles</a></li>";
+  				echo "<li><a href=\"/about.php\">About</a></li>";
+        		echo "<li><a href=\"logout.php\">Logout</a></li>";
+				echo "</ul>";
+  			echo "</div>";
+  		}
+  		else {
+  				echo "<div class=\"navBar\">";
+       			echo "<ul>";
+  				echo "<li><a href=\"/about.php\">About</a></li>";
+  				echo "<li><a href=\"../login.php\">Login</a></li>";
+        		
+				echo "</ul>";
+  			echo "</div>";
+  		}
+?>
 
 
