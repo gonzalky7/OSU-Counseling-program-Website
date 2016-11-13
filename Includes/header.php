@@ -1,11 +1,8 @@
 <?php include('session.functions.php') ?>
-<?php include('session_new.php') ?>
-
-<?php 
+<?php
 ob_start();
 session_start();
-
- ?> 
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -53,7 +50,7 @@ session_start();
        		echo "<li><a class=\"active\" href=\"/index.php\">Home</a></li>";
   				echo "<li><a href=\"/about.php\">About</a></li>";
   				echo "<li><a href=\"../login.php\">Login</a></li>";
-        		
+
 				echo "</ul>";
   			echo "</div>";
   		}

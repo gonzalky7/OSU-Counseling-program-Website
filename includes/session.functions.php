@@ -13,7 +13,11 @@ function currentUser() {
  }
 //return $_SESSION['user_name'];
   function currentUserName(){
-  	return $_SESSION['user_name']; 
+    if (isset($_SESSION['user_name'])) {
+  	 return $_SESSION['user_name'];
+    } else {
+      return NULL;
+    }
   }
   //return $_SESSION['currentUser'];
 
