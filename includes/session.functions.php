@@ -11,8 +11,10 @@ function currentUser() {
   	return false;
   }
  }
-
-  //return $_SESSION['user_name'];
+//return $_SESSION['user_name'];
+  function currentUserName(){
+  	return $_SESSION['user_name']; 
+  }
   //return $_SESSION['currentUser'];
 
 ?>

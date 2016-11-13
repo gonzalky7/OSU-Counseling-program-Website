@@ -25,7 +25,7 @@ session_start();
 
 
 
-			<p class="demo">  <?php echo $_SESSION['user_name'] ?> </p>
+			<p class="demo">  <?php echo currentUserName() ?> </p>
 
 
      	   </body>
