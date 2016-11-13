@@ -24,7 +24,6 @@ session_start();
 
 
 
-
 			<p class="demo">  <?php echo currentUserName() ?> </p>
 
 
@@ -37,20 +36,21 @@ session_start();
 <?php
 		if (currentUser()) {
 			echo "<div class=\"navBar\">";
-       			echo "<ul>";
-  				echo "<li><a class=\"active\" href=\"/index.php\">Home</a></li>";
-  				echo "<li><a href=\"/clients/list_clients.php\">Clients</a></li>";
-  				echo "<li><a href=\"/users/list_users.php\">Users</a></li>";
-        		echo "<li><a href=\"/roles\">Roles</a></li>";
-  				echo "<li><a href=\"../about.php\">About</a></li>";
-        		echo "<li><a href=\"../logout.php\">Logout</a></li>";
+       	echo "<ul>";
+  			echo "<li><a class=\"active\" href=\"/index.php\">Home</a></li>";
+  			echo "<li><a href=\"/clients/list_clients.php\">Clients</a></li>";
+  			echo "<li><a href=\"/users/list_users.php\">Users</a></li>";
+
+        echo "<li><a href=\"/roles\">Roles</a></li>";
+  			echo "<li><a href=\"../about.php\">About</a></li>";
+        echo "<li><a href=\"../logout.php\">Logout</a></li>";
 				echo "</ul>";
   			echo "</div>";
   		}
   		else {
   				echo "<div class=\"navBar\">";
-       			echo "<ul>";
-       			echo "<li><a class=\"active\" href=\"/index.php\">Home</a></li>";
+       		echo "<ul>";
+       		echo "<li><a class=\"active\" href=\"/index.php\">Home</a></li>";
   				echo "<li><a href=\"/about.php\">About</a></li>";
   				echo "<li><a href=\"../login.php\">Login</a></li>";
         		
