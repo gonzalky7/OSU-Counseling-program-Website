@@ -1,5 +1,5 @@
 <?php include('includes/header.php') ?>
-
+<?php include('session_new.php') ?>
 
 
 	<div class="wrapper">
