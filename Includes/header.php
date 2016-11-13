@@ -18,7 +18,8 @@
 			<div class="topright"><a href="/login.php" title="Log In">Login</a></div>
 
         <p class="demo">
-          <?php //= currentUser() ? "Logged in" : "Not logged in"; ?>
+          <?php currentUser() ? "Logged in" : "Not logged in"; ?>
+		  <?php currentUser() ? $user_name : ;?>
         </p>
 
 		</div>
