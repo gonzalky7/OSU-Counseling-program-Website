@@ -20,7 +20,7 @@
 			$row_cnt = $res->num_rows; 
 		
 			if ($row_cnt == 0 ) {
-				echo 'Invalid username/password combination.'; 
+				//echo 'Invalid username/password combination.'; 
 			} else if ($row_cnt == 1){
 				$user_id = $row['id'];
 				$_SESSION['user_id'] = $user_id;

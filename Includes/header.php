@@ -1,8 +1,11 @@
-<?php include('session.functions.php');
+<?php include('session.functions.php') ?>
+<?php include('session_new.php') ?>
+
+<?php 
 ob_start();
 session_start();
 
- ?>
+ ?> 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -19,13 +22,18 @@ session_start();
 		<div class="banner">
 			<a href="/index.php"><img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades"></a>
 
-			
 
-        <p class="demo">
-          <?php = currentUser() ? "Logged in" : "Not logged in"; ?>
-        </p>
 
+
+			<p class="demo">  <?php echo $_SESSION['user_name'] ?> </p>
+
+
+     	   </body>
 		</div>
+
+		 </body>
+
+
 <?php
 		if (currentUser()) {
 			echo "<div class=\"navBar\">";
