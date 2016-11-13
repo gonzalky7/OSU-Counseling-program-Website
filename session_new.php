@@ -1,9 +1,9 @@
 <?php 
 	ob_start(); //output buffer 
 	session_start();
- 
 	include("includes/db_connect.php");
-//	$db = new mysqli($server, $username, $password, $dbname);
+	$db = new mysqli($server, $username, $password, $dbname);
+
 	if (isset($_POST['username']) && isset($_POST['password'])){
 		$username = $_POST['username'];
 		$password = $_POST['password'];
@@ -20,7 +20,7 @@
 			$row_cnt = $res->num_rows; 
 		
 			if ($row_cnt == 0 ) {
-				echo 'Invalid username/password combination.'; 
+				//echo 'Invalid username/password combination.'; 
 			} else if ($row_cnt == 1){
 				$user_id = $row['id'];
 				$_SESSION['user_id'] = $user_id;
