@@ -17,15 +17,15 @@
     <?php foreach($users_info as $value) {
       echo "<tr>";
       echo "<td>";
-      echo "<a href=\"view_clients_info.php?id=" . $value->id . "\">";
+      echo "<a href=\"view_users_info.php?id=" . $value->id . "\">";
       echo $value->first_name . " " . $value->last_name;
       echo "</a>";
       echo "</td>";
       echo "<td>";
-      echo "<a style=\"color: red; text-decoration: none; text-align: center;\" href=\"delete.php?id=" . $value->id . "\">X</a>";
+      echo "<a style=\"color: red; text-decoration: none; text-align: center;\" href=\"user_delete.php?id=" . $value->id . "\">X</a>";
       echo "</td>";
       echo "<td>";
-      echo "<a style=\"color: Green; text-decoration: none; text-align: center;\" href=\"update.php?id=" . $value->id . "\">&#10003</a>";
+      echo "<a style=\"color: Green; text-decoration: none; text-align: center;\" href=\"user_update.php?id=" . $value->id . "\">&#10003</a>";
       echo "</td>";
       echo "</tr>";
       }

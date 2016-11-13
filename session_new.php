@@ -2,7 +2,7 @@
 	ob_start(); //output buffer 
 	session_start();
 	include("includes/db_connect.php");
-//	$db = new mysqli($server, $username, $password, $dbname);
+	$db = new mysqli($server, $username, $password, $dbname);
 
 	if (isset($_POST['username']) && isset($_POST['password'])){
 		$username = $_POST['username'];
