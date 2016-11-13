@@ -11,7 +11,23 @@
 		public $role_id;
 
 		//What kinds of things will users be able to do...?
+	private static $sql_select = "SELECT * FROM users ORDER BY id;";
 
+    // Returns an array of User objects, based on data in the persistence layer.
+    public static function loadUsers() {
+        global $db;
+        $all_users = [];
+        $results = $db->query(self::$sql_select);
+        while ($row = $results->fetch_assoc()) {
+            $user = new User();
+            $user->id = $row['id'];
+            $user->first_name = $row['first_name'];
+            array_push($all_users, $user);
+        }
+        $results->free();
+        $db->close();
+        return $all_users;
+    }
 
 		//Create
 		public static function create() {
