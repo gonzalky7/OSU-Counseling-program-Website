@@ -50,6 +50,7 @@ session_start();
   		else {
   				echo "<div class=\"navBar\">";
        			echo "<ul>";
+       			echo "<li><a class=\"active\" href=\"/index.php\">Home</a></li>";
   				echo "<li><a href=\"/about.php\">About</a></li>";
   				echo "<li><a href=\"../login.php\">Login</a></li>";
         		
