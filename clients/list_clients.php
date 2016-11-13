@@ -30,6 +30,9 @@
  			echo "</tr>";
  			}
  		?>
+ 		<tr>
+ 			<th><a href="/form.php">Create New Client</a></th>
+ 		</tr>
 	</table>
 	</div>
 </div>

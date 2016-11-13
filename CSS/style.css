@@ -201,6 +201,7 @@ th {
 
 .list-table a {
   color: black;
+  appearance: button;
 }
 /* ---- end table style --- */
 
@@ -208,15 +209,7 @@ th {
 .list-roles-table th {
   width: 50%;
 }
-
 /* ---end roles table style ---- */
-
-
-/* style for login page */
-
-
-
-/* ---- end login style ---- */
 
 
 .content {
