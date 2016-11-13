@@ -4,7 +4,7 @@
 	include("../classes/client.class.php");
 
 
-//	$db = new mysqli($server, $username, $password, $dbname);
+//	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 
 	$updateClient = new Client(NULL, NULL, NULL, NULL, NULL);
 	$updateClient->listClientInfo($_GET['id']);
@@ -19,7 +19,7 @@
 			echo "ERROR: Could not execute"; //. mysqli_error($db);
 			header('Refresh:3; list_clients.php');
 		}
-	} 
+	}
 ?>
 
 
@@ -48,6 +48,6 @@
  </div>
 
 
-<?php 
+<?php
 	include("../includes/footer.php")
 ?>

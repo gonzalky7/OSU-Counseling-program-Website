@@ -1,10 +1,10 @@
-<?php 
+<?php
 	ob_start();
 	include("../includes/header.php");
 	include("../includes/db_connect.php");
-	
+
 	//For the db.humanoriented.com the $dbname is db_oneteam not cascades_clinic
-	//$db = new mysqli($server, $username, $password, $dbname);
+	//$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 
 	include("../classes/client.class.php");
 
@@ -15,7 +15,7 @@
 	$output = "";
 
 	//create a new client object and pass to it the values from the form
-	$new_client = new Client(NULL, $_POST['firstName'], $_POST['lastName'], 
+	$new_client = new Client(NULL, $_POST['firstName'], $_POST['lastName'],
 		$_POST['age'], $_POST['birthday']);
 
 	//call our save function and it returns true print success else print failure

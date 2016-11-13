@@ -1,7 +1,7 @@
 <?php
 	include("../includes/db_connect.php");
-//	$db = new mysqli($server, $username, $password, $dbname);
-	/*The clients class will incapsulate our CRUD operations 
+
+	/*The clients class will incapsulate our CRUD operations
 	 *as well as store some of the data.
 	 */
 
