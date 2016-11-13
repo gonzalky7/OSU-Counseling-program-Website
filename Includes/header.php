@@ -28,8 +28,6 @@ session_start();
 		</div>
 
 		 </body>
-
-
 <?php
 		if (currentUser()) {
 			echo "<div class=\"navBar\">";
