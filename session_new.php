@@ -24,6 +24,7 @@
 			} else if ($row_cnt == 1){
 				$user_id = $row['id'];
 				$_SESSION['user_id'] = $user_id;
+				$_SESSION['username'] = $username;
 				header('Location: index.php');
 			}
 		
