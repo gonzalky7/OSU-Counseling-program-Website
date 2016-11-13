@@ -3,7 +3,7 @@
 
     $user = new User(NULL, NULL, NULL, NULL, NULL);
     $users_info = $user->loadUsers();
-//    $db = new mysqli($server, $username, $password, $dbname);
+//    $db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 ?>
 
 <div class="wrapper">

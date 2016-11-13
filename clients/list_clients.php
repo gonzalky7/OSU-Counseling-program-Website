@@ -3,7 +3,7 @@
 
 	  $clients = new Client(NULL, NULL, NULL, NULL, NULL);
 	  $client_info = $clients->listAllClientInfo();
-//	  $db = new mysqli($server, $username, $password, $dbname);
+//	  $db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 ?>
 
 <div class="wrapper">

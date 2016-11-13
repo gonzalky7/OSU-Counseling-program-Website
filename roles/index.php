@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include('../includes/header.php');
 	include('../classes/role.class.php');
 
@@ -26,7 +26,4 @@
     	</div><!-- /content -->";
 	</div><!-- /wrapper -->";
 
-<?php
-	$db->close();
-	include('../includes/footer.php');
-?>
+<?php	include('../includes/footer.php'); ?>

@@ -7,7 +7,7 @@
  * special puppy picture."
  */
 include("../includes/db_connect.php");
-	  $db = new mysqli($server, $username, $password, $dbname);
+
 class Role {
     public $id;
     public $name;
@@ -36,7 +36,7 @@ class Role {
         // Hmmm...
     }
 
-    
+
 
 }
 

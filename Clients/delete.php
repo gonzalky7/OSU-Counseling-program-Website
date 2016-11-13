@@ -1,8 +1,8 @@
-<?php 
+<?php
 	ob_start();
 	include("../includes/header.php");
 	include("../classes/client.class.php");
-//	$db = new mysqli($server, $username, $password, $dbname);
+//	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 	$client = new Client(NULL, NULL, NULL, NULL, NULL);
 
 
@@ -16,7 +16,7 @@
 	 	echo "<h1>Error deleting record: " . $db->error . "</h1>";
 		header('Refresh:3; list_clients.php');
 	}
-		
+
 	echo "    </div>";
 	echo "</div>";
 

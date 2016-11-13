@@ -4,7 +4,7 @@
 	include("../classes/user.class.php");
 
 
-//	$db = new mysqli($server, $username, $password, $dbname);
+//	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 
 	$updateUser = new User(NULL, NULL, NULL, NULL, NULL);
 	$updateUser->listUserInfo($_GET['id']);
@@ -19,7 +19,7 @@
 			echo "ERROR: Could not execute"; //. mysqli_error($db);
 			header('Refresh:3; list_users.php');
 		}
-	} 
+	}
 ?>
 
 
@@ -51,6 +51,6 @@
  </div>
 
 
-<?php 
+<?php
 	include("../includes/footer.php")
 ?>
