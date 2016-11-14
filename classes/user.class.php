@@ -18,23 +18,23 @@
 		}
 
 		//What kinds of things will users be able to do...?
-	private static $sql_select = "SELECT * FROM users ORDER BY id;";
+		private static $sql_select = "SELECT * FROM users ORDER BY id;";
 
-    // Returns an array of User objects, based on data in the persistence layer.
-    public static function loadUsers() {
-        global $db;
-        $all_users = [];
-        $results = $db->query(self::$sql_select);
-        while ($row = $results->fetch_assoc()) {
-            $user = new User();
-            $user->id = $row['id'];
-            $user->first_name = $row['first_name'];
-            array_push($all_users, $user);
-        }
-        $results->free();
-        $db->close();
-        return $all_users;
-    }
+    	// Returns an array of User objects, based on data in the 	persistence layer.
+    	public static function loadUsers() {
+        	global $db;
+        	$all_users = [];
+        	$results = $db->query(self::$sql_select);
+        	while ($row = $results->fetch_assoc()) {
+            	$user = new User();
+            	$user->id = $row['id'];
+            	$user->first_name = $row['first_name'];
+            	array_push($all_users, $user);
+        	}
+       		$results->free();
+        	$db->close();
+        	return $all_users;
+    	}
 
 		//Create
 		public function saveUserInfo() {
@@ -107,6 +107,27 @@
 	 		} else {
 	 			return false;
 	 		}
+	 	}
+
+	 	public function validateUser(){
+	 		global $db;
+	 		$query = "SELECT id FROM users WHERE username = '{$this->username}' AND password = '{$this->password}'";
+
+	 		$res = $db->query($query);
+
+			if ($res && $res->num_rows == 1) {
+				$row = $res->fetch_assoc();
+				$user_id = $row['id'];
+
+				//Declaring global session variables
+				$_SESSION['user_id'] = $user_id;
+				$_SESSION['user_name'] = $username;
+		
+				return true;
+			} else{ 
+		 		$_SESSION['message'] = 'Invalid username/password'; 
+   	 	    } 
+
 	 	}
 
 	}
