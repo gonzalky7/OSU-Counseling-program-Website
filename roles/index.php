@@ -7,23 +7,27 @@
 ?>
 
 	<div class="wrapper">
-  	    <div class="content">
-           <h2>Roles</h2>
-           <table class="list-roles-table">
-
+  	    <div class="main-content">
+           <table class="list-table"> 
            <tr>
-           <th>ID</th>
-           <th>Role</th>
+              <th>Roles</th>
+              <th>ID</th>
+              <th>Delete</th>
+              <th>Edit</th>
            </tr>
            <?php foreach ($roles as $value){
            			echo "<tr>";
-           			echo "<td>" . $value->id . "</td>";
            			echo "<td>" . $value->name . "</td>";
+           			echo "<td>" . $value->id . "</td>";
            			echo "</tr>";
                  }
             ?>
-           </table>
+            <tr>
+              <th><a href="form.php">Create New Role</a></th>
+          </tr>
+          </table>
     	</div><!-- /content -->";
 	</div><!-- /wrapper -->";
+
 
 <?php	include('../includes/footer.php'); ?>
