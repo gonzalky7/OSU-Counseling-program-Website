@@ -14,10 +14,10 @@ class Role {
 
     public function __construct($id, $name){
         $this->id = $id;
-        $this->name = $first;
+        $this->name = $name;
     }
 
-    private static $sql_select = "SELECT * FROM roles ORDER BY name;";
+    private static $sql_select = "SELECT * FROM roles ORDER BY name";
 
     // Returns an array of Role objects, based on data in the persistence layer.
     public static function load() {
@@ -68,7 +68,7 @@ class Role {
 
         //get the updated values form
         $this->id = $id;
-        $this->name = $first;
+        $this->name = $name;
 
         $update_query = "UPDATE roles SET id = '$id', name = '$name' WHERE id = $id";
 

@@ -15,7 +15,7 @@
 
 			Sessions are facilitated by graduate students who are trained in cognitive–behavioral therapies that are shown to be effective in helping individuals manage stress, anxiety, depression and trauma.
 
-			community counseling is offered in Bend at the Graduate & Research Center near the Old Mill District.</p>
+			Community counseling is offered in Bend at the Graduate & Research Center near the Old Mill District.</p>
   		</body>
 </html>
 </div>
