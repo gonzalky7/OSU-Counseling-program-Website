@@ -2,6 +2,16 @@
 	ob_start();
 	include("../includes/header.php");
 	include("../classes/user.class.php");
+
+//For security checking for login id if not redirected to login page
+if (!isset($_SESSION['user_id']))
+{
+    header("Location: /login.php");
+    die();
+}
+
+
+
 //	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 	$user = new User("","","","");
 
