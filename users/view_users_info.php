@@ -6,6 +6,17 @@
 	<div class="main-content">
 
 <?php
+
+
+//For security checking for login id if not redirected to login page
+if (!isset($_SESSION['user_id']))
+{
+    header("Location: /login.php");
+    die();
+}
+
+
+
 //again $db for db.humanoriented.com is db_oneteam
 //$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 $id = $_GET["id"];

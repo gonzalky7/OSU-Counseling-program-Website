@@ -2,6 +2,14 @@
 
 <?php include("../includes/db_connect.php") ?>
 
+<?php if (!isset($_SESSION['user_id']))
+{
+    header("Location: /login.php");
+    die();
+} ?>
+
+
+
 <div class="wrapper">
 	<div class="main-content">
 
