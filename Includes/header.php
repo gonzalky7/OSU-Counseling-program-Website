@@ -1,8 +1,16 @@
-<?php include('session.functions.php') ?>
-<?php
-ob_start();
-session_start();
+<?php 
+	include('session.functions.php');
+	ob_start();
+	session_start();
+	
+
+	// if(!currentUser()){
+	//  	header("Location: index.php");
+	//  	die();
+ // 	}
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -18,39 +26,15 @@ session_start();
 	<body>
 		<div class="banner">
 			<a href="/index.php"><img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades"></a>
-
-
-
 			<p class="demo">  <?php echo currentUserName() ?> </p>
-
-
-     	   </body>
 		</div>
 
-		 </body>
 <?php
 		if (currentUser()) {
-			echo "<div class=\"navBar\">";
-       	echo "<ul>";
-  			echo "<li><a class=\"active\" href=\"/index.php\">Home</a></li>";
-  			echo "<li><a href=\"/clients/list_clients.php\">Clients</a></li>";
-  			echo "<li><a href=\"/users/list_users.php\">Users</a></li>";
-
-        echo "<li><a href=\"/roles\">Roles</a></li>";
-  			echo "<li><a href=\"../about.php\">About</a></li>";
-        echo "<li><a href=\"../logout.php\">Logout</a></li>";
-				echo "</ul>";
-  			echo "</div>";
+			include("admin-nav.php");
   		}
   		else {
-  				echo "<div class=\"navBar\">";
-       		echo "<ul>";
-       		echo "<li><a class=\"active\" href=\"/index.php\">Home</a></li>";
-  				echo "<li><a href=\"/about.php\">About</a></li>";
-  				echo "<li><a href=\"../login.php\">Login</a></li>";
-
-				echo "</ul>";
-  			echo "</div>";
+  			include("anon-nav.php");
   		}
 ?>
 
