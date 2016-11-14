@@ -3,13 +3,10 @@
 	include("includes/db_connect.php");
 	include("classes/user.class.php");
 
-	$new_session = new User("", "", "", "");
-
 	if (isset($_POST['username']) && isset($_POST['password'])) {
-		$new_session->username = $_POST['username'];
-		$new_session->password = $_POST['password'];
+		$new_session = validateUser($_POST['username'], $_POST['password']);
 
-		if($new_session->validateUser()){
+		if($new_session){
 			header('Location: index.php'); 
 		} else {
 			header('Location: login.php');

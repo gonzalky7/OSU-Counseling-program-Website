@@ -109,26 +109,27 @@
 	 		}
 	 	}
 
-	 	public function validateUser(){
-	 		global $db;
-	 		$query = "SELECT id FROM users WHERE username = '{$this->username}' AND password = '{$this->password}'";
+	 	// public function validateUser(){
+	 	// 	global $db;
+	 	// 	$query = "SELECT id FROM users WHERE username = '{$this->username}' AND password = '{$this->password}'";
 
-	 		$res = $db->query($query);
+	 	// 	$res = $db->query($query);
 
-			if ($res && $res->num_rows == 1) {
-				$row = $res->fetch_assoc();
-				$user_id = $row['id'];
+			// if ($res && $res->num_rows == 1) {
+			// 	$row = $res->fetch_assoc();
+			// 	$user_id = $row['id'];
 
-				//Declaring global session variables
-				$_SESSION['user_id'] = $this->user_id;
-				$_SESSION['user_name'] = $this->username;
+			// 	//Declaring global session variables
+			// 	$_SESSION['user_id'] = $this->user_id;
+			// 	$_SESSION['user_name'] = $this->username;
 		
-				return true;
-			} else{ 
-		 		$_SESSION['message'] = 'Invalid username/password'; 
-   	 	    } 
+			// 	return true;
+			// } else{ 
+		 // 		$_SESSION['message'] = 'Invalid username/password';
+		 // 		return false; 
+   // 	 	    } 
 
-	 	}
+	 	// }
 
 	}
 

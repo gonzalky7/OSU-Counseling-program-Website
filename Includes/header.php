@@ -19,7 +19,7 @@
 	<body>
 		<div class="banner">
 			<a href="/index.php"><img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades"></a>
-			<p class="demo">Welcome, <?php echo currentUserName() ?> </p>
+			<p class="demo"><?php if(currentUser()) { echo "Welcome, " . currentUserName();} ?> </p>
 		</div>
 
 <?php
