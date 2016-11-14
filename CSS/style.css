@@ -37,9 +37,10 @@ p {
 
 p.demo {
   float: right;
-  background: #9C9;
   color: #FFF;
   padding: 2px;
+  margin-right:10px;
+  font-family: "Open Sans", serif;
 }
 
 .wrapper {

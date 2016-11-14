@@ -120,8 +120,8 @@
 				$user_id = $row['id'];
 
 				//Declaring global session variables
-				$_SESSION['user_id'] = $user_id;
-				$_SESSION['user_name'] = $username;
+				$_SESSION['user_id'] = $this->user_id;
+				$_SESSION['user_name'] = $this->username;
 		
 				return true;
 			} else{ 

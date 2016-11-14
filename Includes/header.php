@@ -2,13 +2,6 @@
 	include('session.functions.php');
 	ob_start();
 	session_start();
-	
-
-	// if(!currentUser()){
-	//  	header("Location: index.php");
-	//  	die();
- // 	}
-
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +19,7 @@
 	<body>
 		<div class="banner">
 			<a href="/index.php"><img src="http://osucascades.edu/sites/osucascades.edu/modules/osu_cascades_top_hat/images/osu_cascades_logo.png" class="logo" alt="Oregon State University Cascades"></a>
-			<p class="demo">  <?php echo currentUserName() ?> </p>
+			<p class="demo">Welcome, <?php echo currentUserName() ?> </p>
 		</div>
 
 <?php
