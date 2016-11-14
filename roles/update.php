@@ -27,7 +27,7 @@
 	<form method="post">
     	<table align="center">
     		<tr>
-    		<td><input type="text" name="name" placeholder="Name" value="<?php echo $updateUser->name; ?>" required /></td>
+    		<td><input type="text" name="name" placeholder="Name" value="<?php echo $updateRole->name; ?>" required /></td>
     		</tr>
     		<tr>
     		<td>
