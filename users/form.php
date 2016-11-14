@@ -4,7 +4,7 @@
 
 	<div class="wrapper">
 
-	<form method="post" action="users/create.php">
+	<form method="post" action="create.php">
 		<fieldset>
 			<div class="centerTitle"><legend><h1 id="header">Create a new User</h1></legend></div>
 			<label for="firstName">Firstname</label>

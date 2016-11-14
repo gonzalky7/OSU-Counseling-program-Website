@@ -10,6 +10,13 @@
 		public $password;
 		public $role_id;
 
+		public function __construct($first, $last, $user, $pass) {
+			$this->first_name = $first;
+			$this->last_name = $last;
+			$this->username = $user;
+			$this->password = $pass;
+		}
+
 		//What kinds of things will users be able to do...?
 	private static $sql_select = "SELECT * FROM users ORDER BY id;";
 
@@ -30,15 +37,18 @@
     }
 
 		//Create
-		public static function create() {
+		public function saveUserInfo() {
 			global $db;
 
 			//create a query and fill it with passed values
+			$save_query = "INSERT INTO users (first_name, last_name, username, password) VALUES ( '{$this->first_name}', '{$this->last_name}', '{$this->username}', '{$this->password}')";
 
 			//error check it
-
-			//close connection
-
+			if(mysqli_query($db, $save_query)) {
+	 			return true;
+	 		} else {
+	 			return false;
+	 		}
 		}
 
 
@@ -82,7 +92,22 @@
 	 	}
 
 		//Delete
+	 	public function deleteUser(){
+	 		global $db;
 
+	 		//get the id to be deleted
+	 		$idToDelete = $_GET["id"];
+
+	 		//create a query
+	 		$delete_query = $db->query("DELETE FROM users WHERE id = $idToDelete");
+
+	 		//test to see if it was successful
+	 		if($delete_query){
+	 			return true;
+	 		} else {
+	 			return false;
+	 		}
+	 	}
 
 	}
 

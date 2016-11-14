@@ -22,7 +22,7 @@
       echo "</a>";
       echo "</td>";
       echo "<td>";
-      echo "<a style=\"color: red; text-decoration: none; text-align: center;\" href=\"user_delete.php?id=" . $value->id . "\">X</a>";
+      echo "<a style=\"color: red; text-decoration: none; text-align: center;\" href=\"delete.php?id=" . $value->id . "\">X</a>";
       echo "</td>";
       echo "<td>";
       echo "<a style=\"color: Green; text-decoration: none; text-align: center;\" href=\"user_update.php?id=" . $value->id . "\">&#10003</a>";
