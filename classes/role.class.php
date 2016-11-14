@@ -68,7 +68,7 @@ class Role {
 
         //get the updated values form
         $this->id = $id;
-        $this->name = $first;
+        $this->name = $name;
 
         $update_query = "UPDATE roles SET id = '$id', name = '$name' WHERE id = $id";
 
