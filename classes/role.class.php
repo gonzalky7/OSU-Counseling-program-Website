@@ -1,105 +1,103 @@
-<?php
-/* A Role represents the role a user plays in the system, and corresponds
- * to a role in the real world. Roles provide semantics around "what kind of
- * user" someone is, and allows the system to dictate what they are allowed
- * to do. For example "Only admins and directors have the ability to do"
- * everything," or, "If the user isn't a Counselor, don't show them the
- * special puppy picture."
- */
-include("../includes/db_connect.php");
+<?php include("../includes/db_connect.php");
 
-class Role {
-    public $id;
-    public $name;
 
-    public function __construct($id, $name){
-        $this->id = $id;
-        $this->name = $name;
-    }
 
-    private static $sql_select = "SELECT * FROM roles ORDER BY name";
 
-    // Returns an array of Role objects, based on data in the persistence layer.
-    public static function load() {
-        global $db;
-        $all_roles = [];
-        $results = $db->query(self::$sql_select);
-        while ($row = $results->fetch_assoc()) {
-            $role = new Role();
-            $role->id = $row['id'];
-            $role->name = $row['name'];
-            array_push($all_roles, $role);
+
+    class Role {
+        public $id;
+        public $name;
+
+        public function __construct($id, $name) {
+            $this->id = $id;
+            $this->name = $name;
         }
-        $results->free();
-        $db->close();
-        return $all_roles;
-    }
 
-    public function saveRoleInfo(){
-        global $db;
+        private static $sql_select = "SELECT * FROM roles ORDER BY name";
 
-        //Create the query to save the role
-        $save_query = "INSERT INTO roles (id, name) VALUES ('{$this->id}', '{$this->name}')";
+        // Returns an array of Role objects, based on data in the persistence layer.
+        public static function load() {
+            global $db;
+            $all_roles = [];
+            $results = $db->query(self::$sql_select);
 
-        //check to make sure it worked
-        if(mysqli_query($db, $save_query)) {
-            return true;
-        } else {
-            return false;
+            while ($row = $results->fetch_assoc()) {
+                $role = new Role();
+                $role->id = $row['id'];
+                $role->name = $row['name'];
+                array_push($all_roles, $role);
+            }
+
+            $results->free();
+            $db->close();
+            return $all_roles;
         }
-    }
 
-    public function listRoleInfo($id){
-        global $db;
+        public function saveRoleInfo() {
+            global $db;
 
-        //create and execute a query
-        $results = $db->query("SELECT * FROM roles WHERE id = $id");
+            //Create the query to save the role
+            $save_query = "INSERT INTO roles (id, name) VALUES ('{$this->id}', '{$this->name}')";
 
-        //get the first row of the return from the query
-        $row = $results->fetch_assoc();
-
-        $this->id = $row['id'];
-        $this->name = $row['name'];
-    }
-
-    //Update
-    public function updateRoleInfo($id, $name){
-        global $db;
-
-        //get the updated values form
-        $this->id = $id;
-        $this->name = $name;
-
-        $update_query = "UPDATE roles SET id = '$id', name = '$name' WHERE id = $id";
-
-        //test to make sure update worked
-        if(mysqli_query($db, $update_query)){
-            return true;
-        } else {
-            return false;
+            //check to make sure it worked
+            if(mysqli_query($db, $save_query)) {
+                return true;
+            }   else {
+                    return false;
+                }
         }
-    }
 
-    //Delete
-    public function deleteRole(){
-        global $db;
+        public function listRoleInfo($id) {
+            global $db;
 
-        //get the id to be deleted
-        $idToDelete = $_GET["id"];
+            //create and execute a query
+            $results = $db->query("SELECT * FROM roles WHERE id = $id");
 
-        //create a query
-        $delete_query = $db->query("DELETE FROM roles WHERE id = $idToDelete");
+            //get the first row of the return from the query
+            $row = $results->fetch_assoc();
 
-        //test to see if it was successful
-        if($delete_query){
-            return true;
-        } else {
-            return false;
+            $this->id = $row['id'];
+            $this->name = $row['name'];
         }
+
+        //Update
+        public function updateRoleInfo($id, $name) {
+            global $db;
+
+            //get the updated values form
+            $this->id = $id;
+            $this->name = $name;
+
+            $update_query = "UPDATE roles SET id = '$id', name = '$name' WHERE id = $id";
+
+            //test to make sure update worked
+            if(mysqli_query($db, $update_query)) {
+                return true;
+            }   else {
+                    return false;
+                }
+        }
+
+        //Delete
+        public function deleteRole() {
+            global $db;
+
+            //get the id to be deleted
+            $idToDelete = $_GET["id"];
+
+            //create a query
+            $delete_query = $db->query("DELETE FROM roles WHERE id = $idToDelete");
+
+            //test to see if it was successful
+            if($delete_query) {
+                return true;
+            }   else {
+                    return false;
+                }
+        }
+
+
+
     }
-
-
-
-}
 
 ?>

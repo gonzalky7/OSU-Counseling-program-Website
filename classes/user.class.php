@@ -1,6 +1,7 @@
-<?php
+<?php include("../includes/db_connect.php");
+
 	/*The user class represents a user of our system. The user class should represent the user's important data as well as the actions a user should be able to take.*/
-	include("../includes/db_connect.php");
+	
 
 	class User {
 		public $id;
@@ -25,6 +26,7 @@
         	global $db;
         	$all_users = [];
         	$results = $db->query(self::$sql_select);
+
         	while ($row = $results->fetch_assoc()) {
             	$user = new User();
             	$user->id = $row['id'];
@@ -46,14 +48,14 @@
 			//error check it
 			if(mysqli_query($db, $save_query)) {
 	 			return true;
-	 		} else {
-	 			return false;
-	 		}
+	 		} 	else {
+	 				return false;
+	 			}
 		}
 
 
 		//Read
-		public function listUserInfo($id){
+		public function listUserInfo($id) {
 			global $db;
 
 	 		//create and execute a query
@@ -70,7 +72,7 @@
 	 	}
 
 		//Update
-		public function updateUserInfo($id, $first, $last, $username, $password, $role_id){
+		public function updateUserInfo($id, $first, $last, $username, $password, $role_id) {
 	 		global $db;
 
 	 		//get the updated values form
@@ -84,15 +86,15 @@
 			$update_query = "UPDATE users SET first_name = '$first', last_name = '$last', username = '$username', password = '$password', role_id = '$role_id' WHERE id = $id";
 
 			//test to make sure update worked
-			if(mysqli_query($db, $update_query)){
+			if(mysqli_query($db, $update_query)) {
 				return true;
-			} else {
-				return false;
-			}
+			}	 else {
+					return false;
+				}
 	 	}
 
 		//Delete
-	 	public function deleteUser(){
+	 	public function deleteUser() {
 	 		global $db;
 
 	 		//get the id to be deleted
@@ -102,11 +104,11 @@
 	 		$delete_query = $db->query("DELETE FROM users WHERE id = $idToDelete");
 
 	 		//test to see if it was successful
-	 		if($delete_query){
+	 		if($delete_query) {
 	 			return true;
-	 		} else {
-	 			return false;
-	 		}
+	 		} 	else {
+	 				return false;
+	 			}
 	 	}
 
 	 	// public function validateUser(){
