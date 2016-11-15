@@ -1,9 +1,10 @@
-<?php include("../includes/db_connect.php");
+<?php 
+
+	include("../includes/db_connect.php");
 
 		/*The clients class will incapsulate our CRUD operations
 		 *as well as store some of the data.
 	 	*/
-
 	class Client {
 	 	public $ID;
 	 	public $first_name;
@@ -18,7 +19,6 @@
 	 		$this->age = $age;
 	 		$this->birthday = $bday;
 	 	}
-
 
 	 	public function saveClientInfo() {
 	 		global $db;

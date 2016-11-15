@@ -1,5 +1,6 @@
-<?php include("../includes/db_connect.php");
+<?php 
 
+    include("../includes/db_connect.php");
 
 
 

@@ -1,5 +1,5 @@
 <?php
-	ob_start();
+
 	include("../includes/header.php");
 	include("../includes/db_connect.php");
 
@@ -19,11 +19,11 @@
 		$_POST['age'], $_POST['birthday']);
 
 	//call our save function and it returns true print success else print failure
-	if($new_client->saveClientInfo()){
+	if($new_client->saveClientInfo()) {
 		$output = $success;
-	} else {
-		$output = $failed;
-	}
+	}	else {
+			$output = $failed;
+		}
 
 	echo "<div class=\"wrapper\">";
 	echo "    <div class=\"main-content\">";
@@ -31,6 +31,6 @@
 	echo "    </div>";
 	echo "</div>";
 
+	header("Refresh:2; ../clients/list_clients.php");
 	include("../includes/footer.php");
-	header("Refresh:3; ../index.php");
 ?>
