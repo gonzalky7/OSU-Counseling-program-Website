@@ -23,7 +23,7 @@
 
       	$query = "SELECT id FROM users WHERE username = '$username' AND password = '$password'";
 
-      	//Kyleen: Can someone change the res variable to something more descriptive. I am still unsure about this line of code THank
+      	//Kyleen: Can someone change the res variable to something more descriptive. I am still unsure about this line of code THanks 
       	$res = $db->query($query);
 
       	if ($res && $res->num_rows == 1) {
