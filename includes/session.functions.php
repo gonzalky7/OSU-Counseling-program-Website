@@ -2,7 +2,7 @@
 /* Session Functions
  * These functions abstract the details of working with sessions.
 */
-	include("../includes/db_connect.php");
+	include("db_connect.php");
 
 	// Returns a User object or NULL if no user is logged in.
 	function currentUser() {

@@ -3,9 +3,6 @@
 	include("../includes/header.php");
 	include("../classes/role.class.php");
 
-
-//	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
-
 	$updateRole = new Role(NULL, NULL);
 	$updateRole->listRoleInfo($_GET['id']);
 
@@ -22,7 +19,6 @@
 	}
 ?>
 
-
 <div class="wrapper">
 	<form method="post">
     	<table align="center">
@@ -37,7 +33,6 @@
     	</table>
     </form>
  </div>
-
 
 <?php
 	include("../includes/footer.php")

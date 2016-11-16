@@ -2,9 +2,7 @@
 	ob_start();
 	include("../includes/header.php");
 	include("../classes/role.class.php");
-//	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 	$role = new Role("","");
-
 
 	echo "<div class=\"wrapper\">";
 	echo "<div class=\"main-content\">";
@@ -21,5 +19,4 @@
 	echo "</div>";
 
 	include("../includes/footer.php");
-
 ?>

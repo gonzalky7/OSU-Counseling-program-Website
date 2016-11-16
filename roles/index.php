@@ -3,12 +3,11 @@
 	include('../classes/role.class.php');
 
 //For security checking for login id if not redirected to login page
-if (!isset($_SESSION['user_id']))
-{
-    header("Location: /login.php");
-    die();
-}
-
+	if (!isset($_SESSION['user_id']))
+	{
+		header("Location: /login.php");
+		die();
+	}
 
 	$list_roles = new Role(NULL,NULL);
 	$roles = $list_roles->load();
@@ -25,7 +24,7 @@ if (!isset($_SESSION['user_id']))
               <th>Edit</th>
            </tr>
            <?php foreach ($roles as $value){
-           			echo "<tr>";
+           		echo "<tr>";
                 echo "<td>";
                 echo $value->name;
                 echo "</td>";
@@ -38,8 +37,8 @@ if (!isset($_SESSION['user_id']))
                 echo "<td>";
                 echo "<a style=\"color: Green; text-decoration: none; text-align: center;\" href=\"update.php?id=" . $value->id . "\">&#10003</a>";
                 echo "</td>";
-               echo "</tr>";
-             }
+				echo "</tr>";
+            }
             ?>
             <tr>
               <th><a href="form.php">Create New Role</a></th>
@@ -47,6 +46,5 @@ if (!isset($_SESSION['user_id']))
           </table>
     	</div><!-- /content -->";
 	</div><!-- /wrapper -->";
-
 
 <?php	include('../includes/footer.php'); ?>
