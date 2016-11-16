@@ -12,7 +12,7 @@
  	}
 
   function redirectIfNotLoggedIn() {
-    $allowableURLS = ["index.php", "login.php", "about.php", "form.php"];
+    include('public_urls.include.php');
     if (in_array(basename($_SERVER['REQUEST_URI']), $allowableURLS)) {
       return;
     } else if (!isset($_SESSION['user_id'])) {
