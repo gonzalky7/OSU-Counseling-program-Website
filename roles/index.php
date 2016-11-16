@@ -2,12 +2,7 @@
 	include('../includes/header.php');
 	include('../classes/role.class.php');
 
-//For security checking for login id if not redirected to login page
-	if (!isset($_SESSION['user_id']))
-	{
-		header("Location: /login.php");
-		die();
-	}
+  redirectIfNotLoggedIn();
 
 	$list_roles = new Role(NULL,NULL);
 	$roles = $list_roles->load();
@@ -16,7 +11,7 @@
 
 	<div class="wrapper">
   	    <div class="main-content">
-           <table class="list-table"> 
+           <table class="list-table">
            <tr>
               <th>Roles</th>
               <th>ID</th>

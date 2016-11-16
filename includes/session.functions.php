@@ -8,9 +8,16 @@
 	function currentUser() {
   		if (isset($_SESSION['user_id'])) {
   			return true;
-  		} else return false;	
+  		} else return false;
  	}
-	
+
+  function redirectIfNotLoggedIn() {
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: /login.php");
+        die();
+    }
+  }
+
   	function currentUserName(){
     	if (isset($_SESSION['user_name'])) {
   	 		return $_SESSION['user_name'];
@@ -23,7 +30,7 @@
 
       	$query = "SELECT id FROM users WHERE username = '$username' AND password = '$password'";
 
-      	//Kyleen: Can someone change the res variable to something more descriptive. I am still unsure about this line of code THanks 
+      	//Kyleen: Can someone change the res variable to something more descriptive. I am still unsure about this line of code THanks
       	$res = $db->query($query);
 
       	if ($res && $res->num_rows == 1) {
@@ -33,12 +40,12 @@
         	//Declaring global session variables
         	$_SESSION['user_id'] = $user_id;
         	$_SESSION['user_name'] = $username;
-    
+
         	return true;
-      	} 	else { 
+      	} 	else {
         		$_SESSION['message'] = 'Invalid username/password';
-        		return false; 
-      		} 
+        		return false;
+      		}
 
     }
 
