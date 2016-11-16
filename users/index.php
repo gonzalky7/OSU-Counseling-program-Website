@@ -4,7 +4,7 @@
 
 
 //For security checking for login id if not redirected to login page
-redirectIfNotLoggedIn();
+
 
 
 

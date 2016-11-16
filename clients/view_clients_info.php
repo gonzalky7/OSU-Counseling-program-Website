@@ -2,7 +2,7 @@
 
 <?php include("../includes/db_connect.php") ?>
 
-<?php redirectIfNotLoggedIn(); ?>
+<?php  ?>
 
 
 

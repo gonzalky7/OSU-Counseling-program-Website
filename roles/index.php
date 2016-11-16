@@ -2,8 +2,6 @@
 	include('../includes/header.php');
 	include('../classes/role.class.php');
 
-  redirectIfNotLoggedIn();
-
 	$list_roles = new Role(NULL,NULL);
 	$roles = $list_roles->load();
 ?>

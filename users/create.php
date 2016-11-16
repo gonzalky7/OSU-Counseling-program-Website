@@ -9,7 +9,7 @@
 	include("../classes/user.class.php");
 
 
-  redirectIfNotLoggedIn();
+
 
 
 	//strings to outout on function success/failure
