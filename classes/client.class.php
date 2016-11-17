@@ -105,6 +105,8 @@
 			$this->age = $row['age'];
 			$this->birthday = $row['date_of_birth'];
 	 	}
+
+	 	
 	}
 
 ?>
