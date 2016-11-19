@@ -9,7 +9,6 @@ if (!isset($_SESSION['user_id']))
     die();
 }
 
-	
 ?>
 
 	<div class="wrapper">
@@ -35,6 +34,7 @@ if (!isset($_SESSION['user_id']))
 
 	</div>
 
+
 <?php 
-	include("includes/footer.php");
+	include("../includes/footer.php");
 ?>

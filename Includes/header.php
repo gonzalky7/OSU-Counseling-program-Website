@@ -1,7 +1,8 @@
-<?php 
+<?php
 	include('session.functions.php');
 	ob_start();
 	session_start();
+	redirectIfNotLoggedIn();
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
 		<link rel="stylesheet" type="text/css" href="/css/about.css">
 
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 
 	<body>

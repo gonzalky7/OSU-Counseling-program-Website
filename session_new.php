@@ -1,5 +1,5 @@
 <?php 
-	include("includes/header.php");
+	include('includes/header.php');
 	include("includes/db_connect.php");
 	include("classes/user.class.php");
 
@@ -8,9 +8,9 @@
 
 		if($new_session){
 			header('Location: index.php'); 
-		} else {
-			header('Location: login.php');
-		}
+		}	else {
+				header('Location: login.php');
+			}
 	}
 
 	include('includes/footer.php');

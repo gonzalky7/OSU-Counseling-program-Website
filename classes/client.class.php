@@ -1,11 +1,10 @@
-<?php
-	include("includes/db_connect.php");
+<?php 
+	include("../includes/db_connect.php");
 
-	/*The clients class will incapsulate our CRUD operations
-	 *as well as store some of the data.
-	 */
-
-	 class Client {
+		/*The clients class will incapsulate our CRUD operations
+		 *as well as store some of the data.
+	 	*/
+	class Client {
 	 	public $ID;
 	 	public $first_name;
 	 	public $last_name;
@@ -20,8 +19,7 @@
 	 		$this->birthday = $bday;
 	 	}
 
-
-	 	public function saveClientInfo(){
+	 	public function saveClientInfo() {
 	 		global $db;
 
 	 		//Create the query to save the client
@@ -30,12 +28,12 @@
 	 		//check to make sure it worked
 	 		if(mysqli_query($db, $save_query)) {
 	 			return true;
-	 		} else {
-	 			return false;
-	 		}
+	 		} 	else {
+	 				return false;
+	 			}
 	 	}
 
-	 	public function deleteClient(){
+	 	public function deleteClient() {
 	 		global $db;
 
 	 		//get the id to be deleted
@@ -45,14 +43,14 @@
 	 		$delete_query = $db->query("DELETE FROM clients WHERE id = $idToDelete");
 
 	 		//test to see if it was successful
-	 		if($delete_query){
+	 		if($delete_query) {
 	 			return true;
-	 		} else {
-	 			return false;
-	 		}
+	 		} 	else {
+	 				return false;
+	 			}
 	 	}
 
-	 	public function listAllClientInfo(){
+	 	public function listAllClientInfo() {
 	 		global $db;
 	 		$all_clients = [];
 	 		//create a query and execute it
@@ -71,7 +69,7 @@
         	return $all_clients;
 	 	}
 
-	 	public function updateClientInfo($id, $first, $last, $age, $bday){
+	 	public function updateClientInfo($id, $first, $last, $age, $bday) {
 	 		global $db;
 
 	 		//get the updated values form
@@ -84,15 +82,15 @@
 			$update_query = "UPDATE clients SET first_name = '$first', last_name = '$last', age = '$age', date_of_birth = '$bday' WHERE id = $id";
 
 			//test to make sure update worked
-			if(mysqli_query($db, $update_query)){
+			if(mysqli_query($db, $update_query)) {
 				return true;
-			} else {
-				return false;
-			}
+			} 	else {
+					return false;
+				}
 	 	}
 
 	 	//should we do a list one client info?
-		public function listClientInfo($id){
+		public function listClientInfo($id) {
 			global $db;
 
 	 		//create and execute a query
@@ -106,6 +104,8 @@
 			$this->age = $row['age'];
 			$this->birthday = $row['date_of_birth'];
 	 	}
+
+	 	
 	}
 
 ?>

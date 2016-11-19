@@ -10,8 +10,6 @@ if (!isset($_SESSION['user_id']))
     die();
 }
 
-
-
 //	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 
 	$updateUser = new User(NULL, NULL, NULL, NULL, NULL);

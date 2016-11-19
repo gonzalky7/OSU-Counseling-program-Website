@@ -15,8 +15,6 @@ if (!isset($_SESSION['user_id']))
     die();
 }
 
-
-
 //again $db for db.humanoriented.com is db_oneteam
 //$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 $id = $_GET["id"];

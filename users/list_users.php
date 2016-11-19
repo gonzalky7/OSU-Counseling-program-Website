@@ -9,10 +9,6 @@ if (!isset($_SESSION['user_id']))
     die();
 }
 
-
-
-
-
     $user = new User(NULL, NULL, NULL, NULL, NULL);
     $users_info = $user->loadUsers();
 //    $db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);

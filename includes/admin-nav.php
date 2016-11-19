@@ -7,4 +7,4 @@
   		<li><a href="../about.php">About</a></li>
         <li><a href="../logout.php">Logout</a></li>
 	</ul>
- </div>
+</div>

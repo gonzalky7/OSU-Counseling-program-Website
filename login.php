@@ -2,27 +2,29 @@
 
 
 
+
+
 	<div class="wrapper">
    		<div class="welcome-header">
-   			<h1>Login</h1>
+   				<h1>Login</h1>
 
-		    <form class="login-form" action="session_new.php" method="POST">
-      <?php if (isset($_SESSION['message']))
-            {
-              echo $_SESSION['message'];
-              unset($_SESSION['message']);
-            } ?>
-              <br>
-          <label style="text-align: left;"name="username">Username</label><br />
-          <input type="text" name="username" /><br />
-          <br />
-          <label name="password">Password</label><br />
-          <input type="password" name="password" /><br />
-          <br />
-          <input type="submit" value="Log In" />
-        </form>
+		    	<form class="login-form" action="session_new.php" method="POST">
+		    	
+      				<?php if (isset($_SESSION['message'])) {
+              			echo $_SESSION['message'];
+              			unset($_SESSION['message']);
+            		} ?>
+
+              		<br />
+         			<label style="text-align: left;"name="username">Username</label><br />
+          			<input type="text" name="username" /><br />
+          			<br />
+          			<label name="password">Password</label><br />
+          			<input type="password" name="password" /><br />
+          			<br />
+          			<input type="submit" value="Log In" />
+          		</form>
    		</div>
    	</div>
-  </div>
 
 <?php include('includes/footer.php') ?>

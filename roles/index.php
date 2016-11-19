@@ -14,9 +14,10 @@ if (!isset($_SESSION['user_id']))
 	$roles = $list_roles->load();
 ?>
 
+
 	<div class="wrapper">
   	    <div class="main-content">
-           <table class="list-table"> 
+           <table class="list-table">
            <tr>
               <th>Roles</th>
               <th>ID</th>
@@ -24,7 +25,7 @@ if (!isset($_SESSION['user_id']))
               <th>Edit</th>
            </tr>
            <?php foreach ($roles as $value){
-           			echo "<tr>";
+           		echo "<tr>";
                 echo "<td>";
                 echo $value->name;
                 echo "</td>";
@@ -37,8 +38,8 @@ if (!isset($_SESSION['user_id']))
                 echo "<td>";
                 echo "<a style=\"color: Green; text-decoration: none; text-align: center;\" href=\"update.php?id=" . $value->id . "\">&#10003</a>";
                 echo "</td>";
-               echo "</tr>";
-             }
+				echo "</tr>";
+            }
             ?>
             <tr>
               <th><a href="form.php">Create New Role</a></th>
@@ -47,5 +48,4 @@ if (!isset($_SESSION['user_id']))
     	</div><!-- /content -->";
 	</div><!-- /wrapper -->";
 
-
-<?php	include('includes/footer.php'); ?>
+<?php	include('../includes/footer.php'); ?>

@@ -9,7 +9,6 @@
 } ?>
 
 
-
 <div class="wrapper">
 	<div class="main-content">
 

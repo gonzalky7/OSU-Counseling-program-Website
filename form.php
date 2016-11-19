@@ -1,12 +1,21 @@
 <?php include('includes/header.php') ?>	
+<?php
+ 
+// grab recaptcha library
+require_once "recaptchalib.php";
+ 
+?>
+
+
 			<form method="post" action="clients/create.php">
 				<fieldset>
 				<div class="centerTitle"><legend><h1 id="header">OSU Cascades Counseling Practicum <br> Client Information Form<h1></legend></div>
 					<br>
+
+				
 					<div class="boxed">
 						<label for="date">Today's Date</label>
-						<input type="date" name="date" placeholder="YYYYMMDD"/>
-
+						<input type="date" name="date" placeholder="YYYYMMDD"/>					
 						<label for="firstName">First Name</label>
 						<input type="text" name="firstName" />
 						<label for="lastName">Last Name</label>
@@ -17,7 +26,7 @@
 						<label for="birthday">Date of Birth</label>
 						<input type="date" name="birthday" placeholder="YYYYMMDD"/>
 					<br>
-						<label for="address">Address</label>
+					<!--	<label for="address">Address</label>
 						<input type="text" name="address"/>
 						<label for="address2">Address</label>
 						<input type="text" name="address2"/>
@@ -75,7 +84,7 @@
 
 					<div class="box"><h2 class="form-header">Other Members of Your Household</h2></div>
 
-					 <!-- Want to do like select a number of members of house -->
+					 <!-- Want to do like select a number of members of house --
 						<label for="relativeFirstName">First Name</label>
 						<input type="text" name="relativeFirstName">
 						<label for="relativeLastName">Last Name</label>
@@ -126,10 +135,11 @@
 					<br>
 						<label for="reason">Reason for seeking help now?</label>
 					<br>
-						<textarea rows="5" cols="50">Reason for your visit.</textarea>
-					<br>
-						
+						<textarea rows="10" cols="80">Reason for your visit.</textarea>
+					<br>-->
+						<div class="g-recaptcha" data-sitekey="6LdDRAwUAAAAAP_6x9Z2E9g6KK5tzaRRQYBMnkOg"></div>
 						<input type="submit" name ="Submit" />
+
 						
 				</fieldset>
 			</form>
