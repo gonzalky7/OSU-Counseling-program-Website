@@ -1,7 +1,7 @@
 <?php
 	ob_start();
-	include("../includes/header.php");
-	include("../classes/role.class.php");
+	include("includes/header.php");
+	include("classes/role.class.php");
 
 
 //	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
@@ -40,5 +40,5 @@
 
 
 <?php
-	include("../includes/footer.php")
+	include("includes/footer.php")
 ?>

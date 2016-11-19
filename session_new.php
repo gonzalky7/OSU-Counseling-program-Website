@@ -1,5 +1,5 @@
 <?php 
-	include('includes/header.php');
+	include("includes/header.php");
 	include("includes/db_connect.php");
 	include("classes/user.class.php");
 

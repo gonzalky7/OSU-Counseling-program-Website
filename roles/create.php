@@ -1,12 +1,12 @@
 <?php
 	ob_start();
-	include("../includes/header.php");
-	include("../includes/db_connect.php");
+	include("includes/header.php");
+	include("includes/db_connect.php");
 
 	//For the db.humanoriented.com the $dbname is db_oneteam not cascades_clinic
 	//$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 
-	include("../classes/role.class.php");
+	include("classes/role.class.php");
 
 
 	//strings to outout on function success/failure
@@ -30,6 +30,6 @@
 	echo "    </div>";
 	echo "</div>";
 
-	include("../includes/footer.php");
-	header("Refresh:3; ../index.php");
+	include("includes/footer.php");
+	header("Refresh:3; index.php");
 ?>

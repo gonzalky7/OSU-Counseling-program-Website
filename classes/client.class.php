@@ -1,5 +1,5 @@
 <?php
-	include("../includes/db_connect.php");
+	include("includes/db_connect.php");
 
 	/*The clients class will incapsulate our CRUD operations
 	 *as well as store some of the data.

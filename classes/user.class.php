@@ -1,6 +1,6 @@
 <?php
 	/*The user class represents a user of our system. The user class should represent the user's important data as well as the actions a user should be able to take.*/
-	include("../includes/db_connect.php");
+	include("includes/db_connect.php");
 
 	class User {
 		public $id;

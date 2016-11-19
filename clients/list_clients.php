@@ -3,7 +3,7 @@
 
 if (!isset($_SESSION['user_id']))
 {
-    header("Location: /login.php");
+    header("Location: login.php");
     die();
 }
 
@@ -46,4 +46,4 @@ if (!isset($_SESSION['user_id']))
 	</div>
 </div>
 
-<?php include("../includes/footer.php") ?>
+<?php include("includes/footer.php") ?>

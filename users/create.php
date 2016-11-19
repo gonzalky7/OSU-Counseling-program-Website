@@ -12,7 +12,7 @@
 	//For security checking for login id if not redirected to login page
 	if (!isset($_SESSION['user_id']))
 	{	
-    header("Location: /login.php");
+    header("Location: login.php");
     die();
 	}
 
@@ -39,6 +39,6 @@
 	echo "    </div>";
 	echo "</div>";
 
-	include("../includes/footer.php");
-	header("Refresh:3; ../index.php");
+	include("includes/footer.php");
+	header("Refresh:3; list_users.php");
 ?>

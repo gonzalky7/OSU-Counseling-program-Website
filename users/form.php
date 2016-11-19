@@ -1,11 +1,11 @@
 <?php
-	include('../includes/header.php');
+	include('includes/header.php');
 
 
 //For security checking for login id if not redirected to login page
 if (!isset($_SESSION['user_id']))
 {
-    header("Location: /login.php");
+    header("Location: login.php");
     die();
 }
 
@@ -36,5 +36,5 @@ if (!isset($_SESSION['user_id']))
 	</div>
 
 <?php 
-	include("../includes/footer.php");
+	include("includes/footer.php");
 ?>

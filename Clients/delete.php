@@ -1,7 +1,7 @@
 <?php
 	ob_start();
-	include("../includes/header.php");
-	include("../classes/client.class.php");
+	include("includes/header.php");
+	include("classes/client.class.php");
 //	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 	$client = new Client(NULL, NULL, NULL, NULL, NULL);
 
@@ -20,6 +20,6 @@
 	echo "    </div>";
 	echo "</div>";
 
-	include("../includes/footer.php");
+	include("includes/footer.php");
 
 ?>

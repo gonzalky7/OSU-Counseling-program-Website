@@ -1,10 +1,10 @@
-<?php include("../includes/header.php") ?>
+<?php include("includes/header.php") ?>
 
-<?php include("../includes/db_connect.php") ?>
+<?php include("includes/db_connect.php") ?>
 
 <?php if (!isset($_SESSION['user_id']))
 {
-    header("Location: /login.php");
+    header("Location: login.php");
     die();
 } ?>
 
@@ -146,4 +146,4 @@ $row = $res->fetch_assoc();
 	</div>
 </div>
 
-<?php include("../includes/footer.php") ?>
+<?php include("includes/footer.php") ?>
