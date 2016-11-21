@@ -15,16 +15,13 @@
     die();
 	}
 
-	//strings to outout on function success/failure
 	$success = "Record saved successfully.";
 	$failed = "Error: could not save user info.";
 	$output = "";
 
-	//create a new client object and pass to it the values from the form
 	$new_user = new User($_POST['firstName'], $_POST['lastName'],
 		$_POST['userName'], $_POST['password']);
 
-	//call our save function and it returns true print success else print failure
 	if($new_user->saveUserInfo()){
 		$output = $success;
 	} else {

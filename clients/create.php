@@ -8,7 +8,7 @@
 	include("classes/client.class.php");
 
 
-	//strings to outout on function success/failure
+	//strings to output on function success/failure
 	$success = "Record saved successfully.";
 	$failed = "Error: could not save client info.";
 	$output = "";
@@ -25,7 +25,7 @@
         	}
         $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdDRAwUAAAAAN_xMeO0l0bPVI4rRduTFRKQsdFS&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
         if($response.success==false) {
-          echo '<h2>You are spammer ! </h2>';
+          echo '<h2>Please try again. </h2>';
         }	else {
           		//create a new client object and pass to it the values from the form
 				$new_client = new Client(NULL, $_POST['firstName'], $_POST['lastName'],

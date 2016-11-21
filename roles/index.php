@@ -1,6 +1,6 @@
 <?php
-	include('includes/header.php');
-	include('classes/role.class.php');
+	include('../includes/header.php');
+	include('../classes/role.class.php');
 
 //For security checking for login id if not redirected to login page
 if (!isset($_SESSION['user_id']))

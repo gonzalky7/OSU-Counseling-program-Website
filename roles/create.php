@@ -3,7 +3,7 @@
 	include("../includes/db_connect.php");
 	include("../classes/role.class.php");
 
-	//strings to outout on function success/failure
+	//strings to output on function success/failure
 	$success = "Record saved successfully.";
 	$failed = "Error: could not save role info.";
 	$output = "";
