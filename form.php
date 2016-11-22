@@ -1,18 +1,12 @@
-<?php include("includes/header.php") ?>	
-<?php
- 
-// grab recaptcha library
-require_once "recaptchalib.php";
- 
+<?php 
+	include("includes/header.php");
+	// grab recaptcha library
+	require_once "recaptchalib.php";
 ?>
-
-
 			<form method="post" action="clients/create.php">
 				<fieldset>
 				<div class="centerTitle"><legend><h1 id="header">OSU Cascades Counseling Practicum <br> Client Information Form<h1></legend></div>
-					<br>
-
-				
+					<br>			
 					<div class="boxed">
 						<label for="date">Today's Date</label>
 						<input type="date" name="date" placeholder="YYYYMMDD"/>					

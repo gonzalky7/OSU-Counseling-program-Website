@@ -1,3 +1,3 @@
 <?php
-$allowableURLS = ["index.php", "login.php", "session_new.php", "about.php", "form.php"];
+$allowableURLS = ["index.php", "login.php", "session_new.php", "about.php", "form.php", "clients/create.php"];
 ?>
