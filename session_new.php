@@ -8,9 +8,9 @@
 
 		if($new_session){
 			header('Location: index.php'); 
-		}	else {
+		} else {
 				header('Location: login.php');
-			}
+		}
 	}
 
 	include('includes/footer.php');
