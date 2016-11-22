@@ -1,7 +1,8 @@
 <?php
-	ob_start();
 	include("includes/header.php");
 	include("classes/client.class.php");
+
+	redirectIfNotLoggedIn();
 //	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 	$client = new Client(NULL, NULL, NULL, NULL, NULL);
 

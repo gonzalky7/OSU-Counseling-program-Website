@@ -1,20 +1,13 @@
 <?php include('includes/header.php') ?>
 
-
-
-
-
 	<div class="wrapper">
    		<div class="welcome-header">
    				<h1>Login</h1>
 
 		    	<form class="login-form" action="session_new.php" method="POST">
 		    	
-      				<?php if (isset($_SESSION['message'])) {
-              			echo $_SESSION['message'];
-              			unset($_SESSION['message']);
-            		} ?>
-
+                <?php errorMessageLogin() ?>
+      			
               		<br />
          			<label style="text-align: left;"name="username">Username</label><br />
           			<input type="text" name="username" /><br />

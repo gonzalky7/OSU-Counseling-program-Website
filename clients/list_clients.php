@@ -1,14 +1,11 @@
-<?php include("../includes/header.php");
-	  include("../classes/client.class.php");
+<?php 
+	include("../includes/header.php"); 
+	include("../classes/client.class.php");
 
-if (!isset($_SESSION['user_id']))
-{
-    header("Location: login.php");
-    die();
-}
+	redirectIfNotLoggedIn();
 
-	  $clients = new Client(NULL, NULL, NULL, NULL, NULL);
-	  $client_info = $clients->listAllClientInfo();
+	$clients = new Client(NULL, NULL, NULL, NULL, NULL);
+	$client_info = $clients->listAllClientInfo();
 //	  $db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 ?>
 

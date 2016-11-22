@@ -7,6 +7,7 @@
 
 	include("classes/client.class.php");
 
+	redirectIfNotLoggedIn();
 
 	//strings to output on function success/failure
 	$success = "Record saved successfully.";
