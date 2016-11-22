@@ -7,10 +7,26 @@
 <script>
 function validateForm() {
     var x = document.forms["myForm"]["date"].value;
-    if (x == "") {
+    if (x.length == 0) {
         alert("Date must be filled out");
+		x.value = "Date must be filled out";
         return false;
     }
+/*	else if{
+		var x = document.forms["myForm"]["date"].value;
+		return false;
+	}
+	else if{
+		var x = document.forms["myForm"]["date"].value;
+		return false;
+	}
+	else if{
+		var x = document.forms["myForm"]["date"].value;
+		return false;
+	}*/
+	else{
+		return true;
+	}
 } 
 </script>
 			<form name="myForm" onsubmit="return validateForm()" method="post" action="clients/create.php">

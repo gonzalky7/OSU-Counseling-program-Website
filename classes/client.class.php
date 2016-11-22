@@ -21,7 +21,16 @@
 
 	 	public function saveClientInfo() {
 	 		global $db;
-
+			
+			//********************************************
+			$this->first_name = $db->real_escape_string($this->first_name);
+			$this->last_name = $db->real_escape_string($this->last_name);
+			$this->age = $db->real_escape_string($this->age);
+			$this->birthday = $db->real_escape_string($this->birthday);
+			//****************************************
+			
+			
+			
 	 		//Create the query to save the client
 	 		$save_query = "INSERT INTO clients (id, first_name, last_name, age, date_of_birth) VALUES ( '{NULL}', '{$this->first_name}', '{$this->last_name}', '{$this->age}', '{$this->birthday}')";
 
