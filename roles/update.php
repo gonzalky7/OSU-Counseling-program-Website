@@ -1,21 +1,21 @@
 <?php
-	ob_start();
 	include("includes/header.php");
 	include("classes/role.class.php");
+
+	redirectIfNotLoggedIn();
 
 	$updateRole = new Role(NULL, NULL);
 	$updateRole->listRoleInfo($_GET['id']);
 
-	 if(isset($_POST['update']))
-	 {
+	if(isset($_POST['update'])) {
 
-	 	if($updateRole->updateRoleInfo($_GET['id'], $_POST['name'])){
+	 	if($updateRole->updateRoleInfo($_GET['id'], $_POST['name'])) {
 			echo "<h1> Record Successfully updated </h1>";
 			header('Refresh:3; index.php');
-		} else {
-			echo "ERROR: Could not execute"; //. mysqli_error($db);
-			header('Refresh:3; index.php');
-		}
+		} 	else {
+				echo "ERROR: Could not execute"; //. mysqli_error($db);
+				header('Refresh:3; index.php');
+			}
 	}
 ?>
 
@@ -32,7 +32,7 @@
     		</tr>
     	</table>
     </form>
- </div>
+</div>
 
 <?php
 	include("includes/footer.php")

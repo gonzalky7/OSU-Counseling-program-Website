@@ -1,16 +1,15 @@
 * {
-  margin: 0;
+	margin: 0;
 }
 
 a {
-  color: white;
-  text-decoration: underline;
+	color: white;
+	text-decoration: underline;
 }
 
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
-
 
 html, body {
 	margin: 0;
@@ -34,48 +33,46 @@ html, body {
 	color: black;
 }
 
-
 form {
-  background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-  background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-  background: linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-  margin: 10px auto;
-  position: relative;
-  width: 80%;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 10px;
-  border: 1px solid #999;
-  border: inset 1px solid #333;
-  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	background: linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	margin: 10px auto;
+	position: relative;
+	width: 80%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+	border-radius: 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	border: inset 1px solid #333;
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 input {
-  width: 50%;
-  display: block;
-  border: 1px solid #999;
-  height: 25px;
-  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	width: 50%;
+	display: block;
+	border: 1px solid #999;
+	height: 25px;
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
-/*Jack: code to center title */
-
-.centerTitle{
+/*Code to center title*/
+.centerTitle {
 	text-align: center;
 	color: white;
 }
 
-/*Jack: code to make things centered and white in black*/
-.box{
+/*Code to make things centered and white/black*/
+.box {
 	color:white;
 	width:medium;
 	height:60px;
@@ -87,20 +84,11 @@ input {
 }
 
 br {
-   display: block;
-   margin: 15px 0;
+	display: block;
+	margin: 15px 0;
 }
 
-/*
-		.boxed {
-			border: 1px solid black;
-			padding: 25px;
-			line-height: 8px;
-			margin: 25 px;
-		}
-*/
-
-.radioButton{
+.radioButton {
 	display:inline-block;
 }
 

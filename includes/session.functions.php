@@ -11,7 +11,7 @@
   		} else return false;
  	}
 
-  function redirectIfNotLoggedIn() {
+  	function redirectIfNotLoggedIn() {
       include('public_urls.include.php');
 
       if (in_array(basename($_SERVER['REQUEST_URI']), $allowableURLS)) {
@@ -20,13 +20,13 @@
           header("Location: /login.php");
           die();
       }
-  }
+  	}
 
-  function currentUserName(){
+  	function currentUserName(){
     	if (isset($_SESSION['user_name'])) {
   	 		return $_SESSION['user_name'];
     	} else return NULL;
-  }
+ 	 }
 
   	//return $_SESSION['currentUser'];
   	function validateUser($username, $password) {
@@ -51,6 +51,14 @@
         		return false;
       		}
 
+    }
+
+
+    function errorMessageLogin(){
+       if (isset($_SESSION['message'])) {
+          echo $_SESSION['message'];
+          unset($_SESSION['message']);
+        } 
     }
 
 ?>
