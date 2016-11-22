@@ -7,17 +7,17 @@
 //	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 
 	$updateClient = new Client(NULL, NULL, NULL, NULL, NULL);
-	$updateClient->listClientInfo($_GET['id']);
+	$updateClient->listClientInfo($_GET["id"]);
 
-	 if(isset($_POST['update']))
+	 if(isset($_POST["update"]))
 	 {
 
-	 	if($updateClient->updateClientInfo($_GET['id'], $_POST['first_name'], $_POST['last_name'], $_POST['age'], $_POST['birthday'])){
+	 	if($updateClient->updateClientInfo($_GET["id"], $_POST["first_name"], $_POST["last_name"], $_POST["age"], $_POST["birthday"])){
 			echo "<h1> Record Successfully updated </h1>";
-			header('Refresh:3; list_clients.php');
+			header("Refresh:3; list_clients.php");
 		} else {
 			echo "ERROR: Could not execute"; //. mysqli_error($db);
-			header('Refresh:3; list_clients.php');
+			header("Refresh:3; list_clients.php");
 		}
 	}
 ?>

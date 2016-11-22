@@ -20,8 +20,8 @@
 
             while ($row = $results->fetch_assoc()) {
                 $role = new Role();
-                $role->id = $row['id'];
-                $role->name = $row['name'];
+                $role->id = $row["id"];
+                $role->name = $row["name"];
                 array_push($all_roles, $role);
             }
 
@@ -53,8 +53,8 @@
             //get the first row of the return from the query
             $row = $results->fetch_assoc();
 
-            $this->id = $row['id'];
-            $this->name = $row['name'];
+            $this->id = $row["id"];
+            $this->name = $row["name"];
         }
 
         //Update

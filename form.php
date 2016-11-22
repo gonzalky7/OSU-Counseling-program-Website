@@ -1,4 +1,4 @@
-<?php include('includes/header.php') ?>	
+<?php include("includes/header.php") ?>	
 <?php
  
 // grab recaptcha library
@@ -144,4 +144,4 @@ require_once "recaptchalib.php";
 				</fieldset>
 			</form>
 
-<?php include('includes/footer.php') ?>
+<?php include("includes/footer.php") ?>

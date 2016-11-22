@@ -1,6 +1,6 @@
 <?php
-	include('../includes/header.php');
-	include('../classes/role.class.php');
+	include("../includes/header.php");
+	include("../classes/role.class.php");
 
 	redirectIfNotLoggedIn();
 
@@ -42,4 +42,4 @@
     	</div><!-- /content -->";
 	</div><!-- /wrapper -->";
 
-<?php	include('../includes/footer.php'); ?>
+<?php	include("../includes/footer.php"); ?>

@@ -9,7 +9,7 @@
 
 
 //For security checking for login id if not redirected to login page
-if (!isset($_SESSION['user_id']))
+if (!isset($_SESSION["user_id"]))
 {
     header("Location: login.php");
     die();
@@ -24,13 +24,13 @@ $row = $res->fetch_assoc();
 ?>
 	<table class="list-table">
 		<tr>
-			<th><?php echo $row['first_name'] . " " . $row['last_name']; ?></th>
+			<th><?php echo $row["first_name"] . " " . $row["last_name"]; ?></th>
 		</tr>
 		<tr>
-			<td><strong>Username: </strong><?php echo $row['username'];?></td>
+			<td><strong>Username: </strong><?php echo $row["username"];?></td>
 		</tr>
 		<tr>
-			<td><strong>role_id: </strong><?php echo $row['role_id']; ?></td>
+			<td><strong>role_id: </strong><?php echo $row["role_id"]; ?></td>
 		</tr>
 	</table>
 

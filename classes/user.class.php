@@ -1,5 +1,5 @@
 <?php 
-	include("../includes/db_connect.php");
+	include("/includes/db_connect.php");
 
 	/*The user class represents a user of our system. The user class should represent the user's important data as well as the actions a user should be able to take.*/
 	
@@ -29,8 +29,8 @@
 
         	while ($row = $results->fetch_assoc()) {
             	$user = new User();
-            	$user->id = $row['id'];
-            	$user->first_name = $row['first_name'];
+            	$user->id = $row["id"];
+            	$user->first_name = $row["first_name"];
             	array_push($all_users, $user);
         	}
        		$results->free();
@@ -64,11 +64,11 @@
 	 		//get the first row of the return from the query
 	 		$row = $results->fetch_assoc();
 
-	 		$this->first_name = $row['first_name'];
-			$this->last_name = $row['last_name'];
-			$this->username = $row['username'];
-			$this->password = $row['password'];
-			$this->role_id = $row['role_id'];
+	 		$this->first_name = $row["first_name"];
+			$this->last_name = $row["last_name"];
+			$this->username = $row["username"];
+			$this->password = $row["password"];
+			$this->role_id = $row["role_id"];
 	 	}
 
 		//Update
@@ -110,28 +110,6 @@
 	 				return false;
 	 			}
 	 	}
-
-	 	// public function validateUser(){
-	 	// 	global $db;
-	 	// 	$query = "SELECT id FROM users WHERE username = '{$this->username}' AND password = '{$this->password}'";
-
-	 	// 	$res = $db->query($query);
-
-			// if ($res && $res->num_rows == 1) {
-			// 	$row = $res->fetch_assoc();
-			// 	$user_id = $row['id'];
-
-			// 	//Declaring global session variables
-			// 	$_SESSION['user_id'] = $this->user_id;
-			// 	$_SESSION['user_name'] = $this->username;
-		
-			// 	return true;
-			// } else{ 
-		 // 		$_SESSION['message'] = 'Invalid username/password';
-		 // 		return false; 
-   // 	 	    } 
-
-	 	// }
 
 	}
 

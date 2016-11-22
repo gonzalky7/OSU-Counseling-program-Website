@@ -58,9 +58,9 @@
 
         	while ($row = $results->fetch_assoc()) {
             	$client = new Client(NULL, NULL, NULL, NULL, NULL);
-            	$client->ID = $row['id'];
-            	$client->first_name = $row['first_name'];
-            	$client->last_name = $row['last_name'];
+            	$client->ID = $row["id"];
+            	$client->first_name = $row["first_name"];
+            	$client->last_name = $row["last_name"];
 
             	array_push($all_clients, $client);
         	}
@@ -99,10 +99,10 @@
 	 		//get the first row of the return from the query
 	 		$row = $results->fetch_assoc();
 
-	 		$this->first_name = $row['first_name'];
-			$this->last_name = $row['last_name'];
-			$this->age = $row['age'];
-			$this->birthday = $row['date_of_birth'];
+	 		$this->first_name = $row["first_name"];
+			$this->last_name = $row["last_name"];
+			$this->age = $row["age"];
+			$this->birthday = $row["date_of_birth"];
 	 	}
 
 	 	

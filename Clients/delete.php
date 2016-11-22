@@ -12,10 +12,10 @@
 
 	if($client->deleteClient()){
 	 	echo "<h1>Recorded successfully deleted</h1>";
-	 	header('Refresh:3; list_clients.php');
+	 	header("Refresh:3; list_clients.php");
 	}else {
 	 	echo "<h1>Error deleting record: " . $db->error . "</h1>";
-		header('Refresh:3; list_clients.php');
+		header("Refresh:3; list_clients.php");
 	}
 
 	echo "    </div>";
