@@ -10,10 +10,8 @@ if (!isset($_SESSION["user_id"]))
     die();
 }
 
-//	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
-
 	$updateUser = new User(NULL, NULL, NULL, NULL, NULL);
-	$updateUser->listUserInfo($_GET["id"v]);
+	$updateUser->listUserInfo($_GET["id"]);
 
 	 if(isset($_POST["update"]))
 	 {
