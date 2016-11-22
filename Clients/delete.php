@@ -1,11 +1,9 @@
 <?php
-	include("includes/header.php");
-	include("classes/client.class.php");
+	include("../includes/header.php");
+	include("../classes/client.class.php");
 
 	redirectIfNotLoggedIn();
-//	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 	$client = new Client(NULL, NULL, NULL, NULL, NULL);
-
 
 	echo "<div class=\"wrapper\">";
 	echo "    <div class=\"main-content\">";
