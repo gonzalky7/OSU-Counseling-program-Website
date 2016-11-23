@@ -33,6 +33,10 @@
         public function saveRoleInfo() {
             global $db;
 
+			//Escapes out of special characters
+			$this->id = $db->real_escape_string($this->id);
+			$this->name = $db->real_escape_string($this->name);
+			
             //Create the query to save the role
             $save_query = "INSERT INTO roles (id, name) VALUES ('{$this->id}', '{$this->name}')";
 
@@ -62,10 +66,13 @@
             global $db;
 
             //get the updated values form
-            $this->id = $id;
-            $this->name = $name;
+           // $this->id = $id;
+          //  $this->name = $name;
+			
+			$this->id = $db->real_escape_string($id);
+			$this->name = $db->real_escape_string($name);
 
-            $update_query = "UPDATE roles SET id = '$id', name = '$name' WHERE id = $id";
+            $update_query = "UPDATE roles SET id = '$this->id', name = '$name' WHERE id = $this->name";
 
             //test to make sure update worked
             if(mysqli_query($db, $update_query)) {
