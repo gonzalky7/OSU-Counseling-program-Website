@@ -1,7 +1,10 @@
-<?php 
+<?php
     include("../includes/db_connect.php");
 
     class Role {
+
+        private static $sql_select = "SELECT * FROM roles ORDER BY name";
+
         public $id;
         public $name;
 
@@ -10,7 +13,9 @@
             $this->name = $name;
         }
 
-        private static $sql_select = "SELECT * FROM roles ORDER BY name";
+        public function isValid() {
+            return preg_match('/\S/', trim($this->name));
+        }
 
         // Returns an array of Role objects, based on data in the persistence layer.
         public static function load() {
@@ -36,7 +41,7 @@
 			//Escapes out of special characters
 			$this->id = $db->real_escape_string($this->id);
 			$this->name = $db->real_escape_string($this->name);
-			
+
             //Create the query to save the role
             $save_query = "INSERT INTO roles (id, name) VALUES ('{$this->id}', '{$this->name}')";
 
@@ -68,7 +73,7 @@
             //get the updated values form
            // $this->id = $id;
           //  $this->name = $name;
-			
+
 			$this->id = $db->real_escape_string($id);
 			$this->name = $db->real_escape_string($name);
 
