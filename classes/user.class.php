@@ -1,8 +1,8 @@
-<?php 
-	include("../includes/db_connect.php");
+<?php
+  include $_SERVER['DOCUMENT_ROOT'] . '/includes/db_connect.php';
 
 	/*The user class represents a user of our system. The user class should represent the user's important data as well as the actions a user should be able to take.*/
-	
+
 	class User {
 		public $id;
 		public $first_name;
@@ -41,7 +41,7 @@
 		//Create
 		public function saveUserInfo() {
 			global $db;
-			
+
 			//Escapes out of special characters
 			$this->first_name = $db->real_escape_string($this->first_name);
 			$this->last_name = $db->real_escape_string($this->last_name);
@@ -91,19 +91,19 @@
 			$this->username = $username;
 			$this->password = $password;
 			$this->role_id = $role_id;*/
-			
+
 			$this->ID = $db->real_escape_string($id);
 			$this->first_name = $db->real_escape_string($first);
 			$this->last_name = $db->real_escape_string($last);
 			$this->username = $db->real_escape_string($username);
 			$this->password = $db->real_escape_string($password);
 			$this->role_id = $db->real_escape_string($role_id);
-			
+
 			//encrypts password
 			$this->password = password_hash($this->password, PASSWORD_BCRYPT, array(
 				'cost' => 12
 			));
-			
+
 			$update_query = "UPDATE users SET first_name = '$this->first_name', last_name = '$this->last_name', username = '$this->username', password = '$this->password', role_id = '$this->role_id' WHERE id = $this->ID";
 
 			//test to make sure update worked
