@@ -30,26 +30,34 @@
 
   	//return $_SESSION['currentUser'];
   	function validateUser($username, $password) {
-    	global $db;
+        global $db;
 
-      	$query = "SELECT id FROM users WHERE username = '$username' AND password = '$password'";
+    	  //$query = "SELECT id FROM users WHERE username = '$username' AND password = '$password'";
+        $query = "SELECT id, password FROM users WHERE username = '$username'";
 
-      	//Kyleen: Can someone change the res variable to something more descriptive. I am still unsure about this line of code THanks
-      	$res = $db->query($query);
+    	  $result = $db->query($query);
 
-      	if ($res && $res->num_rows == 1) {
-        	$row = $res->fetch_assoc();
-        	$user_id = $row["id"];
+    	  if ($result && $result->num_rows == 1) {
+      	    $row = $result->fetch_assoc();
+      	    $user_id = $row["id"];
+            $pass_hash = $row["password"];
 
-        	//Declaring global session variables
-        	$_SESSION["user_id"] = $user_id;
-        	$_SESSION["user_name"] = $username;
+            echo $pass_hash;
+            echo $row["password"];
 
-        	return true;
-      	} 	else {
-        		$_SESSION["message"] = "Invalid username/password";
-        		return false;
-      		}
+            if(password_verify("$password", "$pass_hash")){
+      	        //Declaring global session variables
+      	        $_SESSION["user_id"] = $user_id;
+      	        $_SESSION["user_name"] = $username;
+                return true;
+            } else {
+              $_SESSION["message"] = "Invalid username/password";
+              return false;
+            }
+    	  } else {
+      		  $_SESSION["message"] = "Invalid username/password";
+      		  return false;
+    		}
 
     }
 
