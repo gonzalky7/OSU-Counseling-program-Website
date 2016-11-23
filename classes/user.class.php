@@ -47,7 +47,10 @@
 			$this->last_name = $db->real_escape_string($this->last_name);
 			$this->username = $db->real_escape_string($this->username);
 			$this->password = $db->real_escape_string($this->password);
-
+			//encryps password
+			$this->password = password_hash($this->password, PASSWORD_BCRYPT, array(
+				'cost' => 12
+			));
 			//create a query and fill it with passed values
 			$save_query = "INSERT INTO users (first_name, last_name, username, password) VALUES ( '{$this->first_name}', '{$this->last_name}', '{$this->username}', '{$this->password}')";
 
@@ -95,7 +98,12 @@
 			$this->username = $db->real_escape_string($username);
 			$this->password = $db->real_escape_string($password);
 			$this->role_id = $db->real_escape_string($role_id);
-
+			
+			//encrypts password
+			$this->password = password_hash($this->password, PASSWORD_BCRYPT, array(
+				'cost' => 12
+			));
+			
 			$update_query = "UPDATE users SET first_name = '$this->first_name', last_name = '$this->last_name', username = '$this->username', password = '$this->password', role_id = '$this->role_id' WHERE id = $this->ID";
 
 			//test to make sure update worked
