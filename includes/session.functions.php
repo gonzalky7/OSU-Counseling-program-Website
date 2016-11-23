@@ -30,24 +30,30 @@
 
   	//return $_SESSION['currentUser'];
   	function validateUser($username, $password) {
-    	global $db;
-//		$db->query("DELETE FROM users WHERE id = $idToDelete");
-//		$query = "SELECT password, id FROM users WHERE username = 'username'";
-		$res = $db->query("SELECT password, id FROM users WHERE username = '$username'");
-		$row = $res->fetch_assoc();
-		$passHash = $row["password"];
-		if(password_verify($password, $passHash)){
-        	$user_id = $row["id"];
+        global $db;
 
-        	//Declaring global session variables
-        	$_SESSION["user_id"] = $user_id;
-        	$_SESSION["user_name"] = $username;
+        $query = "SELECT id, password FROM users WHERE username = '$username'";
 
-        	return true;
-      	} 	else {
-        		$_SESSION["message"] = "Invalid username/password";
-        		return false;
-      		}
+    	  $result = $db->query($query);
+
+    	  if ($result && $result->num_rows == 1) {
+      	    $row = $result->fetch_assoc();
+      	    $user_id = $row["id"];
+            $pass_hash = $row["password"];
+
+            if(password_verify("$password", "$pass_hash")){
+      	        //Declaring global session variables
+      	        $_SESSION["user_id"] = $user_id;
+      	        $_SESSION["user_name"] = $username;
+                return true;
+            } else {
+              $_SESSION["message"] = "Invalid username/password";
+              return false;
+            }
+    	  } else {
+      		  $_SESSION["message"] = "Invalid username/password";
+      		  return false;
+    		}
 
     }
 
