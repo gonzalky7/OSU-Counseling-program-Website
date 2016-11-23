@@ -32,7 +32,6 @@
   	function validateUser($username, $password) {
         global $db;
 
-    	  //$query = "SELECT id FROM users WHERE username = '$username' AND password = '$password'";
         $query = "SELECT id, password FROM users WHERE username = '$username'";
 
     	  $result = $db->query($query);
@@ -41,9 +40,6 @@
       	    $row = $result->fetch_assoc();
       	    $user_id = $row["id"];
             $pass_hash = $row["password"];
-
-            echo $pass_hash;
-            echo $row["password"];
 
             if(password_verify("$password", "$pass_hash")){
       	        //Declaring global session variables
