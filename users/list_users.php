@@ -4,7 +4,6 @@
 
     $user = new User(NULL, NULL, NULL, NULL, NULL);
     $users_info = $user->loadUsers();
-//    $db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 ?>
 
 <div class="wrapper">

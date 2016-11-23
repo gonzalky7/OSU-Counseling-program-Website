@@ -1,17 +1,17 @@
-<?php include("../includes/header.php") ?>
-
-<?php include("../includes/db_connect.php") ?>
+<?php 
+	include("../includes/header.php");
+	include("../includes/db_connect.php");
+?>
 
 <div class="wrapper">
 	<div class="main-content">
 
 <?php
-//again $db for db.humanoriented.com is db_oneteam
-//$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
-$id = $_GET["id"];
-$res = $db->query("SELECT * FROM users WHERE id=$id");
-$row = $res->fetch_assoc();
-
+	//again $db for db.humanoriented.com is db_oneteam
+	//$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
+	$id = $_GET["id"];
+	$res = $db->query("SELECT * FROM users WHERE id=$id");
+	$row = $res->fetch_assoc();
 ?>
 	<table class="list-table">
 		<tr>
