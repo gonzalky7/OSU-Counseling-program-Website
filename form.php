@@ -5,8 +5,45 @@
 ?>
 
 <script>
-function validateForm() {
-    var x = document.forms["myForm"]["date"].value;
+	function validateForm() {
+  		var x = document.forms["myForm"]["date"].value;
+  		var d = document.forms["myForm"]["firstName"].value;
+  		var t = document.forms["myForm"]["lastName"].value;
+  		var f = document.forms["myForm"]["age"].value;
+  		var s = document.forms["myForm"]["birthday"].value;
+
+		if (x == null || x == "") {
+    		alert("Please enter the date.");
+    		return false;
+    	}
+		if (d == null || d == "") {
+     		alert("Please enter your first name.");
+ 			return false;
+ 		}	else if (d.length > 15) {
+    			alert("First name length to long.")
+    			return false; 
+    		}
+		if (t == null || t == "") {
+     		alert("Please enter your last name.");
+ 			return false;
+ 		}	else if (t.length > 15) {
+    			alert("Last name length to long.")
+    			return false; 
+    		}
+		if (f == null || f == "") {
+     		alert("Please enter your age.");
+ 			return false;
+ 		}
+		if (s == null || s == "") {
+    		alert("Please enter your birthday.");
+ 			return false;
+ 		}
+	}
+ /*
+
+ ***Here is your code I am not sure if this is what you guys wanted, But I am just trying to help out and work on form validation*****
+
+ var x = document.forms["myForm"]["date"].value;
     if (x.length == 0) {
         alert("Date must be filled out");
 		x.value = "Date must be filled out";
@@ -23,12 +60,14 @@ function validateForm() {
 	else if{
 		var x = document.forms["myForm"]["date"].value;
 		return false;
-	}*/
+	}
 	else{
 		return true;
 	}
 } 
+ */
 </script>
+
 			<form name="myForm" onsubmit="return validateForm()" method="post" action="clients/create.php">
 				<fieldset>
 				<div class="centerTitle"><legend><h1 id="header">OSU Cascades Counseling Practicum <br> Client Information Form<h1></legend></div>
@@ -44,7 +83,7 @@ function validateForm() {
 						<label for="age">Age</label>
 						<input type="text" name="age"/>
 						<label for="birthday">Date of Birth</label>
-						<input type="date" name="birthday" placeholder="YYYYMMDD"/>
+						<input type="date" name="birthday" placeholder="YYYYMMDD" max="1979-12-31"/>
 					<br>
 					<!--	<label for="address">Address</label>
 						<input type="text" name="address"/>
