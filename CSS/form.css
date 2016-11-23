@@ -92,3 +92,19 @@ br {
 	display:inline-block;
 }
 
+/* Oh hell yeah */
+@keyframes warningFun {
+    0%   {transform:rotate(0deg);}
+    50%  {transform:rotate(180deg) scale(20);}
+    100% {transform:rotate(360deg) scale(1);}
+}
+
+.warning {
+	display: block;
+	color: #990000;
+	font-size: 12px;
+	font-weight: normal;
+	animation-name: warningFun;
+	animation-duration: 5s;
+	transform-origin: 20% 20%;
+}
