@@ -31,14 +31,12 @@
   	//return $_SESSION['currentUser'];
   	function validateUser($username, $password) {
     	global $db;
-
-      	$query = "SELECT id FROM users WHERE username = '$username' AND password = '$password'";
-
-      	//Kyleen: Can someone change the res variable to something more descriptive. I am still unsure about this line of code THanks
-      	$res = $db->query($query);
-
-      	if ($res && $res->num_rows == 1) {
-        	$row = $res->fetch_assoc();
+//		$db->query("DELETE FROM users WHERE id = $idToDelete");
+//		$query = "SELECT password, id FROM users WHERE username = 'username'";
+		$res = $db->query("SELECT password, id FROM users WHERE username = '$username'");
+		$row = $res->fetch_assoc();
+		$passHash = $row["password"];
+		if(password_verify($password, $passHash)){
         	$user_id = $row["id"];
 
         	//Declaring global session variables
