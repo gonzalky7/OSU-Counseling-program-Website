@@ -1,6 +1,6 @@
 <?php
-	include("includes/header.php");
-	include("classes/role.class.php");
+	include("../includes/header.php");
+	include("../classes/role.class.php");
 
 	redirectIfNotLoggedIn();
 

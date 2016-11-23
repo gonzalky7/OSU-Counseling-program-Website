@@ -11,7 +11,6 @@ if (!isset($_SESSION["user_id"]))
 
     $user = new User(NULL, NULL, NULL, NULL, NULL);
     $users_info = $user->loadUsers();
-//    $db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 ?>
 
 <div class="wrapper">
@@ -45,4 +44,4 @@ if (!isset($_SESSION["user_id"]))
   </div>
 </div>
 
-<?php include("includes/footer.php") ?>
+<?php include("../includes/footer.php") ?>

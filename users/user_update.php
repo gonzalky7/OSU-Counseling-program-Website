@@ -1,7 +1,7 @@
 <?php
 	ob_start();
-	include("includes/header.php");
-	include("classes/user.class.php");
+	include("../includes/header.php");
+	include("../classes/user.class.php");
 
 //For security checking for login id if not redirected to login page
 if (!isset($_SESSION["user_id"]))
@@ -56,5 +56,5 @@ if (!isset($_SESSION["user_id"]))
 
 
 <?php
-	include("includes/footer.php")
+	include("../includes/footer.php")
 ?>

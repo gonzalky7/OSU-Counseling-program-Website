@@ -1,12 +1,11 @@
-<?php include("includes/header.php") ?>
+<?php include("../includes/header.php") ?>
 
-<?php include("includes/db_connect.php") ?>
+<?php include("../includes/db_connect.php") ?>
 
 <div class="wrapper">
 	<div class="main-content">
 
 <?php
-
 
 //For security checking for login id if not redirected to login page
 if (!isset($_SESSION["user_id"]))
@@ -15,8 +14,6 @@ if (!isset($_SESSION["user_id"]))
     die();
 }
 
-//again $db for db.humanoriented.com is db_oneteam
-//$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
 $id = $_GET["id"];
 $res = $db->query("SELECT * FROM users WHERE id=$id");
 $row = $res->fetch_assoc();
