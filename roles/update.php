@@ -1,8 +1,6 @@
 <?php
-	include("includes/header.php");
-	include("classes/role.class.php");
-
-	redirectIfNotLoggedIn();
+	include("../includes/header.php");
+	include("../classes/role.class.php");
 
 	$updateRole = new Role(NULL, NULL);
 	$updateRole->listRoleInfo($_GET["id"]);
@@ -35,5 +33,5 @@
 </div>
 
 <?php
-	include("includes/footer.php")
+	include("../includes/footer.php")
 ?>

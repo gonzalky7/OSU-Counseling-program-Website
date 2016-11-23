@@ -24,6 +24,6 @@
 	echo "    </div>";
 	echo "</div>";
 
-	include("includes/footer.php");
+	include("../includes/footer.php");
 	header("Refresh:3; index.php");
 ?>

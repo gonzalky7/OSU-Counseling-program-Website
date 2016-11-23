@@ -2,7 +2,6 @@
 	include("../includes/header.php");
 	include("../classes/client.class.php");
 
-	redirectIfNotLoggedIn();
 	$client = new Client(NULL, NULL, NULL, NULL, NULL);
 
 	echo "<div class=\"wrapper\">";

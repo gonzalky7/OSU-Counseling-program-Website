@@ -2,8 +2,6 @@
 	include("../includes/header.php"); 
 	include("../classes/client.class.php");
 
-	redirectIfNotLoggedIn();
-
 	$clients = new Client(NULL, NULL, NULL, NULL, NULL);
 	$client_info = $clients->listAllClientInfo();
 ?>

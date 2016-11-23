@@ -14,7 +14,7 @@
   	function redirectIfNotLoggedIn() {
       include("public_urls.include.php");
 
-      if (in_array(basename($_SERVER["REQUEST_URI"]), $allowableURLS)) {
+      if (in_array(basename($_SERVER["REQUEST_URI"]), $allowableURLS) || isset($_SESSION["user_id"])) {
           return;
       } else if (!isset($_SESSION["user_id"])) {
           header("Location: /login.php");

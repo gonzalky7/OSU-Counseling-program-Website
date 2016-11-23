@@ -1,13 +1,6 @@
-<?php include("../includes/header.php");
+<?php 
+    include("../includes/header.php");
     include("../classes/user.class.php");
-
-
-//For security checking for login id if not redirected to login page
-if (!isset($_SESSION["user_id"]))
-{
-    header("Location: login.php");
-    die();
-}
 
     $user = new User(NULL, NULL, NULL, NULL, NULL);
     $users_info = $user->loadUsers();
@@ -45,4 +38,4 @@ if (!isset($_SESSION["user_id"]))
   </div>
 </div>
 
-<?php include("includes/footer.php") ?>
+<?php include("../includes/footer.php") ?>
