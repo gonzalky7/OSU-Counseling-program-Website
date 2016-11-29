@@ -1,8 +1,8 @@
-<?php 
-	include("../includes/db_connect.php");
+<?php
+  include $_SERVER['DOCUMENT_ROOT'] . '/includes/db_connect.php';
 
 	/*The user class represents a user of our system. The user class should represent the user's important data as well as the actions a user should be able to take.*/
-	
+
 	class User {
 		public $id;
 		public $first_name;
@@ -28,9 +28,9 @@
         	$results = $db->query(self::$sql_select);
 
         	while ($row = $results->fetch_assoc()) {
-            	$user = new User();
-            	$user->id = $row['id'];
-            	$user->first_name = $row['first_name'];
+            	$user = new User(NULL, NULL, NULL, NULL);
+            	$user->id = $row["id"];
+            	$user->first_name = $row["first_name"];
             	array_push($all_users, $user);
         	}
        		$results->free();
@@ -42,6 +42,15 @@
 		public function saveUserInfo() {
 			global $db;
 
+			//Escapes out of special characters
+			$this->first_name = $db->real_escape_string($this->first_name);
+			$this->last_name = $db->real_escape_string($this->last_name);
+			$this->username = $db->real_escape_string($this->username);
+			$this->password = $db->real_escape_string($this->password);
+			//encryps password
+			$this->password = password_hash($this->password, PASSWORD_BCRYPT, array(
+				'cost' => 12
+			));
 			//create a query and fill it with passed values
 			$save_query = "INSERT INTO users (first_name, last_name, username, password) VALUES ( '{$this->first_name}', '{$this->last_name}', '{$this->username}', '{$this->password}')";
 
@@ -64,11 +73,11 @@
 	 		//get the first row of the return from the query
 	 		$row = $results->fetch_assoc();
 
-	 		$this->first_name = $row['first_name'];
-			$this->last_name = $row['last_name'];
-			$this->username = $row['username'];
-			$this->password = $row['password'];
-			$this->role_id = $row['role_id'];
+	 		$this->first_name = $row["first_name"];
+			$this->last_name = $row["last_name"];
+			$this->username = $row["username"];
+			$this->password = $row["password"];
+			$this->role_id = $row["role_id"];
 	 	}
 
 		//Update
@@ -76,14 +85,26 @@
 	 		global $db;
 
 	 		//get the updated values form
-	 	 	$this->ID = $id;
+/*	 	 	$this->ID = $id;
 	 		$this->first_name = $first;
 			$this->last_name = $last;
 			$this->username = $username;
 			$this->password = $password;
-			$this->role_id = $role_id;
+			$this->role_id = $role_id;*/
 
-			$update_query = "UPDATE users SET first_name = '$first', last_name = '$last', username = '$username', password = '$password', role_id = '$role_id' WHERE id = $id";
+			$this->ID = $db->real_escape_string($id);
+			$this->first_name = $db->real_escape_string($first);
+			$this->last_name = $db->real_escape_string($last);
+			$this->username = $db->real_escape_string($username);
+			$this->password = $db->real_escape_string($password);
+			$this->role_id = $db->real_escape_string($role_id);
+
+			//encrypts password
+			$this->password = password_hash($this->password, PASSWORD_BCRYPT, array(
+				'cost' => 12
+			));
+
+			$update_query = "UPDATE users SET first_name = '$this->first_name', last_name = '$this->last_name', username = '$this->username', password = '$this->password', role_id = '$this->role_id' WHERE id = $this->ID";
 
 			//test to make sure update worked
 			if(mysqli_query($db, $update_query)) {
@@ -110,28 +131,6 @@
 	 				return false;
 	 			}
 	 	}
-
-	 	// public function validateUser(){
-	 	// 	global $db;
-	 	// 	$query = "SELECT id FROM users WHERE username = '{$this->username}' AND password = '{$this->password}'";
-
-	 	// 	$res = $db->query($query);
-
-			// if ($res && $res->num_rows == 1) {
-			// 	$row = $res->fetch_assoc();
-			// 	$user_id = $row['id'];
-
-			// 	//Declaring global session variables
-			// 	$_SESSION['user_id'] = $this->user_id;
-			// 	$_SESSION['user_name'] = $this->username;
-		
-			// 	return true;
-			// } else{ 
-		 // 		$_SESSION['message'] = 'Invalid username/password';
-		 // 		return false; 
-   // 	 	    } 
-
-	 	// }
 
 	}
 

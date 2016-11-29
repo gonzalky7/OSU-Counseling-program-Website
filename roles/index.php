@@ -1,14 +1,6 @@
 <?php
-	include('../includes/header.php');
-	include('../classes/role.class.php');
-
-//For security checking for login id if not redirected to login page
-if (!isset($_SESSION['user_id']))
-{
-    header("Location: login.php");
-    die();
-}
-
+	include("../includes/header.php");
+	include("../classes/role.class.php");
 
 	$list_roles = new Role(NULL,NULL);
 	$roles = $list_roles->load();
@@ -48,4 +40,4 @@ if (!isset($_SESSION['user_id']))
     	</div><!-- /content -->";
 	</div><!-- /wrapper -->";
 
-<?php	include('../includes/footer.php'); ?>
+<?php	include("../includes/footer.php"); ?>

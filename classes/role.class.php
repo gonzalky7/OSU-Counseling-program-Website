@@ -1,7 +1,10 @@
-<?php 
+<?php
     include("../includes/db_connect.php");
 
     class Role {
+
+        private static $sql_select = "SELECT * FROM roles ORDER BY name";
+
         public $id;
         public $name;
 
@@ -10,7 +13,9 @@
             $this->name = $name;
         }
 
-        private static $sql_select = "SELECT * FROM roles ORDER BY name";
+        public function isValid() {
+            return preg_match('/\S/', trim($this->name));
+        }
 
         // Returns an array of Role objects, based on data in the persistence layer.
         public static function load() {
@@ -19,9 +24,9 @@
             $results = $db->query(self::$sql_select);
 
             while ($row = $results->fetch_assoc()) {
-                $role = new Role();
-                $role->id = $row['id'];
-                $role->name = $row['name'];
+                $role = new Role(NULL, NULL);
+                $role->id = $row["id"];
+                $role->name = $row["name"];
                 array_push($all_roles, $role);
             }
 
@@ -32,6 +37,10 @@
 
         public function saveRoleInfo() {
             global $db;
+
+			//Escapes out of special characters
+			$this->id = $db->real_escape_string($this->id);
+			$this->name = $db->real_escape_string($this->name);
 
             //Create the query to save the role
             $save_query = "INSERT INTO roles (id, name) VALUES ('{$this->id}', '{$this->name}')";
@@ -53,8 +62,8 @@
             //get the first row of the return from the query
             $row = $results->fetch_assoc();
 
-            $this->id = $row['id'];
-            $this->name = $row['name'];
+            $this->id = $row["id"];
+            $this->name = $row["name"];
         }
 
         //Update
@@ -62,10 +71,13 @@
             global $db;
 
             //get the updated values form
-            $this->id = $id;
-            $this->name = $name;
+           // $this->id = $id;
+          //  $this->name = $name;
 
-            $update_query = "UPDATE roles SET id = '$id', name = '$name' WHERE id = $id";
+			$this->id = $db->real_escape_string($id);
+			$this->name = $db->real_escape_string($name);
+
+            $update_query = "UPDATE roles SET id = '$this->id', name = '$name' WHERE id = $this->name";
 
             //test to make sure update worked
             if(mysqli_query($db, $update_query)) {

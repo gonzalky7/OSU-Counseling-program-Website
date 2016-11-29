@@ -1,29 +1,18 @@
 <?php
-	ob_start();
-	include("includes/header.php");
-	include("classes/user.class.php");
-
-//For security checking for login id if not redirected to login page
-if (!isset($_SESSION['user_id']))
-{
-    header("Location: login.php");
-    die();
-}
-
-//	$db = new mysqli($dbserver, $dbusername, $dbpassword, $dbname);
+	include("../includes/header.php");
+	include("../classes/user.class.php");
 
 	$updateUser = new User(NULL, NULL, NULL, NULL, NULL);
-	$updateUser->listUserInfo($_GET['id']);
+	$updateUser->listUserInfo($_GET["id"]);
 
-	 if(isset($_POST['update']))
-	 {
+	if(isset($_POST["update"])) {
 
-	 	if($updateUser->updateUserInfo($_GET['id'], $_POST['first_name'], $_POST['last_name'], $_POST['username'], $_POST['password'], $_POST['role_id'])){
+	 	if($updateUser->updateUserInfo($_GET["id"], $_POST["first_name"], $_POST["last_name"], $_POST["username"], $_POST["password"], $_POST["role_id"])){
 			echo "<h1> Record Successfully updated </h1>";
 			header('Refresh:3; list_users.php');
 		} else {
 			echo "ERROR: Could not execute"; //. mysqli_error($db);
-			header('Refresh:3; list_users.php');
+			header("Refresh:3; list_users.php");
 		}
 	}
 ?>
@@ -58,5 +47,5 @@ if (!isset($_SESSION['user_id']))
 
 
 <?php
-	include("includes/footer.php")
+	include("../includes/footer.php")
 ?>

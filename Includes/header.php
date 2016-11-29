@@ -1,7 +1,7 @@
 <?php
-	include('session.functions.php');
 	ob_start();
 	session_start();
+	include("session.functions.php");
 	redirectIfNotLoggedIn();
 ?>
 

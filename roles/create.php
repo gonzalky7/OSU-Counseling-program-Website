@@ -9,10 +9,10 @@
 	$output = "";
 
 	//create a new role object and pass to it the values from the form
-	$new_role = new Role($_POST['id'], $_POST['name']);
+	$new_role = new Role(NULL, $_POST['name']);
 
 	//call our save function and it returns true print success else print failure
-	if($new_role->saveRoleInfo()){
+	if($new_role->isValid() && $new_role->saveRoleInfo()){
 		$output = $success;
 	} else {
 		$output = $failed;
@@ -24,6 +24,6 @@
 	echo "    </div>";
 	echo "</div>";
 
-	include("includes/footer.php");
+	include("../includes/footer.php");
 	header("Refresh:3; index.php");
 ?>

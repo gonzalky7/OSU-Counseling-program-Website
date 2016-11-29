@@ -1,18 +1,77 @@
-<?php include('includes/header.php') ?>	
-<?php
- 
-// grab recaptcha library
-require_once "recaptchalib.php";
- 
+<?php 
+	include("includes/header.php");
+	// grab recaptcha library
+	require_once "recaptchalib.php";
 ?>
 
+<script>
+	function validateForm() {
+  		var x = document.forms["myForm"]["date"].value;
+  		var d = document.forms["myForm"]["firstName"].value;
+  		var t = document.forms["myForm"]["lastName"].value;
+  		var f = document.forms["myForm"]["age"].value;
+  		var s = document.forms["myForm"]["birthday"].value;
 
-			<form method="post" action="clients/create.php">
+		if (x == null || x == "") {
+    		alert("Please enter the date.");
+    		return false;
+    	}
+		if (d == null || d == "") {
+     		alert("Please enter your first name.");
+ 			return false;
+ 		}	else if (d.length > 15) {
+    			alert("First name length to long.")
+    			return false; 
+    		}
+		if (t == null || t == "") {
+     		alert("Please enter your last name.");
+ 			return false;
+ 		}	else if (t.length > 15) {
+    			alert("Last name length to long.")
+    			return false; 
+    		}
+		if (f == null || f == "") {
+     		alert("Please enter your age.");
+ 			return false;
+ 		}
+		if (s == null || s == "") {
+    		alert("Please enter your birthday.");
+ 			return false;
+ 		}
+	}
+ /*
+
+ ***Here is your code I am not sure if this is what you guys wanted, But I am just trying to help out and work on form validation*****
+
+ var x = document.forms["myForm"]["date"].value;
+    if (x.length == 0) {
+        alert("Date must be filled out");
+		x.value = "Date must be filled out";
+        return false;
+    }
+/*	else if{
+		var x = document.forms["myForm"]["date"].value;
+		return false;
+	}
+	else if{
+		var x = document.forms["myForm"]["date"].value;
+		return false;
+	}
+	else if{
+		var x = document.forms["myForm"]["date"].value;
+		return false;
+	}
+	else{
+		return true;
+	}
+} 
+ */
+</script>
+
+			<form name="myForm" onsubmit="return validateForm()" method="post" action="clients/create.php">
 				<fieldset>
 				<div class="centerTitle"><legend><h1 id="header">OSU Cascades Counseling Practicum <br> Client Information Form<h1></legend></div>
-					<br>
-
-				
+					<br>			
 					<div class="boxed">
 						<label for="date">Today's Date</label>
 						<input type="date" name="date" placeholder="YYYYMMDD"/>					
@@ -24,7 +83,7 @@ require_once "recaptchalib.php";
 						<label for="age">Age</label>
 						<input type="text" name="age"/>
 						<label for="birthday">Date of Birth</label>
-						<input type="date" name="birthday" placeholder="YYYYMMDD"/>
+						<input type="date" name="birthday" placeholder="YYYYMMDD" max="1979-12-31"/>
 					<br>
 					<!--	<label for="address">Address</label>
 						<input type="text" name="address"/>
@@ -33,7 +92,7 @@ require_once "recaptchalib.php";
 						<label for="city">City</label>
 						<input type="text" name="city"/>
 						<label for="state">State</label>
-						<input type="text" name="state"/>
+						<input type="text" name="state"/>  STATES SHOWN at bottom of file
 						<label for="zip">Zip</label>
 						<input type="text" name="zip"/>
 					<br>
@@ -144,4 +203,59 @@ require_once "recaptchalib.php";
 				</fieldset>
 			</form>
 
-<?php include('includes/footer.php') ?>
+<?php include("includes/footer.php") ?>
+
+<!--<select name="state">
+	<option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District Of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+	<option value="IL">Illinois</option>
+	<option value="IN">Indiana</option>
+	<option value="IA">Iowa</option>
+	<option value="KS">Kansas</option>
+	<option value="KY">Kentucky</option>
+	<option value="LA">Louisiana</option>
+	<option value="ME">Maine</option>
+	<option value="MD">Maryland</option>
+	<option value="MA">Massachusetts</option>
+	<option value="MI">Michigan</option>
+	<option value="MN">Minnesota</option>
+	<option value="MS">Mississippi</option>
+	<option value="MO">Missouri</option>
+	<option value="MT">Montana</option>
+	<option value="NE">Nebraska</option>
+	<option value="NV">Nevada</option>
+	<option value="NH">New Hampshire</option>
+	<option value="NJ">New Jersey</option>
+	<option value="NM">New Mexico</option>
+	<option value="NY">New York</option>
+	<option value="NC">North Carolina</option>
+	<option value="ND">North Dakota</option>
+	<option value="OH">Ohio</option>
+	<option value="OK">Oklahoma</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+	<option value="RI">Rhode Island</option>
+	<option value="SC">South Carolina</option>
+	<option value="SD">South Dakota</option>
+	<option value="TN">Tennessee</option>
+	<option value="TX">Texas</option>
+	<option value="UT">Utah</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+</select>				
+				-->

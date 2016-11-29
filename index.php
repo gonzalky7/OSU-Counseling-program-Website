@@ -1,7 +1,5 @@
 <?php 
-	ob_start();
-
-	include('includes/header.php');
+	include("includes/header.php");
 ?>
 
 <div class="wrapper">	
@@ -12,4 +10,4 @@
        		</div>
        	</div>
 </div>
-<?php include('includes/footer.php') ?>
+<?php include("includes/footer.php") ?>
