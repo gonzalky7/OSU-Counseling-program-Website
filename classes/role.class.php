@@ -1,4 +1,14 @@
 <?php
+    /*
+     * Class Role
+     *
+     * This role class encapsulates the permissions that will be granted 
+     * to each user of the OSU Cascades clinic application. 
+     *
+     * Each role has an associated ID and name. This class has basic
+     * CRUD functions for the roles as well as some utility functions 
+     * to list the various roles in a table.
+    */
     include("../includes/db_connect.php");
 
     class Role {
@@ -17,7 +27,14 @@
             return preg_match('/\S/', trim($this->name));
         }
 
-        // Returns an array of Role objects, based on data in the persistence layer.
+        /*
+         * The load() function loads all the roles and displays them on the roles screen. 
+         *
+         * There are no parameters for this function.
+         *
+         * Returns an array of Role objects based on data in the persistence layer.
+         * 
+        */
         public static function load() {
             global $db;
             $all_roles = [];
@@ -34,7 +51,13 @@
             $db->close();
             return $all_roles;
         }
-
+        /*
+         * The saveRoleInfo() function saves a role object to the database. 
+         *
+         * There are no parameters for this function.
+         *
+         * Returns a boolean value based on if it succeeded or failed.
+        */
         public function saveRoleInfo() {
             global $db;
 
@@ -45,14 +68,20 @@
             //Create the query to save the role
             $save_query = "INSERT INTO roles (id, name) VALUES ('{$this->id}', '{$this->name}')";
 
-            //check to make sure it worked
+            //Check to make sure it worked
             if(mysqli_query($db, $save_query)) {
                 return true;
             }   else {
                     return false;
                 }
         }
-
+        /*
+         * The listRoleInfo() function lists one role when editing a role in the application. 
+         *
+         * The function takes an integer $id as a parameter to know which specific role to list.
+         *
+         * Has no return value.
+        */
         public function listRoleInfo($id) {
             global $db;
 
@@ -65,8 +94,14 @@
             $this->id = $row["id"];
             $this->name = $row["name"];
         }
-
-        //Update
+        /*
+         * The updateRoleInfo() function allows a user to update the name of a role. 
+         *
+         * The function takes an integer $id and a string $name as parameters.
+         *
+         * Returns a boolean value on whether the update succeeded or failed.
+        */
+        
         public function updateRoleInfo($id, $name) {
             global $db;
 
@@ -87,17 +122,23 @@
                 }
         }
 
-        //Delete
+        /*
+         * The deleteRole() function allows a user to delete a role from the database. 
+         *
+         * There are no parameters for this function.
+         *
+         * Returns a boolean value on whether the update succeeded or failed.
+        */
         public function deleteRole() {
             global $db;
 
-            //get the id to be deleted
+            //Get the id to be deleted
             $idToDelete = $_GET["id"];
 
-            //create a query
+            //Create a query
             $delete_query = $db->query("DELETE FROM roles WHERE id = $idToDelete");
 
-            //test to see if it was successful
+            //Test to see if it was successful
             if($delete_query) {
                 return true;
             }   else {
