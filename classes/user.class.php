@@ -28,7 +28,7 @@
         	$results = $db->query(self::$sql_select);
 
         	while ($row = $results->fetch_assoc()) {
-            	$user = new User();
+            	$user = new User(NULL, NULL, NULL, NULL);
             	$user->id = $row["id"];
             	$user->first_name = $row["first_name"];
             	array_push($all_users, $user);

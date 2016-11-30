@@ -24,7 +24,7 @@
             $results = $db->query(self::$sql_select);
 
             while ($row = $results->fetch_assoc()) {
-                $role = new Role();
+                $role = new Role(NULL, NULL);
                 $role->id = $row["id"];
                 $role->name = $row["name"];
                 array_push($all_roles, $role);
