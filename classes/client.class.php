@@ -1,9 +1,13 @@
-<?php 
-	include("../includes/db_connect.php");
+<?php
+	/* 
+	 * The client class will encapsulate the data for each client.
+	 * 
+	 * Basic CRUD operations as well as some utility functions to
+	 * help list the data on the page.
+	 *
+	 */
 
-		/*The clients class will incapsulate our CRUD operations
-		 *as well as store some of the data.
-	 	*/
+	include("../includes/db_connect.php");
 	class Client {
 	 	public $ID;
 	 	public $first_name;
@@ -25,6 +29,15 @@
 	 		$this->birthday = $bday;
 	 	}
 
+	 	/* Saves a client object to the database.
+	 	 *
+	 	 * There are no parameters passed to this function.
+	 	 *
+	 	 * This function returns true if the information was saved correctly
+	 	 * and returns false when the information wasn't saved correctly in the
+	 	 * database.
+	 	 */
+
 	 	public function saveClientInfo() {
 	 		global $db;
 			
@@ -45,6 +58,15 @@
 	 			}
 	 	}
 
+	 	/* Deletes a client object to the database.
+	 	 *
+	 	 * There are no parameters passed to this function.
+	 	 *
+	 	 * This function returns true if the information was removed correctly
+	 	 * and returns false when the information wasn't removed correctly in the
+	 	 * database.
+	 	 */
+
 	 	public function deleteClient() {
 	 		global $db;
 
@@ -61,6 +83,14 @@
 	 				return false;
 	 			}
 	 	}
+
+	 	/* Lists all of the stored information in the database.
+	 	 *
+	 	 * There are no parameters passed to this function.
+	 	 *
+	 	 * This function returns an array of client objects. The client objects
+	 	 * are filled with the data that is stored in the database. 
+	 	 */
 
 	 	public function listAllClientInfo() {
 	 		global $db;
@@ -80,6 +110,15 @@
         	$results->free();
         	return $all_clients;
 	 	}
+
+	 	/* Updates the information for an existing client in the database.
+	 	 *
+	 	 * This function takes new string values for the various client member variables.
+	 	 *
+	 	 * This function returns true if the information was updated correctly
+	 	 * and returns false when the information wasn't updated correctly in the
+	 	 * database.
+	 	 */
 
 	 	public function updateClientInfo($id, $first, $last, $age, $bday) {
 	 		global $db;
@@ -113,7 +152,14 @@
 				}
 	 	}
 
-	 	//should we do a list one client info?
+	 	/* Over-writes the member variables of a client object using the information
+	 	 * from a single client from the database.
+	 	 *
+	 	 * The function takes the ID of the client as a parameter.
+	 	 *
+	 	 * This function has no return value.
+	 	 */
+
 		public function listClientInfo($id) {
 			global $db;
 
