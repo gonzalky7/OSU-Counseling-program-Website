@@ -11,8 +11,14 @@
 	 	public $age;
 	 	public $birthday;
 
-	 	public function __construct($id, $first, $last, $age, $bday){
-	 		$this->ID = $id;
+	 	public function __construct(){
+	 		$this->first_name = NULL;
+	 		$this->last_name = NULL;
+	 		$this->age = NULL;
+	 		$this->birthday = NULL;
+	 	}
+
+	 	public function __construct($first, $last, $age, $bday){
 	 		$this->first_name = $first;
 	 		$this->last_name = $last;
 	 		$this->age = $age;
@@ -29,7 +35,7 @@
 			$this->birthday = $db->real_escape_string($this->birthday);
 			
 	 		//Create the query to save the client
-	 		$save_query = "INSERT INTO clients (id, first_name, last_name, age, date_of_birth) VALUES ( '{NULL}', '{$this->first_name}', '{$this->last_name}', '{$this->age}', '{$this->birthday}')";
+	 		$save_query = "INSERT INTO clients (id, first_name, last_name, age, date_of_birth) VALUES ('{$this->first_name}', '{$this->last_name}', '{$this->age}', '{$this->birthday}')";
 
 	 		//check to make sure it worked
 	 		if(mysqli_query($db, $save_query)) {

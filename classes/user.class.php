@@ -10,7 +10,7 @@
 		public $username;
 		public $password;
 		public $role_id;
-
+		
 		public function __construct($first, $last, $user, $pass) {
 			$this->first_name = $first;
 			$this->last_name = $last;
@@ -100,9 +100,9 @@
 			$this->role_id = $db->real_escape_string($role_id);
 
 			//encrypts password
-			$this->password = password_hash($this->password, PASSWORD_BCRYPT, array(
-				'cost' => 12
-			));
+			//$this->password = password_hash($this->password, PASSWORD_BCRYPT, array(
+			//	'cost' => 12
+			//));
 
 			$update_query = "UPDATE users SET first_name = '$this->first_name', last_name = '$this->last_name', username = '$this->username', password = '$this->password', role_id = '$this->role_id' WHERE id = $this->ID";
 
