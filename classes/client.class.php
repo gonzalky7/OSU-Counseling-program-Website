@@ -4,7 +4,6 @@
 	 * 
 	 * Basic CRUD operations as well as some utility functions to
 	 * help list the data on the page.
-	 *
 	 */
 
 	include("../includes/db_connect.php");
@@ -29,7 +28,8 @@
 	 		$this->birthday = $bday;
 	 	}
 
-	 	/* Saves a client object to the database.
+	 	/* 
+	 	 * Saves a client object to the database.
 	 	 *
 	 	 * There are no parameters passed to this function.
 	 	 *
@@ -58,7 +58,8 @@
 	 			}
 	 	}
 
-	 	/* Deletes a client object to the database.
+	 	/* 
+	 	 * Deletes a client object to the database.
 	 	 *
 	 	 * There are no parameters passed to this function.
 	 	 *
@@ -84,7 +85,8 @@
 	 			}
 	 	}
 
-	 	/* Lists all of the stored information in the database.
+	 	/*
+	 	 * Lists all of the stored information in the database.
 	 	 *
 	 	 * There are no parameters passed to this function.
 	 	 *
@@ -111,7 +113,8 @@
         	return $all_clients;
 	 	}
 
-	 	/* Updates the information for an existing client in the database.
+	 	/* 
+	 	 * Updates the information for an existing client in the database.
 	 	 *
 	 	 * This function takes new string values for the various client member variables.
 	 	 *
@@ -152,7 +155,8 @@
 				}
 	 	}
 
-	 	/* Over-writes the member variables of a client object using the information
+	 	/* 
+	 	 * Over-writes the member variables of a client object using the information
 	 	 * from a single client from the database.
 	 	 *
 	 	 * The function takes the ID of the client as a parameter.
