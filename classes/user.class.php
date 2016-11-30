@@ -18,7 +18,7 @@
 		public $username;
 		public $password;
 		public $role_id;
-
+		
 		public function __construct($first, $last, $user, $pass) {
 			$this->first_name = $first;
 			$this->last_name = $last;
