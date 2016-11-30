@@ -26,7 +26,7 @@
         echo "<h2>Please try again. </h2>";
     } else {
       	//create a new client object and pass to it the values from the form
-		$new_client = new Client(NULL, $_POST["firstName"], $_POST["lastName"],
+		$new_client = new Client($_POST["firstName"], $_POST["lastName"],
 		$_POST["age"], $_POST["birthday"]);
     }
 
