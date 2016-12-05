@@ -1,13 +1,13 @@
 <?php
-	/*Class User
+	/*
+	 * Class User
 	 *
-	 *The User class represents a user of our system. 
+	 * The User class represents a user of our system. 
 	 *
-	 *A User can login to the system. A User has access to CRUD operations for all classes. 
-	 *A User object can be given a firstName, lastName, userName, and password when created.
-	 *The id is automatically set along with the role_id. The role_id can be changed in ../users/update.php
-	 *
-	*/
+	 * A User can login to the system. A User has access to CRUD operations for all classes. 
+	 * A User object can be given a firstName, lastName, userName, and password when created.
+	 * The id is automatically set along with the role_id. The role_id can be changed in ../users/update.php
+	 */
 	
   include $_SERVER['DOCUMENT_ROOT'] . '/includes/db_connect.php';
 
@@ -28,13 +28,15 @@
 
 		private static $sql_select = "SELECT * FROM users ORDER BY id;";
 
-    	/* This functions retrieves a User's information from the database.
+    	/* 
+    	 * This functions retrieves a User's information from the database.
+    	 *
 		 * Intended to be used to display all users in the system. 
 		 *
 		 * There are no parameters for this function.
 		 *
 		 * Returns an array of User objects.
-		*/
+		 */
 	
     	public static function loadUsers() {
         	global $db;
@@ -52,15 +54,16 @@
         	return $all_users;
     	}
 
-		/* This function saves new User information to the database. 
+		/* 
+		 * This function saves new User information to the database. 
 		 * It also escapes special characters stored in the User information and hashes the User's password. 
 		 * It is intended to be used to save user information that has just been created. 
 		 *
 		 * There are no parameters for this function.
 		 *
-		 * This function will return boolean values TRUE or FALSE depending on if it was successful in saving to the database.  
-		 *
-		*/
+		 * This function will return boolean values TRUE or FALSE
+		 * depending on if it was successful in saving to the database.  
+		 */
 		public function saveUserInfo() {
 			global $db;
 
@@ -84,12 +87,13 @@
 	 			}
 		}
 
-		/* This function queries the database and retrives all information for a specific user based on the id.
+		/* 
+		 * This function queries the database and retrives all information for a specific user based on the id.
 		 *
 		 * This function takes an integer id.
 		 *
 		 * The function returns all of the queried data into the User object used to call this function.
-		*/
+		 */
 		public function listUserInfo($id) {
 			global $db;
 
@@ -106,14 +110,14 @@
 			$this->role_id = $row["role_id"];
 	 	}
 
-		/* This function updates User information in the database. 
+		/* 
+		 * This function updates User information in the database. 
 		 * It also escapes special characters before updating.
 		 *
 		 * Parameters: This function takes all the attributes of a User object. id is automatically supplied. 
 		 *
-		 * Returns: This function will return boolean values TRUE or FALSE depending on if it was successful in saving to the database.  
-		 *
-		*/
+		 * Returns: This function will return boolean values TRUE or FALSE depending on if it was successful in saving to the database. 
+		 */
 		public function updateUserInfo($id, $first, $last, $username, $password, $role_id) {
 	 		global $db;
 
@@ -135,14 +139,14 @@
 				}
 	 	}
 
-		/* This function deletes a User from the database.
+		/* 
+		 * This function deletes a User from the database.
 		 * It is intended to delete a single specific User. 
 		 *
 		 * This function takes no parameters. 
 		 *
 		 * This function returns boolean values TRUE or FALSE depending on if it was sucessful.
-		 *
-		*/
+		 */
 	 	public function deleteUser() {
 	 		global $db;
 

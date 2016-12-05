@@ -8,7 +8,7 @@
      * Each role has an associated ID and name. This class has basic
      * CRUD functions for the roles as well as some utility functions 
      * to list the various roles in a table.
-    */
+     */
     include("../includes/db_connect.php");
 
     class Role {
@@ -34,7 +34,7 @@
          *
          * Returns an array of Role objects based on data in the persistence layer.
          * 
-        */
+         */
         public static function load() {
             global $db;
             $all_roles = [];
@@ -57,7 +57,7 @@
          * There are no parameters for this function.
          *
          * Returns a boolean value based on if it succeeded or failed.
-        */
+         */
         public function saveRoleInfo() {
             global $db;
 
@@ -81,7 +81,7 @@
          * The function takes an integer $id as a parameter to know which specific role to list.
          *
          * Has no return value.
-        */
+         */
         public function listRoleInfo($id) {
             global $db;
 
@@ -100,7 +100,7 @@
          * The function takes an integer $id and a string $name as parameters.
          *
          * Returns a boolean value on whether the update succeeded or failed.
-        */
+         */
         
         public function updateRoleInfo($id, $name) {
             global $db;
@@ -128,7 +128,7 @@
          * There are no parameters for this function.
          *
          * Returns a boolean value on whether the update succeeded or failed.
-        */
+         */
         public function deleteRole() {
             global $db;
 
