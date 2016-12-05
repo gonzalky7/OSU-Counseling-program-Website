@@ -105,10 +105,9 @@
         public function updateRoleInfo($id, $name) {
             global $db;
 
-            //get the updated values form
-           // $this->id = $id;
-          //  $this->name = $name;
-
+            // get the updated values form
+            // $this->id = $id;
+            // $this->name = $name;
 			$this->id = $db->real_escape_string($id);
 			$this->name = $db->real_escape_string($name);
 
