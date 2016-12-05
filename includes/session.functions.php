@@ -4,12 +4,12 @@
 */
 	include("db_connect.php");
 
-/*This function checks to see if any user is logged in at the moment.
- *
- *This function takes no parameters.
- *
- *This function returns true if a session is set, or returns false if there is no user logged in.
- */
+	/* This function checks to see if any user is logged in at the moment.
+	 *
+	 * This function takes no parameters.
+	 *
+	 * This function returns true if a session is set, or returns false if there is no user logged in.
+	*/
 	function currentUser() {
   		if (isset($_SESSION["user_id"])) {
   			return true;
@@ -39,7 +39,7 @@
  	 *This function takes no parameters.
  	 *
  	 *This function does not return the session username
- 	 */
+ 	*/
   	function currentUserName(){
     	if (isset($_SESSION["user_name"])) {
   	 		return $_SESSION["user_name"];
@@ -51,8 +51,8 @@
 	 *
  	 *This functions takes username and password for parameters
  	 *
- 	 *This function does not returns true if credentials are valid or returns false if they do not. 
- 	 */
+ 	 *This function returns true if credentials are valid or returns false if they do not. 
+ 	*/
   	function validateUser($username, $password) {
         global $db;
 
@@ -83,8 +83,8 @@
 	 *
  	 *This function takes no parameters.
  	 *
- 	 *This function does not return anything.
- 	 */
+ 	 *This function does not return anything. Will write error message to screen if login is unsucessful.
+ 	*/
     function errorMessageLogin(){
        if (isset($_SESSION["message"])) {
           echo $_SESSION["message"];

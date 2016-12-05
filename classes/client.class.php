@@ -125,26 +125,13 @@
 
 	 	public function updateClientInfo($id, $first, $last, $age, $bday) {
 	 		global $db;
-/*
-	 		//get the updated values form
-	 	 	$this->ID = $id;
-	 		$this->first_name = $first;
-			$this->last_name = $last;
-			$this->age = $age;
-			$this->birthday = $bday;
-			//Probably can combine the bottom and top one to like $this->first_name = $db->real_escape_string($first);
-			//Escapes out of special characters
-			$this->first_name = $db->real_escape_string($this->first_name);
-			$this->last_name = $db->real_escape_string($this->last_name);
-			$this->age = $db->real_escape_string($this->age);
-			$this->birthday = $db->real_escape_string($this->birthday);*/
+
 			$this->ID = $db->real_escape_string($id);
 			$this->first_name = $db->real_escape_string($first);
 			$this->last_name = $db->real_escape_string($last);
 			$this->age = $db->real_escape_string($age);
 			$this->birthday = $db->real_escape_string($bday);
 			
-			//$update_query = "UPDATE clients SET first_name = '$first', last_name = '$last', age = '$age', date_of_birth = '$bday' WHERE id = $id";
 			$update_query = "UPDATE clients SET first_name = '$this->first_name', last_name = '$this->last_name', age = '$this->age', date_of_birth = '$this->birthday' WHERE id = $this->ID";
 			
 			//test to make sure update worked

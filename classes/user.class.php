@@ -1,5 +1,5 @@
 <?php
-	/*USER CLASS 
+	/*Class User
 	 *
 	 *The User class represents a user of our system. 
 	 *
@@ -26,15 +26,16 @@
 			$this->password = $pass;
 		}
 
-		//What kinds of things will users be able to do...?
 		private static $sql_select = "SELECT * FROM users ORDER BY id;";
 
     	/* This functions retrieves a User's information from the database.
+		 * Intended to be used to display all users in the system. 
 		 *
-		 * Parameters: 
+		 * There are no parameters for this function.
 		 *
+		 * Returns an array of User objects.
 		*/
-		
+	
     	public static function loadUsers() {
         	global $db;
         	$all_users = [];
@@ -51,13 +52,13 @@
         	return $all_users;
     	}
 
-		/*This function saves new User information to the database. 
-		 *It also escapes special characters stored in the User information and hashes the User's password. 
-		 *It is intended to be used to save user information that has just been created. 
+		/* This function saves new User information to the database. 
+		 * It also escapes special characters stored in the User information and hashes the User's password. 
+		 * It is intended to be used to save user information that has just been created. 
 		 *
-		 *Parameters: This function takes no parameters.
+		 * There are no parameters for this function.
 		 *
-		 *Returns: This function will return boolean values TRUE or FALSE depending on if it was successful in saving to the database.  
+		 * This function will return boolean values TRUE or FALSE depending on if it was successful in saving to the database.  
 		 *
 		*/
 		public function saveUserInfo() {
@@ -68,7 +69,7 @@
 			$this->last_name = $db->real_escape_string($this->last_name);
 			$this->username = $db->real_escape_string($this->username);
 			$this->password = $db->real_escape_string($this->password);
-			//encryps password
+			//encrypts password
 			$this->password = password_hash($this->password, PASSWORD_BCRYPT, array(
 				'cost' => 12
 			));
@@ -83,11 +84,11 @@
 	 			}
 		}
 
-		/*This function queries the database and retrives all information for a specific user based on the id.
+		/* This function queries the database and retrives all information for a specific user based on the id.
 		 *
-		 *Parameters: The function takes an integer id.
+		 * This function takes an integer id.
 		 *
-		 *Returns: The function places all of the queried data into the User object used to call this function.
+		 * The function returns all of the queried data into the User object used to call this function.
 		*/
 		public function listUserInfo($id) {
 			global $db;
@@ -105,12 +106,12 @@
 			$this->role_id = $row["role_id"];
 	 	}
 
-		/*This function updates User information in the database. 
-		 *It also escapes special characters before updating.
+		/* This function updates User information in the database. 
+		 * It also escapes special characters before updating.
 		 *
-		 *Parameters: This function takes all the attributes of a User object. id is automatically supplied. 
+		 * Parameters: This function takes all the attributes of a User object. id is automatically supplied. 
 		 *
-		 *Returns: This function will return boolean values TRUE or FALSE depending on if it was successful in saving to the database.  
+		 * Returns: This function will return boolean values TRUE or FALSE depending on if it was successful in saving to the database.  
 		 *
 		*/
 		public function updateUserInfo($id, $first, $last, $username, $password, $role_id) {
@@ -134,12 +135,12 @@
 				}
 	 	}
 
-		/*This function deletes a User from the database.
-		 *It is intended to delete a single specific User. 
+		/* This function deletes a User from the database.
+		 * It is intended to delete a single specific User. 
 		 *
-		 *Parameters: This function takes no parameters. 
+		 * This function takes no parameters. 
 		 *
-		 *Returns: This function returns true or false depending on if it was sucessful.
+		 * This function returns boolean values TRUE or FALSE depending on if it was sucessful.
 		 *
 		*/
 	 	public function deleteUser() {
