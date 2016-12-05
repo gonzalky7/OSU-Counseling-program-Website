@@ -114,9 +114,9 @@
 		 * This function updates User information in the database. 
 		 * It also escapes special characters before updating.
 		 *
-		 * Parameters: This function takes all the attributes of a User object. id is automatically supplied. 
+		 * This function takes all the attributes of a User object. id is automatically supplied. 
 		 *
-		 * Returns: This function will return boolean values TRUE or FALSE depending on if it was successful in saving to the database. 
+		 * This function will return boolean values TRUE or FALSE depending on if it was successful in saving to the database. 
 		 */
 		public function updateUserInfo($id, $first, $last, $username, $password, $role_id) {
 	 		global $db;
