@@ -97,6 +97,7 @@
 	 	public function listAllClientInfo() {
 	 		global $db;
 	 		$all_clients = [];
+	 		
 	 		//create a query and execute it
 			$results = $db->query("SELECT id, first_name, last_name FROM clients");
 
