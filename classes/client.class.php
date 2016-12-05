@@ -1,5 +1,7 @@
 <?php
 	/* 
+	 * Class Client
+	 *
 	 * The client class will encapsulate the data for each client.
 	 * 
 	 * Basic CRUD operations as well as some utility functions to
@@ -97,7 +99,7 @@
 	 	public function listAllClientInfo() {
 	 		global $db;
 	 		$all_clients = [];
-	 		
+
 	 		//create a query and execute it
 			$results = $db->query("SELECT id, first_name, last_name FROM clients");
 
