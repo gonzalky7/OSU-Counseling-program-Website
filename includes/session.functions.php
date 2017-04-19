@@ -30,7 +30,7 @@
       if (in_array(basename($_SERVER["REQUEST_URI"]), $allowableURLS) || isset($_SESSION["user_id"])) {
           return;
       } else if (!isset($_SESSION["user_id"])) {
-          header("Location: /login.php");
+          header("Location: /index.php");
           die();
       }
   	}

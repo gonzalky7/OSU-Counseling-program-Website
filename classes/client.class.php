@@ -16,12 +16,12 @@
 	 	public $age;
 	 	public $birthday;
 
-	 	public function __construct(){
+	 	/*public function __construct(){
 	 		$this->first_name = NULL;
 	 		$this->last_name = NULL;
 	 		$this->age = NULL;
 	 		$this->birthday = NULL;
-	 	}
+	 	}*/
 
 	 	public function __construct($first, $last, $age, $bday){
 	 		$this->first_name = $first;
